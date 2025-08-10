@@ -1,0 +1,11 @@
+<h1>Libros en la base de datos</h1>
+
+<%= if Enum.empty?(@books) do %>
+  <p>No hay libros registrados.</p>
+<% else %>
+  <ul>
+  <%= for book <- @books do %>
+    <li><strong><%= book["title"] %></strong> - <%= book["author"] %> (<%= book["year"] %>)</li>
+  <% end %>
+  </ul>
+<% end %>

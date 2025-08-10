@@ -8,7 +8,6 @@
 import Config
 
 config :architecture_a1,
-  ecto_repos: [ArchitectureA1.Repo],
   generators: [timestamp_type: :utc_datetime]
 
 # Configures the endpoint

@@ -9,7 +9,6 @@ defmodule ArchitectureA1.Application do
   def start(_type, _args) do
     children = [
       ArchitectureA1Web.Telemetry,
-      ArchitectureA1.Repo,
       {DNSCluster, query: Application.get_env(:architecture_a1, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: ArchitectureA1.PubSub},
       # Start a worker by calling: ArchitectureA1.Worker.start_link(arg)

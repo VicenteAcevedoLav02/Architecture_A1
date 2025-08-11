@@ -6,5 +6,5 @@ defmodule ArchitectureA1Web.PageHTML do
   """
   use ArchitectureA1Web, :html
 
-  embed_templates "page_html/*"
+  embed_templates "../templates/page/*"
 end

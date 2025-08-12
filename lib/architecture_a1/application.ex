@@ -14,7 +14,8 @@ defmodule ArchitectureA1.Application do
       # Start a worker by calling: ArchitectureA1.Worker.start_link(arg)
       # {ArchitectureA1.Worker, arg},
       # Start to serve requests, typically the last entry
-      ArchitectureA1Web.Endpoint
+      ArchitectureA1Web.Endpoint,
+      ArchitectureA1.Mongo
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

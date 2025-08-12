@@ -3,11 +3,11 @@ defmodule ArchitectureA1.Books do
   Technically the books controller (as we know it)
   """
 
-  def all_books(conn) do
-    Mongo.find(conn, "books", %{}) |> Enum.to_list()
+  def all_books do
+    Mongo.find(ArchitectureA1.Mongo, "books", %{}) |> Enum.to_list()
   end
 
-  def insert_sample_books(conn) do
+  def insert_sample_books do
     books = [
       %{title: "Libro Chiara", author: "Chiara Romanini", year: 2001},
       %{title: "Libro Vicho", author: "Vicente Acevedo", year: 2002},
@@ -15,7 +15,7 @@ defmodule ArchitectureA1.Books do
     ]
 
     Enum.each(books, fn book ->
-      Mongo.insert_one(conn, "books", book)
+      Mongo.insert_one(ArchitectureA1.Mongo, "books", book)
     end)
   end
 end

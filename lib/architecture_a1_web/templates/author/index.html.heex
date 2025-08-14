@@ -1,0 +1,26 @@
+<h1>Authors</h1>
+
+<%= if Enum.empty?(@authors) do %>
+  <p>No authors registered.</p>
+<% else %>
+  <table border="1" cellpadding="6" cellspacing="0">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Date of Birth</th>
+        <th>Country</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= for author <- @authors do %>
+        <tr>
+          <td><%= author["name"] %></td>
+          <td><%= author["date_of_birth"] || "-" %></td>
+          <td><%= author["country_of_origin"] || "-" %></td>
+          <td><%= author["short_description"] || "-" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>

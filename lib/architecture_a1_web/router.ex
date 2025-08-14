@@ -20,6 +20,8 @@ defmodule ArchitectureA1Web.Router do
     get "/", PageController, :home
     get "/books", BookController, :index
     get "/books/seed", BookController, :seed
+
+    resources "/authors", AuthorController
   end
 
   # Other scopes may use custom stacks.

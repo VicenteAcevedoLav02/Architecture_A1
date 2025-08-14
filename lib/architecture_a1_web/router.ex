@@ -20,7 +20,9 @@ defmodule ArchitectureA1Web.Router do
     get "/", PageController, :index
     get "/books", BookController, :index
     get "/books/seed", BookController, :seed
-
+    get  "/books/:book_id/reviews",            ReviewController, :index
+    post "/books/:book_id/reviews",            ReviewController, :create
+    post "/books/:book_id/reviews/:id/upvote", ReviewController, :upvote
     resources "/authors", AuthorController
   end
 

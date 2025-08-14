@@ -4,8 +4,11 @@
   <p>No hay libros registrados.</p>
 <% else %>
   <ul>
-  <%= for book <- @books do %>
-    <li><strong><%= book["title"] %></strong> - <%= book["author"] %> (<%= book["year"] %>)</li>
-  <% end %>
+    <%= for book <- @books do %>
+    <li>
+      <strong><%= book["title"] %></strong> - <%= book["author"] %> (<%= book["year"] %>)
+      <.link navigate={~p"/books/#{BSON.ObjectId.encode!(book["_id"])}/reviews"}>Ver reviews</.link>
+    </li>
+    <% end %>
   </ul>
 <% end %>

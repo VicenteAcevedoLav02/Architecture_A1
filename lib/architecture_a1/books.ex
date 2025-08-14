@@ -18,4 +18,10 @@ defmodule ArchitectureA1.Books do
       Mongo.insert_one(ArchitectureA1.Mongo, "books", book)
     end)
   end
+
+  def get_book!(book_id_hex) when is_binary(book_id_hex) do
+    oid = BSON.ObjectId.decode!(book_id_hex)
+    Mongo.find_one(ArchitectureA1.Mongo, "books", %{_id: oid}) ||
+      raise "Book not found"
+  end
 end

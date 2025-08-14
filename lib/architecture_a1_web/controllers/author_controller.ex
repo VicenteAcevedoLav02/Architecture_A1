@@ -12,44 +12,63 @@ defmodule ArchitectureA1Web.AuthorController do
     render(conn, :new)
   end
 
-  def create(conn, author_params) do
-    attrs = Map.drop(author_params, ["_csrf_token"])
-
-    case Authors.create_author(attrs) do
-      {:ok, _author} ->
-        conn
-        |> put_flash(:info, "Author created successfully.")
-        |> redirect(to: ~p"/authors")
-
-      {:error, reason} ->
-        conn
-        |> put_flash(:error, "Error creating author: #{inspect(reason)}")
-        |> redirect(to: ~p"/authors/new")
-    end
+  def create(conn, params) do
+    params
+    |> author_params()
+    |> Authors.create_author()
+    |> handle_result(
+      conn,
+      success_path: ~p"/authors",
+      success_msg: "Author created successfully.",
+      error_path: ~p"/authors/new"
+      )
   end
 
   def edit(conn, %{"id" => id}) do
-    author = Authors.get_all_authors()
-            |> Enum.find(fn a -> a.id == id end)
-    render(conn, :edit, author: author)
-  end
-
-  def update(conn, %{"id" => id} = author_params) do
-    attrs =
-      author_params
-      |> Map.drop(["id", "_csrf_token", "_method"])
-
-    case Authors.update_author(id, attrs) do
-      {:ok, _msg} ->
+    case Authors.get_author_by_id(id) do
+      nil ->
         conn
-        |> put_flash(:info, "Author updated successfully")
+        |> put_flash(:error, "Author not found")
         |> redirect(to: ~p"/authors")
 
-      {:error, reason} ->
-        conn
-        |> put_flash(:error, "Error updating author: #{inspect(reason)}")
-        |> redirect(to: ~p"/authors/#{id}/edit")
+      author ->
+        render(conn, :edit, author: author)
     end
   end
 
+  def update(conn, %{"id" => id} = params) do
+    attrs = author_params(params)
+
+    Authors.update_author(id, attrs)
+    |> handle_result(conn,
+      success_path: ~p"/authors",
+      success_msg: "Author updated successfully",
+      error_path: ~p"/authors/#{id}/edit"
+    )
+  end
+
+  def delete(conn, %{"id" => id}) do
+    Authors.delete_author(id)
+    |> handle_result(conn,
+      success_path: ~p"/authors",
+      success_msg: "Author deleted successfully",
+      error_path: ~p"/authors"
+    )
+  end
+
+  defp author_params(params) do
+    Map.drop(params, ["_csrf_token", "_method", "id"])
+  end
+
+  defp handle_result({:ok, _}, conn, opts) do
+    conn
+    |> put_flash(:info, opts[:success_msg])
+    |> redirect(to: opts[:success_path])
+  end
+
+  defp handle_result({:error, reason}, conn, opts) do
+    conn
+    |> put_flash(:error, "Error: #{inspect(reason)}")
+    |> redirect(to: opts[:error_path])
+  end
 end

@@ -10,6 +10,7 @@
         <th>Date of Birth</th>
         <th>Country</th>
         <th>Description</th>
+        <th>Actions</th>
       </tr>
     </thead>
     <tbody>
@@ -18,7 +19,12 @@
           <td><%= author["name"] %></td>
           <td><%= author["date_of_birth"] || "-" %></td>
           <td><%= author["country_of_origin"] || "-" %></td>
-          <td><%= author["short_description"] || "-" %></td>
+          <td><%= author["description"] || "-" %></td>
+          <td>
+            <a href={~p"/authors/#{author.id}/edit"}>
+              <button>Edit</button>
+            </a>
+          </td>
         </tr>
       <% end %>
     </tbody>

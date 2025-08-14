@@ -1,0 +1,30 @@
+<h1>Edit Author</h1>
+
+<form action={~p"/authors/#{@author.id}"} method="post">
+  <input type="hidden" name="_method" value="put">
+  <input type="hidden" name="_csrf_token" value={Plug.CSRFProtection.get_csrf_token()}>
+
+  <div>
+    <label>Name:</label>
+    <input type="text" name="name" value={@author["name"]} required>
+  </div>
+
+  <div>
+    <label>Date of Birth:</label>
+    <input type="date" name="date_of_birth" value={@author["date_of_birth"] || ""}>
+  </div>
+
+  <div>
+    <label>Country of Origin:</label>
+    <input type="text" name="country_of_origin" value={@author["country_of_origin"] || ""}>
+  </div>
+
+  <div>
+    <label>Short Description:</label>
+    <textarea name="description" required><%= @author["description"] %></textarea>
+  </div>
+
+  <div>
+    <button type="submit">Update</button>
+  </div>
+</form>

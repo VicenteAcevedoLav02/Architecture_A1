@@ -17,7 +17,7 @@ defmodule ArchitectureA1Web.Router do
   scope "/", ArchitectureA1Web do
     pipe_through :browser
 
-    get "/", PageController, :home
+    get "/", PageController, :index
     get "/books", BookController, :index
     get "/books/seed", BookController, :seed
 

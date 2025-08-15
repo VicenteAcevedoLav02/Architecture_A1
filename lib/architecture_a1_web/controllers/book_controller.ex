@@ -25,6 +25,39 @@ defmodule ArchitectureA1Web.BookController do
     )
   end
 
+  def edit(conn, %{"id" => id}) do
+    case Books.get_book_by_id(id) do
+      nil ->
+        conn
+        |> put_flash(:error, "Book not found")
+        |> redirect(to: ~p"/books")
+
+      book ->
+        authors = ArchitectureA1.Authors.get_all_authors()
+        render(conn, :edit, book: book, authors: authors)
+    end
+  end
+
+  def update(conn, %{"id" => id} = params) do
+    attrs = book_params(params)
+
+    Books.update_book(id, attrs)
+    |> handle_result(conn,
+      success_path: ~p"/books",
+      success_msg: "Book updated successfully",
+      error_path: ~p"/books/#{id}/edit"
+    )
+  end
+
+  def delete(conn, %{"id" => id}) do
+    Books.delete_book(id)
+    |> handle_result(conn,
+      success_path: ~p"/books",
+      success_msg: "Book deleted successfully",
+      error_path: ~p"/books"
+    )
+  end
+
   # Helpers
 
   defp book_params(params) do

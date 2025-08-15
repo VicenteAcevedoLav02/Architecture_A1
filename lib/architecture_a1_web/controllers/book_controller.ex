@@ -4,13 +4,41 @@ defmodule ArchitectureA1Web.BookController do
   alias ArchitectureA1.Books
 
   def index(conn, _params) do
-    books = Books.all_books()
+    books = Books.get_all_books()
     render(conn, :index, books: books)
   end
 
-  @spec seed(Plug.Conn.t(), any()) :: Plug.Conn.t()
-  def seed(conn, _params) do
-    Books.insert_sample_books
-    text(conn, "Base de datos poblada con libros de ejemplo.")
+  def new(conn, _params) do
+    render(conn, :new)
+  end
+
+  def create(conn, params) do
+    params
+    |> book_params()
+    |> Books.create_book()
+    |> handle_result(
+      conn,
+      success_path: ~p"/books",
+      success_msg: "Book created successfully.",
+      error_path: ~p"/books/new"
+    )
+  end
+
+  # Helpers
+
+  defp book_params(params) do
+    Map.drop(params, ["_csrf_token", "_method", "id"])
+  end
+
+  defp handle_result({:ok, _}, conn, opts) do
+    conn
+    |> put_flash(:info, opts[:success_msg])
+    |> redirect(to: opts[:success_path])
+  end
+
+  defp handle_result({:error, reason}, conn, opts) do
+    conn
+    |> put_flash(:error, "Error: #{inspect(reason)}")
+    |> redirect(to: opts[:error_path])
   end
 end

@@ -1,0 +1,29 @@
+<h1>New Book</h1>
+
+<form action={~p"/books"} method="post">
+  <input type="hidden" name="_csrf_token" value={Plug.CSRFProtection.get_csrf_token()}>
+
+  <div>
+    <label>Title:</label>
+    <input type="text" name="title" required>
+  </div>
+
+  <div>
+    <label>Publication Date:</label>
+    <input type="date" name="date_of_publication" required>
+  </div>
+
+  <div>
+    <label>Author ID:</label>
+    <input type="text" name="author_id" required>
+  </div>
+
+  <div>
+    <label>Summary:</label>
+    <textarea name="summary" required></textarea>
+  </div>
+
+  <div>
+    <button type="submit">Create</button>
+  </div>
+</form>

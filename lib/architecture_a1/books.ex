@@ -1,21 +1,19 @@
 defmodule ArchitectureA1.Books do
-  @moduledoc """
-  Technically the books controller (as we know it)
-  """
+  alias Mongo
 
-  def all_books do
-    Mongo.find(ArchitectureA1.Mongo, "books", %{}) |> Enum.to_list()
+  def get_all_books() do
+    Mongo.find(ArchitectureA1.Mongo, "books", %{})
+    |> Enum.map(fn doc ->
+      id = BSON.ObjectId.encode!(doc["_id"])
+      Map.put(doc, :id, id)
+      |> Map.delete("_id")
+    end)
   end
 
-  def insert_sample_books do
-    books = [
-      %{title: "Libro Chiara", author: "Chiara Romanini", year: 2001},
-      %{title: "Libro Vicho", author: "Vicente Acevedo", year: 2002},
-      %{title: "Libro Fabi", author: "Fabián Saavedra", year: 2002}
-    ]
-
-    Enum.each(books, fn book ->
-      Mongo.insert_one(ArchitectureA1.Mongo, "books", book)
-    end)
+  def create_book(attrs) do
+    {:ok, result} = Mongo.insert_one(ArchitectureA1.Mongo, "books", attrs)
+    {:ok, result}
+  rescue
+    e -> {:error, e}
   end
 end

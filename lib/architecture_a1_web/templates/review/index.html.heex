@@ -1,0 +1,37 @@
+<h1>Reviews de <%= @book["title"] %></h1>
+
+<p>
+  Puntaje promedio:
+  <%= if @avg do %>
+    <%= :erlang.float_to_binary(@avg, decimals: 2) %> / 5
+  <% else %>
+    Sin reviews
+  <% end %>
+</p>
+
+<h2>Lista</h2>
+<ul>
+<%= for r <- @reviews do %>
+  <li>
+    Puntaje: <%= r["score"] %>
+    &nbsp;|&nbsp; Upvotes: <%= r["upvotes"] || 0 %>
+
+    <form action={"/books/#{BSON.ObjectId.encode!(@book["_id"])}/reviews/#{BSON.ObjectId.encode!(r["_id"])}/upvote"} method="post" style="display:inline">
+      <input type="hidden" name="_csrf_token" value={Plug.CSRFProtection.get_csrf_token()} />
+      <button type="submit">+1</button>
+    </form>
+  </li>
+<% end %>
+</ul>
+
+<h2>Agregar review</h2>
+<form action={"/books/#{BSON.ObjectId.encode!(@book["_id"])}/reviews"} method="post">
+  <input type="hidden" name="_csrf_token" value={Plug.CSRFProtection.get_csrf_token()} />
+  <label>Puntaje (1–5):</label>
+  <select name="score">
+    <%= for s <- 1..5 do %>
+      <option value={s}><%= s %></option>
+    <% end %>
+  </select>
+  <button type="submit">Guardar</button>
+</form>

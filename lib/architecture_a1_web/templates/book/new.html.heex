@@ -9,18 +9,28 @@
   </div>
 
   <div>
-    <label>Publication Date:</label>
+    <label>Summary:</label>
+    <textarea name="summary" required></textarea>
+  </div>
+
+  <div>
+    <label>Date of Publication:</label>
     <input type="date" name="date_of_publication" required>
   </div>
 
   <div>
-    <label>Author ID:</label>
-    <input type="text" name="author_id" required>
+    <label>Number of sales:</label>
+    <input type="number" name="number_of_sales" min="0" step="1" required>
   </div>
 
   <div>
-    <label>Summary:</label>
-    <textarea name="summary" required></textarea>
+    <label>Author:</label>
+    <select name="author_id" required>
+      <option value="">-- Select an Author --</option>
+      <%= for author <- @authors do %>
+        <option value={author.id}><%= author["name"] %></option>
+      <% end %>
+    </select>
   </div>
 
   <div>

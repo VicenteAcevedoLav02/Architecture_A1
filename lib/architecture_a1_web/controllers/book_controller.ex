@@ -9,7 +9,8 @@ defmodule ArchitectureA1Web.BookController do
   end
 
   def new(conn, _params) do
-    render(conn, :new)
+    authors = ArchitectureA1.Authors.get_all_authors()
+    render(conn, :new, authors: authors)
   end
 
   def create(conn, params) do

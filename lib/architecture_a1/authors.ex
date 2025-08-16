@@ -1,5 +1,7 @@
 defmodule ArchitectureA1.Authors do
   alias Mongo
+  alias ArchitectureA1.Books
+  alias ArchitectureA1.Reviews
 
   def get_all_authors() do
     Mongo.find(ArchitectureA1.Mongo, "authors", %{})
@@ -63,6 +65,42 @@ defmodule ArchitectureA1.Authors do
     end
   rescue
     e -> {:error, e}
+  end
+
+  def list_authors_stats do
+    authors = get_all_authors()
+
+    Enum.map(authors, fn author ->
+      books =
+        Books.get_all_books()
+        |> Enum.filter(&(&1["author_id"] == author.id))
+
+        total_sales =
+          books
+          |> Enum.map(&String.to_integer(&1["number_of_sales"]))
+          |> Enum.sum()
+
+        all_scores =
+          books
+          |> Enum.flat_map(fn book ->
+            Reviews.list_by_book(book.id)
+            |> Enum.map(&(&1["score"] || &1[:score]))
+          end)
+
+        avg_score =
+          case all_scores do
+            [] -> nil
+            scores -> Enum.sum(scores) / length(scores)
+          end
+
+        %{
+          id: author.id,
+          name: author["name"] || author[:name],
+          books_count: length(books),
+          avg_score: avg_score,
+          total_sales: total_sales
+        }
+    end)
   end
 
 end

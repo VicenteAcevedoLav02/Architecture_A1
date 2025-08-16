@@ -56,6 +56,11 @@ defmodule ArchitectureA1Web.AuthorController do
     )
   end
 
+  def stats(conn, _params) do
+    authors_stats = Authors.list_authors_stats()
+    render(conn, :stats, authors_stats: authors_stats)
+  end
+
   defp author_params(params) do
     Map.drop(params, ["_csrf_token", "_method", "id"])
   end

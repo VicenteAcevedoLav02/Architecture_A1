@@ -24,6 +24,7 @@ defmodule ArchitectureA1Web.Router do
     get  "/books/:book_id/reviews",            ReviewController, :index
     post "/books/:book_id/reviews",            ReviewController, :create
     post "/books/:book_id/reviews/:id/upvote", ReviewController, :upvote
+    get "/authors/stats", AuthorController, :stats
     resources "/authors", AuthorController
     resources "/sales", SaleController
   end

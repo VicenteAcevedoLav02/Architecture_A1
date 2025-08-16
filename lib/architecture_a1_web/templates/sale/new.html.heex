@@ -1,0 +1,29 @@
+<h1>New Sale</h1>
+
+<form action={~p"/sales"} method="post">
+  <input type="hidden" name="_csrf_token" value={Plug.CSRFProtection.get_csrf_token()}>
+
+  <div>
+    <label>Book:</label>
+    <select name="book_id" required>
+      <option value="">-- Select a Book --</option>
+      <%= for book <- @books do %>
+        <option value={book.id}><%= book["title"] %></option>
+      <% end %>
+    </select>
+  </div>
+
+  <div>
+    <label>Year:</label>
+    <input type="number" name="year" min="1900" max="2100" step="1" required>
+  </div>
+
+  <div>
+    <label>Number of Sales:</label>
+    <input type="number" name="sales" min="0" step="1" required>
+  </div>
+
+  <div>
+    <button type="submit">Create</button>
+  </div>
+</form>

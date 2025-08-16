@@ -1,0 +1,30 @@
+<h1>Edit Sale</h1>
+
+<form action={~p"/sales/#{@sale.id}"} method="post">
+  <input type="hidden" name="_method" value="put">
+  <input type="hidden" name="_csrf_token" value={Plug.CSRFProtection.get_csrf_token()}>
+
+  <div>
+    <label>Book:</label>
+    <select name="book_id" required>
+      <option value="">-- Select a Book --</option>
+      <%= for book <- @books do %>
+        <option value={book.id} selected={book.id == @sale["book_id"]}><%= book["title"] %></option>
+      <% end %>
+    </select>
+  </div>
+
+  <div>
+    <label>Year:</label>
+    <input type="number" name="year" min="1900" max="2100" value={@sale["year"] || ""} required>
+  </div>
+
+  <div>
+    <label>Number of Sales:</label>
+    <input type="number" name="sales" min="0" step="1" value={@sale["sales"] || 0} required>
+  </div>
+
+  <div>
+    <button type="submit">Update</button>
+  </div>
+</form>

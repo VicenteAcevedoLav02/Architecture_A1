@@ -17,4 +17,11 @@
   <a href="/sales">
     <button style="padding: 0.5rem 1rem;">Ver Ventas</button>
   </a>
+
+  <form action="/seed" method="post" style="display:inline;">
+    <input type="hidden" name="_csrf_token" value={get_csrf_token()}>
+    <button style="padding: 0.5rem 1rem; background-color:#10B981; color:white;">
+      Seed Data
+    </button>
+  </form>
 </div>

@@ -1,37 +1,67 @@
-<h1>Reviews de <%= @book["title"] %></h1>
+<h1>Reviews para: <%= @book["title"] %></h1>
 
-<p>
-  Puntaje promedio:
-  <%= if @avg do %>
-    <%= :erlang.float_to_binary(@avg, decimals: 2) %> / 5
-  <% else %>
-    Sin reviews
-  <% end %>
-</p>
+<p><strong>Puntuación promedio:</strong> <%= if @avg, do: Float.round(@avg, 2), else: "No hay reviews aún" %></p>
 
-<h2>Lista</h2>
-<ul>
-<%= for r <- @reviews do %>
-  <li>
-    Puntaje: <%= r["score"] %>
-    &nbsp;|&nbsp; Upvotes: <%= r["upvotes"] || 0 %>
+<%= if Enum.empty?(@reviews) do %>
+  <p>No hay reviews registradas para este libro.</p>
+<% else %>
+  <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+    <thead style="background-color: #f2f2f2;">
+      <tr>
+        <th>Puntaje</th>
+        <th>Comentario</th>
+        <th>Upvotes</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= for review <- @reviews do %>
+        <tr>
+          <td style="text-align: center;"><%= review["score"] %> / 5</td>
+          <td><%= review["text"] || "Sin comentario" %></td>
+          <td style="text-align: center;"><%= review["upvotes"] || 0 %></td>
+          <td style="text-align: center;">
 
-    <form action={"/books/#{BSON.ObjectId.encode!(@book["_id"])}/reviews/#{BSON.ObjectId.encode!(r["_id"])}/upvote"} method="post" style="display:inline">
-      <input type="hidden" name="_csrf_token" value={Plug.CSRFProtection.get_csrf_token()} />
-      <button type="submit">+1</button>
-    </form>
-  </li>
+            <!-- Upvote -->
+            <form action={"/books/#{@book["_id"]}/reviews/#{review["_id"]}/upvote"} method="post" style="display:inline;">
+              <input type="hidden" name="_csrf_token" value={get_csrf_token()}>
+              <button type="submit">Upvote 👍</button>
+            </form>
+
+            <!-- Editar -->
+            <a href={"/books/#{@book["_id"]}/reviews/#{review["_id"]}/edit"} 
+               style="margin-left:5px; text-decoration:underline; color:#2563EB;">✏️ Edit</a>
+
+            <!-- Eliminar -->
+            <form action={"/books/#{@book["_id"]}/reviews/#{review["_id"]}"} method="post" style="display:inline; margin-left:5px;">
+              <input type="hidden" name="_csrf_token" value={get_csrf_token()}>
+              <input type="hidden" name="_method" value="delete">
+              <button type="submit" style="color:white; background-color:#DC2626; border:none; padding:3px 6px; border-radius:4px; cursor:pointer;">
+                🗑️ Delete
+              </button>
+            </form>
+
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 <% end %>
-</ul>
 
-<h2>Agregar review</h2>
-<form action={"/books/#{BSON.ObjectId.encode!(@book["_id"])}/reviews"} method="post">
-  <input type="hidden" name="_csrf_token" value={Plug.CSRFProtection.get_csrf_token()} />
-  <label>Puntaje (1–5):</label>
-  <select name="score">
-    <%= for s <- 1..5 do %>
-      <option value={s}><%= s %></option>
-    <% end %>
-  </select>
-  <button type="submit">Guardar</button>
+<h2>Agregar nueva review</h2>
+
+<form action={"/books/#{@book["_id"]}/reviews"} method="post">
+  <input type="hidden" name="_csrf_token" value={get_csrf_token()}>
+
+  <label for="score">Puntaje (1-5):</label>
+  <input type="number" name="score" min="1" max="5" required style="margin-left: 10px;">
+
+  <br><br>
+
+  <label for="text">Comentario:</label>
+  <textarea name="text" placeholder="Opcional" style="width: 100%; height: 80px;"></textarea>
+
+  <br><br>
+
+  <button type="submit" style="padding: 6px 12px;">Enviar review</button>
 </form>

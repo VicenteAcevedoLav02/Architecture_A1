@@ -58,6 +58,37 @@ defmodule ArchitectureA1Web.BookController do
     )
   end
 
+  def search(conn, params) do
+    query = Map.get(params, "query", "")
+    page =
+      case Map.get(params, "page", "1") do
+        page_str ->
+          case Integer.parse(page_str) do
+            {int, _} -> int
+            :error -> 1
+          end
+      end
+
+    if query == "" do
+      conn
+      |> put_flash(:info, "Please enter a search term.")
+      |> render(:search, search_results: [], query: "", page: 1)
+    else
+      case Books.search(query, page) do
+        {:ok, books} ->
+          render(conn, :search,
+            search_results: books,
+            query: query,
+            page: page
+          )
+        {:error, reason} ->
+          conn
+          |> put_flash(:error, "Error: #{inspect(reason)}")
+          |> redirect(to: ~p"/books/search")
+      end
+    end
+  end
+
   # Helpers
 
   defp book_params(params) do

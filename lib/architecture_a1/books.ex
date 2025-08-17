@@ -1,5 +1,6 @@
 defmodule ArchitectureA1.Books do
   alias Mongo
+  alias ArchitectureA1.Mongo, as: AppMongo
 
   def get_all_books() do
     Mongo.find(ArchitectureA1.Mongo, "books", %{})
@@ -69,5 +70,68 @@ defmodule ArchitectureA1.Books do
     oid = BSON.ObjectId.decode!(book_id_hex)
     Mongo.find_one(ArchitectureA1.Mongo, "books", %{_id: oid}) ||
       raise "Book not found"
+  end
+
+  def search(query, page \\ 1, page_size \\ 20) do
+    search_terms =
+      String.split(query, " ", trim: true)
+      |> Enum.reject(& &1 == "")
+
+    if Enum.empty?(search_terms) do
+      {:ok, []}
+    else
+      match_terms =
+        search_terms
+        |> Enum.map(fn term -> %{"summary" => %{"$regex" => term, "$options" => "i"}} end)
+
+      pipeline = [
+        %{"$match" => %{"$and" => match_terms}},
+        %{"$skip" => (page - 1) * page_size},
+        %{"$limit" => page_size}
+      ]
+
+      case Mongo.aggregate(AppMongo, "books", pipeline) do
+        {:ok, mongo_stream} ->
+          books = mongo_stream |> Enum.to_list()
+          authors = ArchitectureA1.Authors.get_all_authors()
+
+          authors_map =
+            authors
+            |> Enum.into(%{}, fn author ->
+              {(author[:id]), author}
+            end)
+
+          books_with_authors =
+            Enum.map(books, fn book ->
+              author_id = book["author_id"]
+              author = Map.get(authors_map, author_id)
+
+              author_name = if author, do: author["name"], else: "Unknown Author"
+              Map.put(book, "author_name", author_name)
+            end)
+
+          {:ok, books_with_authors}
+        %Mongo.Stream{} = mongo_stream ->
+          books = mongo_stream |> Enum.to_list()
+          authors = ArchitectureA1.Authors.get_all_authors()
+          authors_map =
+            authors
+            |> Enum.into(%{}, fn author ->
+              {(author[:id]), author}
+            end)
+
+          books_with_authors =
+            Enum.map(books, fn book ->
+              author_id = book["author_id"]
+              author = Map.get(authors_map, author_id)
+              author_name = if author, do: author["name"], else: "Unknown Author"
+              Map.put(book, "author_name", author_name)
+            end)
+
+          {:ok, books_with_authors}
+        {:error, reason} ->
+          {:error, reason}
+      end
+    end
   end
 end

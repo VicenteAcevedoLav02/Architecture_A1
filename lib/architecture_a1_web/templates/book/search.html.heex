@@ -1,0 +1,70 @@
+<h1>Search Books</h1>
+
+<div class="search-form">
+  <form action="/books/search" method="get">
+    <input type="text" name="query" value={@query} placeholder="Enter a search term..." />
+    <input type="submit" value="Search" />
+  </form>
+</div>
+
+<div class="search-results">
+  <%= if length(@search_results) > 0 do %>
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Summary</th>
+          <th>Published Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= for book <- @search_results do %>
+          <tr>
+            <td><%= book["title"] %></td>
+            <td><%= book["author_name"] %></td>
+            <td><%= book["summary"] %></td>
+            <td><%= book["date_of_publication"] %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <div class="pagination">
+      <%= if @page > 1 do %>
+        <a href={"/books/search?query=#{@query}&page=#{@page - 1}"}>Previous</a>
+      <% end %>
+
+      <span>Page <%= @page %></span>
+
+      <%= if length(@search_results) == 20 do %>
+        <a href={"/books/search?query=#{@query}&page=#{@page + 1}"}>Next</a>
+      <% end %>
+    </div>
+  <% else %>
+    <p>No books found. Try a different search.</p>
+  <% end %>
+</div>
+
+<style>
+  .search-form {
+    margin-bottom: 2rem;
+  }
+  .search-results table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+  }
+  .search-results th, .search-results td {
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    text-align: left;
+  }
+  .pagination {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+</style>

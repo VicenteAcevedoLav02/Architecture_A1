@@ -70,4 +70,13 @@ defmodule ArchitectureA1.Sales do
     Mongo.find_one(ArchitectureA1.Mongo, "sales", %{_id: oid}) ||
       raise "Sale not found"
   end
+
+  def get_sales_by_book(book_id) do
+    Mongo.find(ArchitectureA1.Mongo, "sales", %{"book_id" => book_id})
+    |> Enum.map(fn doc ->
+      id = BSON.ObjectId.encode!(doc["_id"])
+      Map.put(doc, :id, id)
+      |> Map.delete("_id")
+    end)
+  end
 end

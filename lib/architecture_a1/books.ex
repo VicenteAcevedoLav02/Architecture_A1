@@ -72,6 +72,28 @@ defmodule ArchitectureA1.Books do
       raise "Book not found"
   end
 
+  def recalculate_number_of_sales(book_id_hex) when is_binary(book_id_hex) do
+    sales = ArchitectureA1.Sales.get_sales_by_book(book_id_hex)
+
+    total =
+      sales
+      |> Enum.map(fn s ->
+        # cases cause the value may be int or str
+        case s["sales"] do
+          n when is_integer(n) -> n
+          n when is_binary(n) ->
+            case Integer.parse(n) do
+              {val, _rest} -> val
+              :error -> 0
+            end
+          _ -> 0
+        end
+      end)
+      |> Enum.sum()
+
+    update_book(book_id_hex, %{"number_of_sales" => total})
+  end
+
   def search(query, page \\ 1, page_size \\ 20) do
     search_terms =
       String.split(query, " ", trim: true)

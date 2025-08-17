@@ -1,0 +1,160 @@
+<!-- lib/architecture_a1_web/templates/review/home.html.heex -->
+
+<h1 style="text-align:center; color:#1F3B4D; margin-bottom: 20px;">
+  Top 10 Libros Mejor Calificados
+</h1>
+
+<div style="overflow-x:auto; padding: 0 20px; margin-bottom: 40px;">
+  <table style="width:100%; border-collapse: collapse; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: #F9FAFB; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border-radius:12px; overflow:hidden;">
+    <thead style="background-color: #1F3B4D; color: #FFFFFF;">
+      <tr>
+        <th style="padding:12px 15px;">Libro</th>
+        <th style="padding:12px 15px;">Autor</th>
+        <th style="padding:12px 15px;">Año</th>
+        <th style="padding:12px 15px;">Puntaje Promedio</th>
+        <th style="padding:12px 15px;">Mejor Review</th>
+        <th style="padding:12px 15px;">Peor Review</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= for entry <- @top_books do %>
+        <tr style="border-bottom: 1px solid #E5E7EB;">
+          <td style="padding:12px 15px; font-weight:bold; color:#1F3B4D;"><%= entry.book.title %></td>
+          <td style="padding:12px 15px; color:#374151;"><%= entry.book.author %></td>
+          <td style="padding:12px 15px; color:#374151;"><%= entry.book.year %></td>
+          <td style="padding:12px 15px; color:#10B981; font-weight:bold;"><%= Float.round(entry.avg_score, 2) %> / 5</td>
+          <td style="padding:12px 15px; color:#2563EB;">
+            <strong><%= entry.highest_review["score"] %> / 5</strong> - <%= entry.highest_review["text"] || "Sin comentario" %> (<%= entry.highest_review["upvotes"] || 0 %> 👍)
+          </td>
+          <td style="padding:12px 15px; color:#EF4444;">
+            <strong><%= entry.lowest_review["score"] %> / 5</strong> - <%= entry.lowest_review["text"] || "Sin comentario" %> (<%= entry.lowest_review["upvotes"] || 0 %> 👍)
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+
+<h1 style="text-align:center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color:#1F3B4D; margin-bottom: 20px;">
+  Todas las Reviews
+</h1>
+
+<div style="text-align: center; margin-bottom: 20px;">
+  <a href="/"
+     style="
+       background-color: #2563EB;
+       color: white;
+       padding: 10px 20px;
+       border-radius: 8px;
+       text-decoration: none;
+       font-weight: bold;
+       transition: background 0.3s;
+     "
+     onmouseover="this.style.backgroundColor='#1D4ED8';"
+     onmouseout="this.style.backgroundColor='#2563EB';"
+  >
+    Volver a Home
+  </a>
+</div>
+
+<div style="overflow-x:auto; padding: 0 20px;">
+  <table style="
+      width: 100%;
+      border-collapse: collapse;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background-color: #F9FAFB;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      border-radius: 12px;
+      overflow: hidden;
+    ">
+    <thead style="background-color: #1F3B4D; color: #FFFFFF;">
+      <tr>
+        <th style="padding: 12px 15px;">Libro</th>
+        <th style="padding: 12px 15px;">Autor</th>
+        <th style="padding: 12px 15px;">Año</th>
+        <th style="padding: 12px 15px;">Puntaje</th>
+        <th style="padding: 12px 15px;">Comentario</th>
+        <th style="padding: 12px 15px;">Upvotes</th>
+        <th style="padding: 12px 15px;">Acciones</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= for review <- @reviews do %>
+        <tr style="border-bottom: 1px solid #E5E7EB; transition: background 0.3s;"
+            onmouseover="this.style.backgroundColor='#E8F0FE';"
+            onmouseout="this.style.backgroundColor='transparent';">
+          <td style="padding: 12px 15px; font-weight: bold; color:#1F3B4D;">
+            <%= review[:book][:title] %>
+          </td>
+          <td style="padding: 12px 15px; color:#374151;"><%= review[:book]["author"] %></td>
+          <td style="padding: 12px 15px; color:#374151;"><%= review[:book]["year"] %></td>
+          <td style="padding: 12px 15px; color:#10B981; font-weight:bold;"><%= review["score"] %> / 5</td>
+          <td style="padding: 12px 15px; color:#4B5563;"><%= review["text"] || "Sin comentario" %></td>
+          <td style="padding: 12px 15px; color:#1F3B4D; font-weight:bold;"><%= review["upvotes"] %></td>
+          <td style="padding: 12px 15px; display: flex; justify-content: center; gap: 5px;">
+
+            <!-- Upvote -->
+            <form action={"/books/#{review["book_id"]}/reviews/#{BSON.ObjectId.encode!(review["_id"])}/upvote"} method="post" style="display:inline;">
+              <input type="hidden" name="_csrf_token" value={get_csrf_token()}>
+              <button type="submit" style="
+                  background-color: #2563EB;
+                  color: white;
+                  border: none;
+                  padding: 6px 12px;
+                  border-radius: 6px;
+                  font-weight: bold;
+                  cursor: pointer;
+                  transition: background 0.3s;
+                "
+                onmouseover="this.style.backgroundColor='#1D4ED8';" 
+                onmouseout="this.style.backgroundColor='#2563EB';"
+              >
+                👍 Upvote
+              </button>
+            </form>
+
+            <!-- Edit -->
+            <a href={"/books/#{review["book_id"]}/reviews/#{BSON.ObjectId.encode!(review["_id"])}/edit"} style="
+                background-color: #3B82F6;
+                color: white;
+                padding: 6px 12px;
+                border-radius: 6px;
+                text-decoration: none;
+                font-weight: bold;
+                transition: background 0.3s;
+              "
+              onmouseover="this.style.backgroundColor='#1E40AF';"
+              onmouseout="this.style.backgroundColor='#3B82F6';"
+            >✏️ Edit</a>
+
+            <!-- Delete -->
+            <form action={"/books/#{review["book_id"]}/reviews/#{BSON.ObjectId.encode!(review["_id"])}"} method="post" style="display:inline;">
+              <input type="hidden" name="_method" value="delete">
+              <input type="hidden" name="_csrf_token" value={get_csrf_token()}>
+              <button type="submit" style="
+                  background-color: #EF4444;
+                  color: white;
+                  border: none;
+                  padding: 6px 12px;
+                  border-radius: 6px;
+                  font-weight: bold;
+                  cursor: pointer;
+                  transition: background 0.3s;
+                "
+                onmouseover="this.style.backgroundColor='#B91C1C';"
+                onmouseout="this.style.backgroundColor='#EF4444';"
+              >🗑️ Delete</button>
+            </form>
+
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+<p style="text-align:center; margin-top: 30px; color:#6B7280; font-size:14px;">
+  Diseñado con ❤️ por el equipo de ArchitectureA1 para ofrecer la experiencia profesional más elegante y moderna posible.
+</p>

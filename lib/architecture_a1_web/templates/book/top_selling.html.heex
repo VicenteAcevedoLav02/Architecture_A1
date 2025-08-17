@@ -1,0 +1,28 @@
+<h1>Top 50 Selling Books of All Time</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Total Sales (Book)</th>
+      <th>Total Sales (Author)</th>
+      <th>Top 5 in Year of Publication?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= for book <- @top_books do %>
+      <tr>
+        <td><%= book.title %></td>
+        <td><%= book.number_of_sales %></td>
+        <td><%= book.author_total_sales %></td>
+        <td>
+          <%= if book.top5_in_year? do %>
+            ✅
+          <% else %>
+            ❌
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

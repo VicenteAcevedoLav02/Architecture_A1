@@ -92,4 +92,58 @@ defmodule ArchitectureA1.Books do
 
     update_book(book_id_hex, %{"number_of_sales" => total})
   end
+
+  def top_selling_books() do
+    # 1. Traemos todos los libros
+    books = get_all_books()
+
+    # 2. Ordenamos y nos quedamos con los top 50
+    top_books =
+      books
+      |> Enum.sort_by(fn b ->
+        case b["number_of_sales"] do
+          n when is_integer(n) -> n
+          n when is_binary(n) ->
+            case Integer.parse(n) do
+              {val, _} -> val
+              :error -> 0
+            end
+          _ -> 0
+        end
+      end, :desc)
+      |> Enum.take(50)
+
+    # 3. Calculamos total de ventas por autor
+    authors_stats = ArchitectureA1.Authors.list_authors_stats()
+
+    # 4. Marcamos si el libro estuvo en el top 5 el año de publicación
+    Enum.map(top_books, fn book ->
+      year =
+        case book["date_of_publication"] do
+          nil -> nil
+          date when is_binary(date) ->
+            String.slice(date, 0, 4) # "2025-08-13" -> "2025"
+          _ -> nil
+        end
+
+      # Buscamos en la colección sales
+      top_5_for_year =
+        ArchitectureA1.Sales.get_top_n_by_year(year, 5)
+        |> Enum.map(& &1["book_id"])
+
+      author_total =
+        case Enum.find(authors_stats, fn a -> a.id == book["author_id"] end) do
+          nil -> 0
+          a -> a.total_sales
+        end
+
+      %{
+        id: book.id,
+        title: book["title"],
+        number_of_sales: book["number_of_sales"],
+        author_total_sales: author_total,
+        top5_in_year?: book.id in top_5_for_year
+      }
+    end)
+  end
 end

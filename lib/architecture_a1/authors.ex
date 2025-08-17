@@ -77,7 +77,13 @@ defmodule ArchitectureA1.Authors do
 
         total_sales =
           books
-          |> Enum.map(&String.to_integer(&1["number_of_sales"]))
+          |> Enum.map(fn b ->
+            case b["number_of_sales"] do
+              n when is_integer(n) -> n
+              n when is_binary(n) -> String.to_integer(n)
+              _ -> 0
+            end
+          end)
           |> Enum.sum()
 
         all_scores =

@@ -79,4 +79,27 @@ defmodule ArchitectureA1.Sales do
       |> Map.delete("_id")
     end)
   end
+
+  def get_top_n_by_year(year, n) do
+    pipeline = [
+      %{"$match" => %{"year" => year}},
+      %{"$addFields" => %{"sales_int" => %{"$toInt" => "$sales"}}},
+      %{"$group" => %{
+          "_id" => "$book_id",
+          "total_sales" => %{"$sum" => "$sales_int"}
+      }},
+      %{"$sort" => %{"total_sales" => -1}},
+      %{"$limit" => n}
+    ]
+
+    ArchitectureA1.Mongo
+    |> Mongo.aggregate("sales", pipeline, [])
+    |> Enum.to_list()
+    |> Enum.map(fn doc ->
+      %{
+        "book_id" => doc["_id"],
+        "total_sales" => doc["total_sales"]
+      }
+    end)
+  end
 end

@@ -20,7 +20,7 @@ defmodule ArchitectureA1Web.Router do
     get "/", PageController, :index
 
     get "/books/search", BookController, :search
-
+    get "/books/top_selling", BookController, :top_selling
     resources "/books", BookController
     post "/seed", SeedController, :seed_data
     get  "/books/:book_id/reviews",            ReviewController, :index

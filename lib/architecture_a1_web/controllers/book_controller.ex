@@ -89,6 +89,11 @@ defmodule ArchitectureA1Web.BookController do
     end
   end
 
+  def top_selling(conn, _params) do
+    top_books = Books.top_selling_books()
+    render(conn, :top_selling, top_books: top_books)
+  end
+
   # Helpers
 
   defp book_params(params) do

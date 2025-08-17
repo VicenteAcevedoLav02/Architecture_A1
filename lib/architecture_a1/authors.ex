@@ -77,11 +77,11 @@ defmodule ArchitectureA1.Authors do
 
         total_sales =
           books
-          |> Enum.map(fn book ->
-            case book["number_of_sales"] do
-              nil -> 0
+          |> Enum.map(fn b ->
+            case b["number_of_sales"] do
               n when is_integer(n) -> n
-              s when is_binary(s) -> String.to_integer(s)
+              n when is_binary(n) -> String.to_integer(n)
+              _ -> 0
             end
           end)
           |> Enum.sum()

@@ -1,0 +1,71 @@
+<div class="p-8">
+  <div class="flex flex-col sm:flex-row justify-between items-center mb-6">
+    <h1 class="text-3xl font-bold text-gray-800 mb-6 text-center">Search Books</h1>
+    <div class="flex flex-col sm:flex-row gap-4">
+      <a href="/" class="px-6 py-3 bg-gray-200 text-gray-700 font-semibold rounded-xl hover:bg-gray-300 transition-colors duration-300 shadow-md">
+        Back Home
+      </a>
+      <a href="/books" class="px-6 py-3 bg-gray-200 text-gray-700 font-semibold rounded-xl hover:bg-gray-300 transition-colors duration-300 shadow-md">
+        Back to Books
+      </a>
+    </div>
+  </div>
+
+  <div class="max-w-xl mx-auto mb-8 bg-white p-6 rounded-xl shadow-md">
+    <form action="/books/search" method="get" class="flex gap-4 items-center">
+      <input 
+        type="text" 
+        name="query" 
+        value={@query} 
+        placeholder="Enter a search term..." 
+        class="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-300" 
+      />
+      <input 
+        type="submit" 
+        value="Search" 
+        class="px-6 py-3 bg-indigo-600 text-white font-semibold rounded-xl hover:bg-indigo-700 transition-colors duration-300 shadow-md cursor-pointer"
+      />
+    </form>
+  </div>
+
+  <div class="search-results">
+    <%= if length(@search_results) > 0 do %>
+      <div class="overflow-x-auto rounded-xl border border-gray-200 shadow-lg">
+        <table class="min-w-full divide-y divide-gray-200">
+          <thead class="bg-gray-50">
+            <tr>
+              <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Title</th>
+              <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Author</th>
+              <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Summary</th>
+              <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Published Date</th>
+            </tr>
+          </thead>
+          <tbody class="bg-white divide-y divide-gray-200">
+            <%= for book <- @search_results do %>
+              <tr class="hover:bg-gray-100 transition-colors duration-200">
+                <td class="px-6 py-4 whitespace-normal text-sm font-medium text-gray-900"><%= book["title"] %></td>
+                <td class="px-6 py-4 whitespace-normal text-sm text-gray-500"><%= book["author_name"] %></td>
+                <td class="px-6 py-4 whitespace-normal text-sm text-gray-500"><%= book["summary"] %></td>
+                <td class="px-6 py-4 whitespace-normal text-sm text-gray-500"><%= book["date_of_publication"] %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="flex justify-center items-center gap-4 mt-6">
+        <%= if @page > 1 do %>
+          <a href={"/books/search?query=#{@query}&page=#{@page - 1}"} class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300">Previous</a>
+        <% end %>
+
+        <span class="text-gray-600">Page <%= @page %></span>
+
+        <%= if length(@search_results) == 20 do %>
+          <a href={"/books/search?query=#{@query}&page=#{@page + 1}"} class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300">Next</a>
+        <% end %>
+      </div>
+    <% else %>
+      <p class="text-center text-gray-500 text-lg">No books found. Try a different search.</p>
+    <% end %>
+  </div>
+</div>

@@ -65,8 +65,6 @@ defmodule ArchitectureA1Web.ReviewController do
       Map.put(review, :book, book)
     end)
 
-    IO.inspect(top_books, label: "TOP BOOKS")
-
     render(conn, :home, reviews: reviews_with_books, top_books: top_books)
   end
 

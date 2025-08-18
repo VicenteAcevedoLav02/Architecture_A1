@@ -28,12 +28,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     currentSort = { column: columnIndex, asc };
 
-    document.querySelectorAll("#authors-stats-table th").forEach(th => {
-      th.classList.remove("sorted-asc", "sorted-desc");
+    document.querySelectorAll("#authors-stats-table th").forEach((th, idx) => {
+      const arrowSpan = th.querySelector("span");
+      if (idx === columnIndex) {
+        arrowSpan.textContent = asc ? "▲" : "▼";
+      } else {
+        arrowSpan.textContent = "▲";
+      }
     });
-
-    const currentHeader = document.querySelectorAll("#authors-stats-table th")[columnIndex];
-    currentHeader.classList.add(asc ? "sorted-asc" : "sorted-desc");
 
     render(sorted);
   }

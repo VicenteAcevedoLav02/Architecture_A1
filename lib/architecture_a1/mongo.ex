@@ -1,7 +1,7 @@
 defmodule ArchitectureA1.Mongo do
   def start_link(_opts \\ []) do
     Mongo.start_link(
-      url: "mongodb://localhost:27017/architecture_a1",
+      url: "mongodb://mongo:27017/architecture_a1",
       name: __MODULE__
     )
   end

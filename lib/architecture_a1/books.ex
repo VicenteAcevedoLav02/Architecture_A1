@@ -199,6 +199,7 @@ defmodule ArchitectureA1.Books do
 
       %{
         id: book.id,
+        author_id: book["author_id"],
         title: book["title"],
         number_of_sales: book["number_of_sales"],
         author_total_sales: author_total,

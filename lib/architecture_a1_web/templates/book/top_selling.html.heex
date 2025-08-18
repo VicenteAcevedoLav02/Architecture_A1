@@ -13,8 +13,8 @@
     <%= for book <- @top_books do %>
       <tr>
         <td><%= book.title %></td>
-        <td><%= book.number_of_sales %></td>
-        <td><%= book.author_total_sales %></td>
+        <td><%= book["number_of_sales"] || 0 %></td>
+        <td><%= book["author_total_sales"] %></td>
         <td>
           <%= if book.top5_in_year? do %>
             ✅

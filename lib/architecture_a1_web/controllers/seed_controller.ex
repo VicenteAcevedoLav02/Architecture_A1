@@ -39,8 +39,8 @@ defmodule ArchitectureA1Web.SeedController do
       summary = "Summary for #{title}"
 
       date_of_publication =
-        ~D[2015-01-01]
-        |> Date.add(:rand.uniform(365*10))
+        ~D[2020-01-01]
+        |> Date.add(:rand.uniform(365*5))
         |> Date.to_iso8601()
 
       author_id =

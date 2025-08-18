@@ -1,160 +1,90 @@
-<!-- lib/architecture_a1_web/templates/review/home.html.heex -->
+<div class="p-8">
+  <div class="flex flex-col sm:flex-row justify-between items-center mb-6">
+    <h1 class="text-3xl font-bold text-gray-800 mb-4 sm:mb-0">Top 10 Best Rated Books</h1>
+    <div class="flex flex-col sm:flex-row gap-4">
+      <a href="/" class="px-6 py-3 bg-gray-200 text-gray-700 font-semibold rounded-xl hover:bg-gray-300 transition-colors duration-300 shadow-md">
+        Back Home
+      </a>
+    </div>
+  </div>
 
-<h1 style="text-align:center; color:#1F3B4D; margin-bottom: 20px;">
-  Top 10 Libros Mejor Calificados
-</h1>
-
-<div style="overflow-x:auto; padding: 0 20px; margin-bottom: 40px;">
-  <table style="width:100%; border-collapse: collapse; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: #F9FAFB; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border-radius:12px; overflow:hidden;">
-    <thead style="background-color: #1F3B4D; color: #FFFFFF;">
-      <tr>
-        <th style="padding:12px 15px;">Libro</th>
-        <th style="padding:12px 15px;">Autor</th>
-        <th style="padding:12px 15px;">Año</th>
-        <th style="padding:12px 15px;">Puntaje Promedio</th>
-        <th style="padding:12px 15px;">Mejor Review</th>
-        <th style="padding:12px 15px;">Peor Review</th>
-      </tr>
-    </thead>
-    <tbody>
-      <%= for entry <- @top_books do %>
-        <tr style="border-bottom: 1px solid #E5E7EB;">
-          <td style="padding:12px 15px; font-weight:bold; color:#1F3B4D;"><%= entry.book.title %></td>
-          <td style="padding:12px 15px; color:#374151;"><%= entry.book.author %></td>
-          <td style="padding:12px 15px; color:#374151;"><%= entry.book.year %></td>
-          <td style="padding:12px 15px; color:#10B981; font-weight:bold;"><%= Float.round(entry.avg_score, 2) %> / 5</td>
-          <td style="padding:12px 15px; color:#2563EB;">
-            <strong><%= entry.highest_review["score"] %> / 5</strong> - <%= entry.highest_review["text"] || "Sin comentario" %> (<%= entry.highest_review["upvotes"] || 0 %> 👍)
-          </td>
-          <td style="padding:12px 15px; color:#EF4444;">
-            <strong><%= entry.lowest_review["score"] %> / 5</strong> - <%= entry.lowest_review["text"] || "Sin comentario" %> (<%= entry.lowest_review["upvotes"] || 0 %> 👍)
-          </td>
+  <div class="overflow-x-auto rounded-xl border border-gray-200 shadow-lg mb-8">
+    <table class="min-w-full divide-y divide-gray-200">
+      <thead class="bg-gray-50">
+        <tr>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Book</th>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Author</th>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Average Score</th>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Best Review</th>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Worst Review</th>
         </tr>
-      <% end %>
-    </tbody>
-  </table>
-</div>
+      </thead>
+      <tbody class="bg-white divide-y divide-gray-200">
+        <%= for entry <- @top_books do %>
+          <tr class="hover:bg-gray-100 transition-colors duration-200">
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-bold text-gray-900"><%= entry.book.title %></td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"><%= entry.book.author %></td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"><%= entry.book.year %></td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-bold text-green-600"><%= Float.round(entry.avg_score, 2) %> / 5</td>
+            <td class="px-6 py-4 whitespace-normal text-sm text-blue-600">
+              <strong><%= entry.highest_review["score"] %> / 5</strong> - <%= entry.highest_review["text"] || "No comment" %> (<%= entry.highest_review["upvotes"] || 0 %> 👍)
+            </td>
+            <td class="px-6 py-4 whitespace-normal text-sm text-red-600">
+              <strong><%= entry.lowest_review["score"] %> / 5</strong> - <%= entry.lowest_review["text"] || "No comment" %> (<%= entry.lowest_review["upvotes"] || 0 %> 👍)
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
 
+  <h2 class="text-2xl font-bold text-gray-800 mb-6 mt-12">All Reviews</h2>
 
-<h1 style="text-align:center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color:#1F3B4D; margin-bottom: 20px;">
-  Todas las Reviews
-</h1>
-
-<div style="text-align: center; margin-bottom: 20px;">
-  <a href="/"
-     style="
-       background-color: #2563EB;
-       color: white;
-       padding: 10px 20px;
-       border-radius: 8px;
-       text-decoration: none;
-       font-weight: bold;
-       transition: background 0.3s;
-     "
-     onmouseover="this.style.backgroundColor='#1D4ED8';"
-     onmouseout="this.style.backgroundColor='#2563EB';"
-  >
-    Volver a Home
-  </a>
-</div>
-
-<div style="overflow-x:auto; padding: 0 20px;">
-  <table style="
-      width: 100%;
-      border-collapse: collapse;
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      background-color: #F9FAFB;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      border-radius: 12px;
-      overflow: hidden;
-    ">
-    <thead style="background-color: #1F3B4D; color: #FFFFFF;">
-      <tr>
-        <th style="padding: 12px 15px;">Libro</th>
-        <th style="padding: 12px 15px;">Autor</th>
-        <th style="padding: 12px 15px;">Año</th>
-        <th style="padding: 12px 15px;">Puntaje</th>
-        <th style="padding: 12px 15px;">Comentario</th>
-        <th style="padding: 12px 15px;">Upvotes</th>
-        <th style="padding: 12px 15px;">Acciones</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <%= for review <- @reviews do %>
-        <tr style="border-bottom: 1px solid #E5E7EB; transition: background 0.3s;"
-            onmouseover="this.style.backgroundColor='#E8F0FE';"
-            onmouseout="this.style.backgroundColor='transparent';">
-          <td style="padding: 12px 15px; font-weight: bold; color:#1F3B4D;">
-            <%= review[:book][:title] %>
-          </td>
-          <td style="padding: 12px 15px; color:#374151;"><%= review[:book]["author"] %></td>
-          <td style="padding: 12px 15px; color:#374151;"><%= review[:book]["year"] %></td>
-          <td style="padding: 12px 15px; color:#10B981; font-weight:bold;"><%= review["score"] %> / 5</td>
-          <td style="padding: 12px 15px; color:#4B5563;"><%= review["text"] || "Sin comentario" %></td>
-          <td style="padding: 12px 15px; color:#1F3B4D; font-weight:bold;"><%= review["upvotes"] %></td>
-          <td style="padding: 12px 15px; display: flex; justify-content: center; gap: 5px;">
-
-            <!-- Upvote -->
-            <form action={"/books/#{review["book_id"]}/reviews/#{BSON.ObjectId.encode!(review["_id"])}/upvote"} method="post" style="display:inline;">
-              <input type="hidden" name="_csrf_token" value={get_csrf_token()}>
-              <button type="submit" style="
-                  background-color: #2563EB;
-                  color: white;
-                  border: none;
-                  padding: 6px 12px;
-                  border-radius: 6px;
-                  font-weight: bold;
-                  cursor: pointer;
-                  transition: background 0.3s;
-                "
-                onmouseover="this.style.backgroundColor='#1D4ED8';" 
-                onmouseout="this.style.backgroundColor='#2563EB';"
-              >
-                👍 Upvote
-              </button>
-            </form>
-
-            <!-- Edit -->
-            <a href={"/books/#{review["book_id"]}/reviews/#{BSON.ObjectId.encode!(review["_id"])}/edit"} style="
-                background-color: #3B82F6;
-                color: white;
-                padding: 6px 12px;
-                border-radius: 6px;
-                text-decoration: none;
-                font-weight: bold;
-                transition: background 0.3s;
-              "
-              onmouseover="this.style.backgroundColor='#1E40AF';"
-              onmouseout="this.style.backgroundColor='#3B82F6';"
-            >✏️ Edit</a>
-
-            <!-- Delete -->
-            <form action={"/books/#{review["book_id"]}/reviews/#{BSON.ObjectId.encode!(review["_id"])}"} method="post" style="display:inline;">
-              <input type="hidden" name="_method" value="delete">
-              <input type="hidden" name="_csrf_token" value={get_csrf_token()}>
-              <button type="submit" style="
-                  background-color: #EF4444;
-                  color: white;
-                  border: none;
-                  padding: 6px 12px;
-                  border-radius: 6px;
-                  font-weight: bold;
-                  cursor: pointer;
-                  transition: background 0.3s;
-                "
-                onmouseover="this.style.backgroundColor='#B91C1C';"
-                onmouseout="this.style.backgroundColor='#EF4444';"
-              >🗑️ Delete</button>
-            </form>
-
-          </td>
+  <div class="overflow-x-auto rounded-xl border border-gray-200 shadow-lg mb-8">
+    <table class="min-w-full divide-y divide-gray-200">
+      <thead class="bg-gray-50">
+        <tr>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Book</th>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Author</th>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Score</th>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Comment</th>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Upvotes</th>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
         </tr>
-      <% end %>
-    </tbody>
-  </table>
+      </thead>
+      <tbody class="bg-white divide-y divide-gray-200">
+        <%= for review <- @reviews do %>
+          <tr class="hover:bg-gray-100 transition-colors duration-200">
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-bold text-gray-900"><%= review[:book]["title"] %></td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"><%= review[:book][:author_name] %></td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"><%= review[:book]["date_of_publication"] %></td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-bold text-green-600"><%= review["score"] %> / 5</td>
+            <td class="px-6 py-4 whitespace-normal text-sm text-gray-500"><%= review["text"] || "No comment" %></td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-bold text-gray-900"><%= review["upvotes"] %></td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium flex gap-2">
+              <form action={~p"/books/#{to_string(review["book_id"])}/reviews/#{to_string(review["_id"])}/upvote"} method="post" class="inline">
+                <input type="hidden" name="_csrf_token" value={Plug.CSRFProtection.get_csrf_token()}>
+                <button type="submit" class="text-blue-600 hover:text-blue-900 font-semibold">
+                  👍 Upvote
+                </button>
+              </form>
+              <a href={~p"/books/#{to_string(review["book_id"])}/reviews/#{to_string(review["_id"])}/edit"} class="text-blue-600 hover:text-blue-900">
+                ✏️ Edit
+              </a>
+              <form action={~p"/books/#{to_string(review["book_id"])}/reviews/#{to_string(review["_id"])}"} method="post" class="inline">
+                <input type="hidden" name="_method" value="delete">
+                <input type="hidden" name="_csrf_token" value={Plug.CSRFProtection.get_csrf_token()}>
+                <button type="submit" onclick="return confirm('Are you sure you want to delete this review?');"
+                  class="text-red-600 hover:text-red-900 cursor-pointer">
+                  🗑️ Delete
+                </button>
+              </form>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
 </div>
-
-<p style="text-align:center; margin-top: 30px; color:#6B7280; font-size:14px;">
-  Diseñado con ❤️ por el equipo de ArchitectureA1 para ofrecer la experiencia profesional más elegante y moderna posible.
-</p>

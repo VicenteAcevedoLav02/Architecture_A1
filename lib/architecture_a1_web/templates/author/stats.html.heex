@@ -1,92 +1,56 @@
-<h1>Authors Stats</h1>
+<div class="p-8">
+  <div class="flex flex-col sm:flex-row justify-between items-center mb-6">
+    <h1 class="text-3xl font-bold text-gray-800 mb-6 text-center">Authors Stats</h1>
+    <div class="flex flex-col sm:flex-row gap-4">
+      <a href="/" class="px-6 py-3 bg-gray-200 text-gray-700 font-semibold rounded-xl hover:bg-gray-300 transition-colors duration-300 shadow-md">
+        Back Home
+      </a>
+      <a href="/authors" class="px-6 py-3 bg-gray-200 text-gray-700 font-semibold rounded-xl hover:bg-gray-300 transition-colors duration-300 shadow-md">
+        Back to Authors
+      </a>
+    </div>
+  </div>
 
-<table id="authors-stats-table">
-  <thead>
-    <tr>
-      <th id="th-author">
-        Author
-        <input type="text" id="filter-author" placeholder="Filter authors...">
-      </th>
-      <th id="th-books">
-        Published Books
-        <input type="number" id="filter-books" placeholder="Min books">
-      </th>
-      <th id="th-avg-score">
-        Average Score
-        <input type="number" id="filter-score" placeholder="Min score">
-      </th>
-      <th id="th-total-sales">
-        Total Sales
-        <input type="number" id="filter-sales" placeholder="Min sales">
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <%= for author <- @authors_stats do %>
-      <tr>
-        <td><%= author.name %></td>
-        <td><%= author.books_count %></td>
-        <td>
-          <%= if author.avg_score, do: Float.round(author.avg_score, 2), else: "-" %>
-        </td>
-        <td><%= author.total_sales %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<style>
-  table {
-    border-collapse: collapse;
-    width: 100%;
-    margin-top: 1rem;
-  }
-
-  th, td {
-    border: 1px solid #ccc;
-    padding: 0.5rem;
-    text-align: left;
-    vertical-align: top;
-  }
-
-  th {
-    background-color: #f5f5f5;
-    position: relative;
-    cursor: pointer;
-    padding-right: 25px;
-  }
-
-  tr:nth-child(even) {
-    background-color: #fafafa;
-  }
-
-  th input {
-    display: block;
-    margin-top: 0.3rem;
-    width: 95%;
-    font-size: 0.8rem;
-    padding: 0.2rem;
-  }
-
-  th::after {
-    content: "▲";
-    position: absolute;
-    right: 8px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #ccc;
-    font-size: 0.8em;
-    transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
-  }
-
-  th.sorted-desc::after {
-    transform: translateY(-50%) rotate(180deg);
-  }
-
-  th.sorted-asc::after,
-  th.sorted-desc::after {
-    color: #000;
-  }
-</style>
+  <div class="overflow-x-auto rounded-xl border border-gray-200 shadow-lg">
+    <table id="authors-stats-table" class="min-w-full divide-y divide-gray-200">
+      <thead class="bg-gray-50">
+        <tr>
+          <th id="th-author" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider relative cursor-pointer">
+            Author
+            <input type="text" id="filter-author" placeholder="Filter authors..." class="block mt-1 w-11/12 p-1 text-sm border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-indigo-500">
+            <span class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm transition-transform duration-200">▲</span>
+          </th>
+          <th id="th-books" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider relative cursor-pointer">
+            Published Books
+            <input type="number" id="filter-books" placeholder="Min books" class="block mt-1 w-11/12 p-1 text-sm border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-indigo-500">
+            <span class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm transition-transform duration-200">▲</span>
+          </th>
+          <th id="th-avg-score" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider relative cursor-pointer">
+            Average Score
+            <input type="number" id="filter-score" placeholder="Min score" class="block mt-1 w-11/12 p-1 text-sm border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-indigo-500">
+            <span class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm transition-transform duration-200">▲</span>
+          </th>
+          <th id="th-total-sales" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider relative cursor-pointer">
+            Total Sales
+            <input type="number" id="filter-sales" placeholder="Min sales" class="block mt-1 w-11/12 p-1 text-sm border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-indigo-500">
+            <span class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm transition-transform duration-200">▲</span>
+          </th>
+        </tr>
+      </thead>
+      <tbody class="bg-white divide-y divide-gray-200">
+        <%= for author <- @authors_stats do %>
+          <tr class="hover:bg-gray-100 transition-colors duration-200">
+            <td class="px-6 py-4 whitespace-normal text-sm font-medium text-gray-900"><%= author.name %></td>
+            <td class="px-6 py-4 whitespace-normal text-sm text-gray-500"><%= author.books_count %></td>
+            <td class="px-6 py-4 whitespace-normal text-sm text-gray-500">
+              <%= if author.avg_score, do: Float.round(author.avg_score, 2), else: "-" %>
+            </td>
+            <td class="px-6 py-4 whitespace-normal text-sm text-gray-500"><%= author.total_sales %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
 
 <script src={~p"/assets/js/authors_stats.js"}></script>

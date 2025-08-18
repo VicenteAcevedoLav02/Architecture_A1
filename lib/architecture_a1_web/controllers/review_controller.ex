@@ -3,6 +3,7 @@ defmodule ArchitectureA1Web.ReviewController do
 
   alias ArchitectureA1.Books
   alias ArchitectureA1.Reviews
+  alias ArchitectureA1.Authors
 
   # /books/:book_id/reviews (GET)
   def index(conn, %{"book_id" => book_id}) do
@@ -18,22 +19,25 @@ defmodule ArchitectureA1Web.ReviewController do
     with {score_int, ""} <- Integer.parse(score_param),
          true <- score_int in 1..5,
          {:ok, _} <- Reviews.create(book_id, score_int, text) do
-      redirect(conn, to: "/books/#{book_id}/reviews")
+          conn
+          |> put_flash(:info, "Review created successfully.")
+          |> redirect(to: "/books/#{book_id}/reviews")
+
     else
       :error ->
         conn
-        |> put_status(400)
-        |> text("Score inválido (debe ser un número entero entre 1 y 5)")
+        |> put_flash(:error, "Error creating review.")
+        |> redirect(to: "/books/#{book_id}/reviews")
 
       false ->
         conn
-        |> put_status(400)
-        |> text("Score fuera de rango (1..5)")
+        |> put_flash(:error, "Error creating review.")
+        |> redirect(to: "/books/#{book_id}/reviews")
 
       {:error, reason} ->
         conn
-        |> put_status(500)
-        |> text("No se pudo crear la review: #{inspect(reason)}")
+        |> put_flash(:error, "Error creating review.")
+        |> redirect(to: "/books/#{book_id}/reviews")
     end
   end
 
@@ -45,13 +49,19 @@ defmodule ArchitectureA1Web.ReviewController do
 
   # Devuelve todas las reviews de todos los libros
   def all_reviews(conn, _params) do
+    authors = Authors.get_all_authors()
     books = Books.get_all_books()
     reviews = Reviews.list_all()
-    top_books = Reviews.top_rated_books(10)  # nueva función que definimos antes
+    top_books = Reviews.top_rated_books(10)
 
-    # mapear cada review con su libro
     reviews_with_books = Enum.map(reviews, fn review ->
-      book = Enum.find(books, fn b -> b[:id] == review["book_id"] end)
+      book = Enum.find(books, fn b -> to_string(b[:id]) == review["book_id"] end)
+
+      author_name = if book, do: Enum.find_value(authors, fn a ->
+        if a[:id] == book["author_id"], do: a["name"], else: nil
+      end), else: nil
+
+      book = if book, do: Map.put(book, :author_name, author_name), else: nil
       Map.put(review, :book, book)
     end)
 
@@ -70,21 +80,23 @@ defmodule ArchitectureA1Web.ReviewController do
     with {score_int, ""} <- Integer.parse(score_param),
         true <- score_int in 1..5,
         {:ok, _} <- Reviews.update(review_id, %{score: score_int, text: text}) do
-      redirect(conn, to: "/books/#{book_id}/reviews")
+          conn
+          |> put_flash(:info, "Review updated successfully.")
+          |> redirect(to: "/books/#{book_id}/reviews")
     else
       :error ->
         conn
-        |> put_status(400)
-        |> text("Score inválido (debe ser un número entero entre 1 y 5)")
+        |> put_flash(:error, "Error updating review.")
+        |> redirect(to: "/books/#{book_id}/reviews")
       false ->
         conn
-        |> put_status(400)
-        |> text("Score fuera de rango (1..5)")
+        |> put_flash(:error, "Error updating review.")
+        |> redirect(to: "/books/#{book_id}/reviews")
 
       {:error, reason} ->
         conn
-        |> put_status(500)
-        |> text("No se pudo actualizar la review: #{inspect(reason)}")
+        |> put_flash(:error, "Error updating review.")
+        |> redirect(to: "/books/#{book_id}/reviews")
     end
   end
 
@@ -97,7 +109,7 @@ defmodule ArchitectureA1Web.ReviewController do
 
     # Redirige de vuelta a las reviews del libro
     conn
-    |> put_flash(:info, "Review eliminada correctamente")
-    |> redirect(to: "/reviews")
+    |> put_flash(:info, "Review deleted successfully.")
+    |> redirect(to: "/books/#{book_id}/reviews")
   end
 end

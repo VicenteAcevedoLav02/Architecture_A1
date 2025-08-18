@@ -1,28 +1,41 @@
-<h1>Top 50 Selling Books of All Time</h1>
+<div class="p-8">
+  <div class="flex flex-col sm:flex-row justify-between items-center mb-6">
+    <h1 class="text-3xl font-bold text-gray-800 mb-4 sm:mb-0">Top 50 Selling Books of All Time</h1>
+    <a href={~p"/books"} class="px-6 py-3 bg-gray-200 text-gray-700 font-semibold rounded-xl hover:bg-gray-300 transition-colors duration-300 shadow-md">
+      Back to All Books
+    </a>
+  </div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Total Sales (Book)</th>
-      <th>Total Sales (Author)</th>
-      <th>Top 5 in Year of Publication?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <%= for book <- @top_books do %>
-      <tr>
-        <td><%= book.title %></td>
-        <td><%= book["number_of_sales"] || 0 %></td>
-        <td><%= book["author_total_sales"] %></td>
-        <td>
-          <%= if book.top5_in_year? do %>
-            ✅
-          <% else %>
-            ❌
+  <%= if Enum.empty?(@top_books) do %>
+    <p class="text-center text-gray-500 text-lg">No top selling books found.</p>
+  <% else %>
+    <div class="overflow-x-auto rounded-xl border border-gray-200 shadow-lg">
+      <table class="min-w-full divide-y divide-gray-200">
+        <thead class="bg-gray-50">
+          <tr>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Title</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Total Sales (Book)</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Total Sales (Author)</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Top 5 in Year of Publication?</th>
+          </tr>
+        </thead>
+        <tbody class="bg-white divide-y divide-gray-200">
+          <%= for book <- @top_books do %>
+            <tr class="hover:bg-gray-100 transition-colors duration-200">
+              <td class="px-6 py-4 whitespace-normal text-sm font-medium text-gray-900"><%= book.title %></td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"><%= book.number_of_sales %></td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"><%= book.author_total_sales %></td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                <%= if book.top5_in_year? do %>
+                  ✅
+                <% else %>
+                  ❌
+                <% end %>
+              </td>
+            </tr>
           <% end %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+        </tbody>
+      </table>
+    </div>
+  <% end %>
+</div>

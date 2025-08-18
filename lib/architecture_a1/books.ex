@@ -177,13 +177,12 @@ defmodule ArchitectureA1.Books do
 
     authors_stats = ArchitectureA1.Authors.list_authors_stats()
 
-    # Marcando si el libro estuvo en el top 5 el año de publicación
     Enum.map(top_books, fn book ->
       year =
         case book["date_of_publication"] do
           nil -> nil
           date when is_binary(date) ->
-            String.slice(date, 0, 4) # "2025-08-13" -> "2025"
+            String.slice(date, 0, 4)
           _ -> nil
         end
 
@@ -199,7 +198,6 @@ defmodule ArchitectureA1.Books do
 
       %{
         id: book.id,
-        author_id: book["author_id"],
         title: book["title"],
         number_of_sales: book["number_of_sales"],
         author_total_sales: author_total,

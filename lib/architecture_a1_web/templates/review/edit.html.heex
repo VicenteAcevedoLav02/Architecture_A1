@@ -1,44 +1,35 @@
-<h1 style="text-align:center; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color:#1F3B4D; margin-bottom:20px;">
-  Editar Review para: <%= @book["title"] %>
-</h1>
+<div class="p-8">
+  <div class="flex justify-between items-center mb-6">
+    <h1 class="text-3xl font-bold text-gray-800">Edit Review for: <%= @book["title"] %></h1>
+    <a href={~p"/books/#{to_string(@book["_id"])}/reviews"} class="px-6 py-3 bg-gray-200 text-gray-700 font-semibold rounded-xl hover:bg-gray-300 transition-colors duration-300 shadow-md">
+      Back to Reviews
+    </a>
+  </div>
 
-<form action={"/books/#{@book["_id"]}/reviews/#{BSON.ObjectId.encode!(@review["_id"])}"} method="post" style="max-width:600px; margin:auto;">
-  <input type="hidden" name="_csrf_token" value={get_csrf_token()}>
-  <input type="hidden" name="_method" value="put">
+  <div class="max-w-xl mx-auto p-6 bg-white rounded-xl shadow-lg border border-gray-200">
+    <form action={~p"/books/#{to_string(@book["_id"])}/reviews/#{to_string(@review["_id"])}"} method="post">
+      <input type="hidden" name="_csrf_token" value={Plug.CSRFProtection.get_csrf_token()}>
+      <input type="hidden" name="_method" value="put">
 
-  <label for="score" style="font-weight:bold;">Puntaje (1-5):</label>
-  <input type="number" name="score" min="1" max="5" value={@review["score"]} required style="width:100%; padding:8px; margin-top:5px; margin-bottom:20px; border-radius:6px; border:1px solid #D1D5DB;">
+      <div class="mb-4">
+        <label for="score" class="block text-sm font-medium text-gray-700">Score (1-5):</label>
+        <input type="number" name="score" id="score" min="1" max="5" value={@review["score"]} required
+          class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+      </div>
 
-  <label for="text" style="font-weight:bold;">Comentario:</label>
-  <textarea name="text" style="width:100%; height:100px; padding:8px; margin-top:5px; margin-bottom:20px; border-radius:6px; border:1px solid #D1D5DB;"><%= @review["text"] %></textarea>
+      <div class="mb-4">
+        <label for="text" class="block text-sm font-medium text-gray-700">Comment:</label>
+        <textarea name="text" id="text"
+          class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm h-24">
+          <%= @review["text"] %>
+        </textarea>
+      </div>
 
-  <button type="submit" style="
-    background-color: #2563EB;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s;
-    display:block;
-    margin:auto;
-  "
-    onmouseover="this.style.backgroundColor='#1D4ED8';"
-    onmouseout="this.style.backgroundColor='#2563EB';"
-  >
-    Guardar cambios
-  </button>
-</form>
-
-<br>
-
-<div style="text-align:center;">
-  <a href={"/books/#{@book["_id"]}/reviews"} style="
-      color:#2563EB;
-      text-decoration: underline;
-      font-weight:bold;
-  ">
-    Volver a Reviews
-  </a>
+      <div class="flex justify-end">
+        <button type="submit" class="px-6 py-3 bg-indigo-600 text-white font-semibold rounded-xl hover:bg-indigo-700 transition-colors duration-300 shadow-md">
+          Save Changes
+        </button>
+      </div>
+    </form>
+  </div>
 </div>

@@ -1,27 +1,47 @@
-<h1>Bienvenido a la entrega 1 de Architecture!</h1>
-<p>Selecciona una sección:</p>
+<div class="text-center p-8">
+  <%= if flash = Phoenix.Flash.get(@flash, :info) do %>
+    <div class="bg-blue-100 text-blue-800 p-4 rounded-lg flex justify-between items-center mb-4 shadow-sm">
+      <span><%= flash %></span>
+      <button onclick="this.parentElement.style.display='none';" class="text-blue-800 font-bold text-xl ml-4">×</button>
+    </div>
+  <% end %>
 
-<div style="display: flex; gap: 1rem;">
-  <a href="/authors">
-    <button style="padding: 0.5rem 1rem;">Ver Autores</button>
-  </a>
+  <%= if flash = Phoenix.Flash.get(@flash, :error) do %>
+    <div class="bg-red-100 text-red-800 p-4 rounded-lg flex justify-between items-center mb-4 shadow-sm">
+      <span><%= flash %></span>
+      <button onclick="this.parentElement.style.display='none';" class="text-red-800 font-bold text-xl ml-4">×</button>
+    </div>
+  <% end %>
 
-  <a href="/books">
-    <button style="padding: 0.5rem 1rem;">Ver Libros</button>
-  </a>
+  <h1 class="text-4xl font-extrabold text-indigo-700 mb-4">
+    Welcome to assignment 1 of Software Architecture!
+  </h1>
+  <p class="text-xl text-gray-700 mb-8">
+    Select a section:
+  </p>
 
-  <a href="/reviews">
-    <button style="padding: 0.5rem 1rem;">Ver Reseñas</button>
-  </a>
+  <div class="flex flex-wrap justify-center gap-4">
+    <a href="/authors" class="px-6 py-3 bg-indigo-600 text-white font-semibold rounded-xl hover:bg-indigo-700 transition-colors duration-300 shadow-md">
+      View Authors
+    </a>
 
-  <a href="/sales">
-    <button style="padding: 0.5rem 1rem;">Ver Ventas</button>
-  </a>
+    <a href="/books" class="px-6 py-3 bg-indigo-600 text-white font-semibold rounded-xl hover:bg-indigo-700 transition-colors duration-300 shadow-md">
+      View Books
+    </a>
 
-  <form action="/seed" method="post" style="display:inline;">
-    <input type="hidden" name="_csrf_token" value={get_csrf_token()}>
-    <button style="padding: 0.5rem 1rem; background-color:#10B981; color:white;">
-      Seed Data
-    </button>
-  </form>
+    <a href="/reviews" class="px-6 py-3 bg-indigo-600 text-white font-semibold rounded-xl hover:bg-indigo-700 transition-colors duration-300 shadow-md">
+      View Reviews
+    </a>
+
+    <a href="/sales" class="px-6 py-3 bg-indigo-600 text-white font-semibold rounded-xl hover:bg-indigo-700 transition-colors duration-300 shadow-md">
+      View Sales
+    </a>
+
+    <form action="/seed" method="post" class="inline-flex">
+      <input type="hidden" name="_csrf_token" value={get_csrf_token()}>
+      <button type="submit" class="px-6 py-3 bg-green-500 text-white font-semibold rounded-xl hover:bg-green-600 transition-colors duration-300 shadow-md">
+        Seed Data
+      </button>
+    </form>
+  </div>
 </div>

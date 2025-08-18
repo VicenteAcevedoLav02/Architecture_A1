@@ -4,6 +4,9 @@ defmodule ArchitectureA1.Reviews do
   Cada review: %{_id, book_id: BSON.ObjectId.t(), score: 1..5, upvotes: integer}
   """
 
+  alias ArchitectureA1.Books
+  alias ArchitectureA1.Authors
+
   # Lista todas las reviews de un libro
   def list_by_book(book_id_hex) when is_binary(book_id_hex) do
     oid = BSON.ObjectId.decode!(book_id_hex)
@@ -80,40 +83,49 @@ defmodule ArchitectureA1.Reviews do
   end
 end
 
+  def top_rated_books(limit \\ 10) do
+    books = Books.get_all_books()
+    authors = Authors.get_all_authors()
 
-def top_rated_books(limit \\ 10) do
-  # Agrupamos por libro, calculando promedio
-  pipeline = [
-    %{"$group" => %{
-      "_id" => "$book_id",
-      "avg_score" => %{"$avg" => "$score"},
-      "reviews" => %{"$push" => "$$ROOT"}
-    }},
-    %{"$sort" => %{"avg_score" => -1}},
-    %{"$limit" => limit}
-  ]
+    pipeline = [
+      %{"$group" => %{
+        "_id" => "$book_id",
+        "avg_score" => %{"$avg" => "$score"},
+        "reviews" => %{"$push" => "$$ROOT"}
+      }},
+      %{"$sort" => %{"avg_score" => -1}},
+      %{"$limit" => limit}
+    ]
 
-  Mongo.aggregate(ArchitectureA1.Mongo, "reviews", pipeline)
-  |> Enum.map(fn book_group ->
-    reviews = book_group["reviews"]
-    highest_review = Enum.max_by(reviews, &(&1["score"]), fn -> %{"score" => 0, "text" => "", "upvotes" => 0} end)
-    lowest_review  = Enum.min_by(reviews, &(&1["score"]), fn -> %{"score" => 0, "text" => "", "upvotes" => 0} end)
+    Mongo.aggregate(ArchitectureA1.Mongo, "reviews", pipeline)
+    |> Enum.map(fn book_group ->
+      reviews = book_group["reviews"]
 
-    # Obtener info del libro (suponiendo que está en cada review)
-    book_info = %{
-      title: reviews |> List.first() |> Map.get("book_title"),
-      author: reviews |> List.first() |> Map.get("book_author"),
-      year: reviews |> List.first() |> Map.get("book_year")
-    }
+      highest_review = Enum.max_by(reviews, &(&1["score"]), fn -> %{"score" => 0, "text" => "", "upvotes" => 0} end)
+      lowest_review  = Enum.min_by(reviews, &(&1["score"]), fn -> %{"score" => 0, "text" => "", "upvotes" => 0} end)
 
-    %{
-      book: book_info,
-      avg_score: book_group["avg_score"],
-      highest_review: highest_review,
-      lowest_review: lowest_review
-    }
-  end)
-end
+      book_id = to_string(List.first(reviews)["book_id"])
+      book = Enum.find(books, fn b -> to_string(b[:id]) == book_id end)
+
+      author = Enum.find(authors, fn a -> to_string(a[:id]) == book["author_id"] end)
+      author_name = author["name"]
+
+      book_info = %{
+        title: book["title"],
+        author: author_name,
+        year: book["date_of_publication"]
+      }
+
+      %{
+        book: book_info,
+        avg_score: book_group["avg_score"],
+        highest_review: highest_review,
+        lowest_review: lowest_review
+      }
+    end)
+  end
+
+
 
   def decode_id(id) do
     case BSON.ObjectId.decode(id) do

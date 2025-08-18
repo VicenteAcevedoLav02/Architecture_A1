@@ -3,6 +3,7 @@ defmodule ArchitectureA1Web.ReviewController do
 
   alias ArchitectureA1.Books
   alias ArchitectureA1.Reviews
+  alias ArchitectureA1.Authors
 
   # /books/:book_id/reviews (GET)
   def index(conn, %{"book_id" => book_id}) do
@@ -48,15 +49,23 @@ defmodule ArchitectureA1Web.ReviewController do
 
   # Devuelve todas las reviews de todos los libros
   def all_reviews(conn, _params) do
+    authors = Authors.get_all_authors()
     books = Books.get_all_books()
     reviews = Reviews.list_all()
-    top_books = Reviews.top_rated_books(10)  # nueva función que definimos antes
+    top_books = Reviews.top_rated_books(10)
 
-    # mapear cada review con su libro
     reviews_with_books = Enum.map(reviews, fn review ->
-      book = Enum.find(books, fn b -> b[:id] == review["book_id"] end)
+      book = Enum.find(books, fn b -> to_string(b[:id]) == review["book_id"] end)
+
+      author_name = if book, do: Enum.find_value(authors, fn a ->
+        if a[:id] == book["author_id"], do: a["name"], else: nil
+      end), else: nil
+
+      book = if book, do: Map.put(book, :author_name, author_name), else: nil
       Map.put(review, :book, book)
     end)
+
+    IO.inspect(top_books, label: "TOP BOOKS")
 
     render(conn, :home, reviews: reviews_with_books, top_books: top_books)
   end

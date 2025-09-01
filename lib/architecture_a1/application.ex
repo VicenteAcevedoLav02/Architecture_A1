@@ -15,7 +15,8 @@ defmodule ArchitectureA1.Application do
       # {ArchitectureA1.Worker, arg},
       # Start to serve requests, typically the last entry
       ArchitectureA1Web.Endpoint,
-      ArchitectureA1.Mongo
+      ArchitectureA1.Mongo,
+      {Redix, name: :redix}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

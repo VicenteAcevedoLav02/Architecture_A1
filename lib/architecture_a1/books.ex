@@ -25,8 +25,18 @@ defmodule ArchitectureA1.Books do
   end
 
   def create_book(attrs) do
-    {:ok, result} = Mongo.insert_one(ArchitectureA1.Mongo, "books", attrs)
-    {:ok, result}
+    case Mongo.insert_one(ArchitectureA1.Mongo, "books", attrs) do
+      {:ok, result} ->
+        book_id = BSON.ObjectId.encode!(result.inserted_id)
+        created_book = get_book_by_id(book_id)
+
+        ArchitectureA1.OpenSearch.index_book(created_book)
+
+        {:ok, result}
+
+      {:error, reason} ->
+        {:error, reason}
+    end
   rescue
     e -> {:error, e}
   end
@@ -37,6 +47,9 @@ defmodule ArchitectureA1.Books do
 
     case Mongo.update_one(ArchitectureA1.Mongo, "books", filter, update) do
       {:ok, %Mongo.UpdateResult{matched_count: 1}} ->
+        updated_book = get_book_by_id(id)
+        ArchitectureA1.OpenSearch.index_book(updated_book)
+
         {:ok, "Book updated successfully"}
 
       {:ok, %Mongo.UpdateResult{matched_count: 0}} ->
@@ -50,10 +63,26 @@ defmodule ArchitectureA1.Books do
   end
 
   def delete_book(id) do
+    book = get_book_by_id(id)
+
+    reviews = ArchitectureA1.Reviews.list_by_book(id)
+    for review <- reviews do
+      review_id = review["_id"] || review[:id]
+      ArchitectureA1.Reviews.delete(review_id)
+    end
+
+    sales = ArchitectureA1.Sales.get_sales_by_book((id))
+    for sale <- sales do
+      sale_id = sale["_id"] || sale[:id]
+      ArchitectureA1.Sales.delete_sale(sale_id)
+    end
+
     filter = %{"_id" => BSON.ObjectId.decode!(id)}
 
     case Mongo.delete_one(ArchitectureA1.Mongo, "books", filter) do
       {:ok, %Mongo.DeleteResult{deleted_count: 1}} ->
+        ArchitectureA1.OpenSearch.delete_book(id)
+
         {:ok, "Book deleted successfully"}
 
       {:ok, %Mongo.DeleteResult{deleted_count: 0}} ->
@@ -95,6 +124,16 @@ defmodule ArchitectureA1.Books do
   end
 
   def search(query, page \\ 1, page_size \\ 20) do
+    case ArchitectureA1.OpenSearch.search_books(query, page, page_size) do
+      {:ok, books} when is_list(books) ->
+        add_author_info_to_books(books)
+
+      {:error, _reason} ->
+        search_with_mongodb(query, page, page_size)
+    end
+  end
+
+  defp search_with_mongodb(query, page, page_size) do
     search_terms =
       String.split(query, " ", trim: true)
       |> Enum.reject(& &1 == "")
@@ -112,49 +151,40 @@ defmodule ArchitectureA1.Books do
         %{"$limit" => page_size}
       ]
 
-      case Mongo.aggregate(AppMongo, "books", pipeline) do
+      case Mongo.aggregate(ArchitectureA1.Mongo, "books", pipeline) do
         {:ok, mongo_stream} ->
           books = mongo_stream |> Enum.to_list()
-          authors = ArchitectureA1.Authors.get_all_authors()
+          add_author_info_to_books(books)
 
-          authors_map =
-            authors
-            |> Enum.into(%{}, fn author ->
-              {(author[:id]), author}
-            end)
-
-          books_with_authors =
-            Enum.map(books, fn book ->
-              author_id = book["author_id"]
-              author = Map.get(authors_map, author_id)
-
-              author_name = if author, do: author["name"], else: "Unknown Author"
-              Map.put(book, "author_name", author_name)
-            end)
-
-          {:ok, books_with_authors}
         %Mongo.Stream{} = mongo_stream ->
           books = mongo_stream |> Enum.to_list()
-          authors = ArchitectureA1.Authors.get_all_authors()
-          authors_map =
-            authors
-            |> Enum.into(%{}, fn author ->
-              {(author[:id]), author}
-            end)
+          add_author_info_to_books(books)
 
-          books_with_authors =
-            Enum.map(books, fn book ->
-              author_id = book["author_id"]
-              author = Map.get(authors_map, author_id)
-              author_name = if author, do: author["name"], else: "Unknown Author"
-              Map.put(book, "author_name", author_name)
-            end)
-
-          {:ok, books_with_authors}
         {:error, reason} ->
           {:error, reason}
       end
     end
+  end
+
+  # Función helper para agregar info de autores (tu lógica original)
+  defp add_author_info_to_books(books) do
+    authors = ArchitectureA1.Authors.get_all_authors()
+
+    authors_map =
+      authors
+      |> Enum.into(%{}, fn author ->
+        {(author[:id]), author}
+      end)
+
+    books_with_authors =
+      Enum.map(books, fn book ->
+        author_id = book["author_id"]
+        author = Map.get(authors_map, author_id)
+        author_name = if author, do: author["name"], else: "Unknown Author"
+        Map.put(book, "author_name", author_name)
+      end)
+
+    {:ok, books_with_authors}
   end
 
   def top_selling_books() do

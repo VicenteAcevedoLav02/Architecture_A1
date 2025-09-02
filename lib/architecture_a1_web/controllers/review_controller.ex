@@ -101,15 +101,16 @@ defmodule ArchitectureA1Web.ReviewController do
   end
 
   def delete(conn, %{"book_id" => book_id, "id" => review_id}) do
-    # Decodifica el ObjectId
-    decoded_id = BSON.ObjectId.decode!(review_id)
+    case Reviews.delete(review_id) do
+      {:ok, _message} ->
+        conn
+        |> put_flash(:info, "Review deleted successfully.")
+        |> redirect(to: "/books/#{book_id}/reviews")
 
-    # Borra la review de la colección
-    Mongo.delete_one!(ArchitectureA1.Mongo, "reviews", %{_id: decoded_id})
-
-    # Redirige de vuelta a las reviews del libro
-    conn
-    |> put_flash(:info, "Review deleted successfully.")
-    |> redirect(to: "/books/#{book_id}/reviews")
+      {:error, _reason} ->
+        conn
+        |> put_flash(:error, "Error deleting review.")
+        |> redirect(to: "/books/#{book_id}/reviews")
+    end
   end
 end

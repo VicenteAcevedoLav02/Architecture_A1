@@ -109,5 +109,8 @@ defmodule ArchitectureA1Web.SeedController do
     conn
     |> put_flash(:info, "Seed successfully completed. Generated Authors, Books, Reviews and Sales.")
     |> redirect(to: "/")
+
+    ArchitectureA1.OpenSearch.sync_all_books()
+    ArchitectureA1.OpenSearch.sync_all_reviews()
   end
 end

@@ -51,6 +51,13 @@ defmodule ArchitectureA1.Authors do
   end
 
   def delete_author(id) do
+    books = ArchitectureA1.Books.get_all_books()
+    author_books = Enum.filter(books, fn book -> book["author_id"] == id end)
+
+    Enum.each(author_books, fn book ->
+      result = ArchitectureA1.Books.delete_book(book[:id])
+    end)
+
     filter = %{"_id" => BSON.ObjectId.decode!(id)}
 
     case Mongo.delete_one(ArchitectureA1.Mongo, "authors", filter) do

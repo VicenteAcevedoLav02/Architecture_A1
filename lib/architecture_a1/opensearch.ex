@@ -7,10 +7,7 @@ defmodule ArchitectureA1.OpenSearch do
   @reviews_index "reviews"
 
   def available? do
-    case Req.get(@opensearch_url, connect_options: [timeout: 1000]) do
-      {:ok, %{status: 200}} -> true
-      _ -> false
-    end
+    ArchitectureA1.OpenSearchManager.available?()
   end
 
   def setup_indices do

@@ -14,7 +14,6 @@ services:
       - _build:/app/_build
     depends_on:
       - mongo
-      - opensearch
     command: mix phx.server
 
   mongo:
@@ -25,21 +24,7 @@ services:
     volumes:
       - mongo_data:/data/db
 
-  opensearch:
-    container_name: architecture_a1_opensearch
-    image: opensearchproject/opensearch:2.11.1
-    ports:
-      - "9200:9200"
-      - "9600:9600"
-    environment:
-      - discovery.type=single-node
-      - OPENSEARCH_INITIAL_ADMIN_PASSWORD=AdminPass123!
-      - DISABLE_SECURITY_PLUGIN=true
-    volumes:
-      - opensearch_data:/usr/share/opensearch/data
-
 volumes:
   deps:
   _build:
   mongo_data:
-  opensearch_data:

@@ -9,6 +9,8 @@ defmodule ArchitectureA1Web.SeedController do
     Mongo.delete_many(ArchitectureA1.Mongo, "reviews", %{})
     Mongo.delete_many(ArchitectureA1.Mongo, "sales", %{})
 
+    IO.puts("Starting seed...")
+
     # AUTHORS
     authors = for i <- 1..50 do
       name = "Author #{i}"
@@ -106,11 +108,18 @@ defmodule ArchitectureA1Web.SeedController do
       ArchitectureA1.Books.recalculate_number_of_sales(book.id |> to_string())
     end
 
+    case ArchitectureA1.OpenSearch.sync_all_books() do
+      {:ok, message} -> IO.puts("Books sync: #{message}")
+      {:error, error} -> IO.puts("Books sync failed: #{error}")
+    end
+
+    case ArchitectureA1.OpenSearch.sync_all_reviews() do
+      {:ok, message} -> IO.puts("Reviews sync: #{message}")
+      {:error, error} -> IO.puts("Reviews sync failed: #{error}")
+    end
+
     conn
     |> put_flash(:info, "Seed successfully completed. Generated Authors, Books, Reviews and Sales.")
     |> redirect(to: "/")
-
-    ArchitectureA1.OpenSearch.sync_all_books()
-    ArchitectureA1.OpenSearch.sync_all_reviews()
   end
 end

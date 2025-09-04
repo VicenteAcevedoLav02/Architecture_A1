@@ -48,6 +48,7 @@ defmodule ArchitectureA1.Books do
     case Mongo.update_one(ArchitectureA1.Mongo, "books", filter, update) do
       {:ok, %Mongo.UpdateResult{matched_count: 1}} ->
         updated_book = get_book_by_id(id)
+
         ArchitectureA1.OpenSearch.index_book(updated_book)
 
         {:ok, "Book updated successfully"}
@@ -81,6 +82,7 @@ defmodule ArchitectureA1.Books do
 
     case Mongo.delete_one(ArchitectureA1.Mongo, "books", filter) do
       {:ok, %Mongo.DeleteResult{deleted_count: 1}} ->
+
         ArchitectureA1.OpenSearch.delete_book(id)
 
         {:ok, "Book deleted successfully"}

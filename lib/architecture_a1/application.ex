@@ -11,6 +11,7 @@ defmodule ArchitectureA1.Application do
       ArchitectureA1Web.Telemetry,
       {DNSCluster, query: Application.get_env(:architecture_a1, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: ArchitectureA1.PubSub},
+      ArchitectureA1.OpenSearchManager,
       # Start a worker by calling: ArchitectureA1.Worker.start_link(arg)
       # {ArchitectureA1.Worker, arg},
       # Start to serve requests, typically the last entry

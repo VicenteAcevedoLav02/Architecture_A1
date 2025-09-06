@@ -51,4 +51,15 @@ defmodule ArchitectureA1Web.Endpoint do
   plug Plug.Head
   plug Plug.Session, @session_options
   plug ArchitectureA1Web.Router
+
+  serve_static? = System.get_env("SERVE_STATIC") == "true"
+
+  if serve_static? do
+    plug Plug.Static,
+      at: "/",
+      from: :architecture_a1,
+      gzip: false,
+      only: ArchitectureA1Web.static_paths()
+  end
+
 end

@@ -67,6 +67,9 @@ if config_env() == :prod do
     ],
     secret_key_base: secret_key_base
 
+  config :architecture_a1, :upload_path,
+  System.get_env("UPLOAD_PATH") || "priv/static/uploads"
+
   # ## SSL Support
   #
   # To get SSL working, you will need to add the `https` key

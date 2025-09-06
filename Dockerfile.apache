@@ -1,0 +1,12 @@
+# Usa la imagen oficial de Apache
+FROM httpd:2.4
+
+# Crea el directorio de logs y dale permisos de escritura al usuario de Apache
+RUN mkdir -p /usr/local/apache2/logs && \
+    chown -R www-data:www-data /usr/local/apache2/logs
+
+# Copia tu archivo de configuración de proxy
+COPY ./apache_conf/proxy.conf /usr/local/apache2/conf/extra/httpd-proxy.conf
+
+# Inicia Apache en el foreground
+CMD ["httpd", "-D", "FOREGROUND", "-f", "/usr/local/apache2/conf/extra/httpd-proxy.conf"]

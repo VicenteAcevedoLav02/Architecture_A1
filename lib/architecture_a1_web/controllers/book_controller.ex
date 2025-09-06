@@ -13,10 +13,27 @@ defmodule ArchitectureA1Web.BookController do
     render(conn, :new, authors: authors)
   end
 
+  #CREAR LIBROS -- AÑADIDO PARA ASSIGNMENT 3
   def create(conn, params) do
-    params
-    |> book_params()
-    |> Books.create_book()
+    # Procesar cover si existe
+    params =
+      case params["cover"] do
+        %Plug.Upload{filename: filename, path: tmp_path} ->
+          storage_dir = Application.get_env(:architecture_a1, :upload_path, "priv/static/uploads")
+          File.mkdir_p!(storage_dir)
+
+          unique_filename = "#{Ecto.UUID.generate()}_#{filename}"
+          dest_path = Path.join(storage_dir, unique_filename)
+          File.cp!(tmp_path, dest_path)
+
+          params
+          |> Map.put("photo_url", "/uploads/#{unique_filename}")
+          |> Map.delete("photo") # <- clave eliminada correctamente
+        _ ->
+          params
+      end
+    # Llamamos a tu capa de persistencia (Books)
+    Books.create_book(params)
     |> handle_result(
       conn,
       success_path: ~p"/books",

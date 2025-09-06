@@ -16,6 +16,19 @@ services:
       - mongo
     command: mix phx.server
 
+  apache_proxy:
+    image: httpd:2.4
+    container_name: apache_proxy
+    volumes:
+      - ./apache_conf/proxy.conf:/usr/local/apache2/conf.d/proxy.conf
+      #- ./apache_conf/proxy.conf:/usr/local/apache2/conf/extra/httpd-proxy.conf
+      - ./apache_logs:/usr/local/apache2/logs/:Z
+    ports:
+      - "80:80"
+    depends_on:
+      - app
+    command: ["httpd", "-D", "FOREGROUND", "-c", "Include conf.d/*.conf"]
+
   mongo:
     container_name: architecture_a1_mongo
     image: mongo:7

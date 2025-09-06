@@ -67,7 +67,8 @@ defmodule ArchitectureA1.MixProject do
       {:jason, "~> 1.2"},
       {:dns_cluster, "~> 0.2.0"},
       {:bandit, "~> 1.5"},
-      {:redix, ">= 1.2.0"}
+      {:nebulex, "~> 2.5"},
+      {:nebulex_redis_adapter, "~> 2.4"}
     ]
   end
 

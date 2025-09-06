@@ -30,6 +30,14 @@ config :architecture_a1, ArchitectureA1Web.Endpoint,
 # at the `config/runtime.exs`.
 config :architecture_a1, ArchitectureA1.Mailer, adapter: Swoosh.Adapters.Local
 
+# Nebulex Config
+redis_url = System.get_env("REDIS_URL", "redis://redis:6379")
+
+config :architecture_a1, ArchitectureA1.Cache,
+  adapter: Nebulex.Adapters.Redis,
+  conn_opts: [url: redis_url],
+  pool_size: 5
+
 # Configure esbuild (the version is required)
 config :esbuild,
   version: "0.25.4",

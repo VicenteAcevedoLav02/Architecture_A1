@@ -16,7 +16,7 @@ defmodule ArchitectureA1.Application do
       # Start to serve requests, typically the last entry
       ArchitectureA1Web.Endpoint,
       ArchitectureA1.Mongo,
-      {Redix, name: :redix}
+      ArchitectureA1.Cache
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

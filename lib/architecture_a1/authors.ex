@@ -2,14 +2,39 @@ defmodule ArchitectureA1.Authors do
   alias Mongo
   alias ArchitectureA1.Books
   alias ArchitectureA1.Reviews
+  alias ArchitectureA1.Cache
+
+  @all_authors_cache_key "authors:all"
 
   def get_all_authors() do
-    Mongo.find(ArchitectureA1.Mongo, "authors", %{})
-    |> Enum.map(fn doc ->
-      id = BSON.ObjectId.encode!(doc["_id"])
-      Map.put(doc, :id, id)
-      |> Map.delete("_id")
-    end)
+    # 3. Intenta obtener los datos desde el caché primero
+    case Cache.get(@all_authors_cache_key) do
+      # CACHE HIT: Si los datos existen en el caché, devuélvelos directamente.
+      authors when is_list(authors) ->
+        IO.puts("Got in a CACHE HIT")
+        authors
+
+      # CACHE MISS: Si no hay nada en el caché (devuelve nil)...
+      nil ->
+        IO.puts("Got in a CACHE MISS")
+        # ...ejecuta tu código original para obtener los datos de Mongo
+        authors_from_db =
+          Mongo.find(ArchitectureA1.Mongo, "authors", %{})
+          |> Enum.map(fn doc ->
+            id = BSON.ObjectId.encode!(doc["_id"])
+            Map.put(doc, :id, id)
+            |> Map.delete("_id")
+          end)
+
+        dbg(authors_from_db)
+
+        # 4. Guarda el resultado en el caché para la próxima vez.
+        #    Se le asigna un TTL (Time To Live) de 1 hora.
+        Cache.put(@all_authors_cache_key, authors_from_db, ttl: :timer.hours(1))
+
+        # 5. Devuelve los datos obtenidos de la base de datos.
+        authors_from_db
+    end
   end
 
   def get_author_by_id(id) do

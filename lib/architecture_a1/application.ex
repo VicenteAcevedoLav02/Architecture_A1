@@ -7,6 +7,8 @@ defmodule ArchitectureA1.Application do
 
   @impl true
   def start(_type, _args) do
+    cache_module = Application.get_env(:architecture_a1, :cache_module)
+
     children = [
       ArchitectureA1Web.Telemetry,
       {DNSCluster, query: Application.get_env(:architecture_a1, :dns_cluster_query) || :ignore},
@@ -16,8 +18,14 @@ defmodule ArchitectureA1.Application do
       # Start to serve requests, typically the last entry
       ArchitectureA1Web.Endpoint,
       ArchitectureA1.Mongo,
-      ArchitectureA1.Cache
     ]
+
+    children =
+      if cache_module == ArchitectureA1.Cache.NebulexImpl do
+        children ++ [cache_module]
+      else
+        children
+      end
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options

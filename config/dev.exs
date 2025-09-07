@@ -87,3 +87,6 @@ config :phoenix_live_view,
 
 # Disable swoosh api client as it is only required for production adapters.
 config :swoosh, :api_client, false
+
+# The next line dissables the database cache wvi Redis-Nebulex and replaces it with a mockup:
+# config :architecture_a1, :cache_module, ArchitectureA1.Cache.NoopImpl

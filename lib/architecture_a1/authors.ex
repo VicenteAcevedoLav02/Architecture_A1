@@ -9,6 +9,10 @@ defmodule ArchitectureA1.Authors do
 
   defp author_cache_key(id), do: "author:#{id}"
 
+  def invalidate_stats_cache() do
+    Cache.delete(@stats_cache_key)
+  end
+
   def get_all_authors() do
     # Checking cache first
     case Cache.get(@all_authors_cache_key) do

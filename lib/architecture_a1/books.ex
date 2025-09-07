@@ -18,6 +18,7 @@ defmodule ArchitectureA1.Books do
     case Cache.get(@all_books_key) do
       # CACHE HIT
       books when is_list(books) ->
+        IO.puts("Got in a CACHE HIT")
         books
       # CACHE MISS
       nil ->
@@ -39,6 +40,7 @@ defmodule ArchitectureA1.Books do
     case Cache.get(cache_key) do
       # CACHE HIT
       book when is_map(book) ->
+        IO.puts("Got in a CACHE HIT")
         book
       # CACHE MISS
       nil ->
@@ -164,10 +166,12 @@ defmodule ArchitectureA1.Books do
       case Cache.get(cache_key) do
         # CACHE HIT:
         books when is_list(books) ->
+          IO.puts("Got in a CACHE HIT")
           {:ok, books}
 
         # CACHE MISS:
         nil ->
+          IO.puts("Got in a CACHE MISS")
           match_terms =
             search_terms
             |> Enum.map(fn term -> %{"summary" => %{"$regex" => term, "$options" => "i"}} end)
@@ -218,8 +222,8 @@ defmodule ArchitectureA1.Books do
                   Map.put(book, "author_name", author_name)
                 end)
 
-              {:ok, books_with_authors}
               Cache.put(cache_key, books_with_authors, ttl: :timer.minutes(5))
+              {:ok, books_with_authors}
 
             {:error, reason} ->
               {:error, reason}
@@ -229,51 +233,68 @@ defmodule ArchitectureA1.Books do
   end
 
   def top_selling_books() do
-    books = get_all_books()
+    ## >> 1. Verificamos el caché primero con la llave estática
+    case Cache.get(@top_selling_key) do
+      # CACHE HIT: Si ya existe, lo devolvemos directamente
+      top_books when is_list(top_books) ->
+        top_books
 
-    top_books =
-      books
-      |> Enum.sort_by(fn b ->
-        case b["number_of_sales"] do
-          n when is_integer(n) -> n
-          n when is_binary(n) ->
-            case Integer.parse(n) do
-              {val, _} -> val
-              :error -> 0
+      # CACHE MISS: Si no existe, ejecutamos toda tu lógica original
+      nil ->
+        books = get_all_books()
+
+        top_books =
+          books
+          |> Enum.sort_by(fn b ->
+            case b["number_of_sales"] do
+              n when is_integer(n) -> n
+              n when is_binary(n) ->
+                case Integer.parse(n) do
+                  {val, _} -> val
+                  :error -> 0
+                end
+              _ -> 0
             end
-          _ -> 0
-        end
-      end, :desc)
-      |> Enum.take(50)
+          end, :desc)
+          |> Enum.take(50)
 
-    authors_stats = ArchitectureA1.Authors.list_authors_stats()
+        authors_stats = ArchitectureA1.Authors.list_authors_stats()
 
-    Enum.map(top_books, fn book ->
-      year =
-        case book["date_of_publication"] do
-          nil -> nil
-          date when is_binary(date) ->
-            String.slice(date, 0, 4)
-          _ -> nil
-        end
+        # >> 2. Guardamos el resultado final en una variable
+        result =
+          Enum.map(top_books, fn book ->
+            year =
+              case book["date_of_publication"] do
+                nil -> nil
+                date when is_binary(date) ->
+                  String.slice(date, 0, 4)
+                _ -> nil
+              end
 
-      top_5_for_year =
-        ArchitectureA1.Sales.get_top_n_by_year(year, 5)
-        |> Enum.map(& &1["book_id"])
+            top_5_for_year =
+              ArchitectureA1.Sales.get_top_n_by_year(year, 5)
+              |> Enum.map(& &1["book_id"])
 
-      author_total =
-        case Enum.find(authors_stats, fn a -> a.id == book["author_id"] end) do
-          nil -> 0
-          a -> a.total_sales
-        end
+            author_total =
+              case Enum.find(authors_stats, fn a -> a.id == book["author_id"] end) do
+                nil -> 0
+                a -> a.total_sales
+              end
 
-      %{
-        id: book.id,
-        title: book["title"],
-        number_of_sales: book["number_of_sales"],
-        author_total_sales: author_total,
-        top5_in_year?: book.id in top_5_for_year
-      }
-    end)
+            %{
+              id: book.id,
+              title: book["title"],
+              number_of_sales: book["number_of_sales"],
+              author_total_sales: author_total,
+              top5_in_year?: book.id in top_5_for_year
+            }
+          end)
+
+        ## >> 3. Guardamos el resultado en el caché antes de devolverlo
+        Cache.put(@top_selling_key, result, ttl: :timer.minutes(30))
+
+        # Devolvemos el resultado que acabamos de calcular y guardar
+        result
+    end
   end
 end

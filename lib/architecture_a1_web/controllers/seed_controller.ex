@@ -1,9 +1,11 @@
 defmodule ArchitectureA1Web.SeedController do
   use ArchitectureA1Web, :controller
-  alias ArchitectureA1.{Authors, Books, Reviews, Sales}
+  alias ArchitectureA1.{Authors, Books, Reviews, Sales, Cache}
   alias BSON.ObjectId
 
   def seed_data(conn, _params) do
+    Cache.flush()
+
     Mongo.delete_many(ArchitectureA1.Mongo, "authors", %{})
     Mongo.delete_many(ArchitectureA1.Mongo, "books", %{})
     Mongo.delete_many(ArchitectureA1.Mongo, "reviews", %{})

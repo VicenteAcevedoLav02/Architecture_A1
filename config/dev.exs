@@ -87,3 +87,9 @@ config :phoenix_live_view,
 
 # Disable swoosh api client as it is only required for production adapters.
 config :swoosh, :api_client, false
+
+# Configuración personalizable para uploads
+config :architecture_a1, :upload_path, System.get_env("UPLOAD_PATH") || "priv/static/uploads"
+
+# Flag para determinar si Phoenix sirve archivos estáticos
+config :architecture_a1, :serve_static, System.get_env("SERVE_STATIC") == "true"

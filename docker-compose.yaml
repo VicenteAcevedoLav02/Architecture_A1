@@ -8,6 +8,8 @@ services:
       - "4000:4000"
     environment:
       MIX_ENV: dev
+      SERVE_STATIC: "true"
+      UPLOAD_PATH: "/app/priv/static/uploads"
     volumes:
       - .:/app:cached
       - deps:/app/deps

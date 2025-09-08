@@ -51,4 +51,14 @@ defmodule ArchitectureA1Web.Endpoint do
   plug Plug.Head
   plug Plug.Session, @session_options
   plug ArchitectureA1Web.Router
+
+    # Solo servir archivos estáticos si no hay reverse proxy
+  if Application.compile_env(:architecture_a1, :serve_static, true) do
+    plug Plug.Static,
+      at: "/",
+      from: :architecture_a1,
+      gzip: not code_reloading?,
+      only: ArchitectureA1Web.static_paths()
+end
+
 end

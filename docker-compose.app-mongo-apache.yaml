@@ -9,6 +9,7 @@ services:
     environment:
       MIX_ENV: dev
       SERVE_STATIC: "false"
+      UPLOAD_PATH: "/app/priv/static/uploads"
     volumes:
       - .:/app:cached
       - deps:/app/deps
@@ -33,6 +34,7 @@ services:
       - "443:443"
     volumes:
       - ./apache/httpd.conf:/usr/local/apache2/conf/httpd.conf
+      - .:/app:cached  # Compartir todo el proyecto para acceso a uploads
       #- ./apache/conf.d/:/usr/local/apache2/conf/extra/
     depends_on:
       - app

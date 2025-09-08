@@ -13,15 +13,31 @@ defmodule ArchitectureA1Web.AuthorController do
   end
 
   def create(conn, params) do
-    params
-    |> author_params()
-    |> Authors.create_author()
+    # Procesar cover si existe
+    params =
+      case params["photo"] do
+        %Plug.Upload{filename: filename, path: tmp_path} ->
+          storage_dir = Application.get_env(:architecture_a1, :upload_path, "priv/static/uploads")
+          File.mkdir_p!(storage_dir)
+
+          unique_filename = "#{Ecto.UUID.generate()}_#{filename}"
+          dest_path = Path.join(storage_dir, unique_filename)
+          File.cp!(tmp_path, dest_path)
+
+          params
+          |> Map.put("photo_url", "/uploads/#{unique_filename}")
+          |> Map.delete("photo") # <- clave eliminada correctamente
+        _ ->
+          params
+      end
+    # Llamamos a tu capa de persistencia (Books)
+    Authors.create_author(params)
     |> handle_result(
       conn,
       success_path: ~p"/authors",
       success_msg: "Author created successfully.",
       error_path: ~p"/authors/new"
-      )
+    )
   end
 
   def edit(conn, %{"id" => id}) do

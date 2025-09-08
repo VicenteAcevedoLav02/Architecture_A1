@@ -13,17 +13,49 @@ defmodule ArchitectureA1Web.BookController do
     render(conn, :new, authors: authors)
   end
 
+  #CREAR LIBROS -- AÑADIDO PARA ASSIGNMENT 3
   def create(conn, params) do
-    params
-    |> book_params()
-    |> Books.create_book()
-    |> handle_result(
-      conn,
-      success_path: ~p"/books",
-      success_msg: "Book created successfully.",
-      error_path: ~p"/books/new"
-    )
-  end
+    IO.inspect(params, label: "PARAMS ORIGINALES")
+
+    # Procesar cover si existe
+    params =
+      case params["cover"] do
+        %Plug.Upload{filename: filename, path: tmp_path} ->
+          IO.puts("PROCESANDO COVER: #{filename}")
+
+          storage_dir = Application.get_env(:architecture_a1, :upload_path, "priv/static/uploads")
+          File.mkdir_p!(storage_dir)
+
+          unique_filename = "#{Ecto.UUID.generate()}_#{filename}"
+          dest_path = Path.join(storage_dir, unique_filename)
+          File.cp!(tmp_path, dest_path)
+
+          result_params = params
+          |> Map.put("cover_url", "/uploads/#{unique_filename}")
+          |> Map.delete("cover")
+
+          IO.inspect(result_params, label: "PARAMS PROCESADOS CON COVER")
+          result_params
+        _ ->
+          IO.puts("NO HAY COVER EN PARAMS")
+          IO.inspect(params, label: "PARAMS SIN COVER")
+          params
+      end
+
+      IO.inspect(params, label: "PARAMS FINALES ANTES DE CREAR")
+
+      # Llamamos a tu capa de persistencia (Books)
+      result = Books.create_book(params)
+      IO.inspect(result, label: "RESULTADO DE CREATE_BOOK")
+
+      result
+      |> handle_result(
+        conn,
+        success_path: ~p"/books",
+        success_msg: "Book created successfully.",
+        error_path: ~p"/books/new"
+      )
+    end
 
   def edit(conn, %{"id" => id}) do
     case Books.get_book_by_id(id) do

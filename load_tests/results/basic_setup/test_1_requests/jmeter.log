@@ -1,0 +1,13 @@
+START Running Jmeter on Mon Sep  8 08:36:00 CEST 2025
+JVM_ARGS=-Xmn436m -Xms1744m -Xmx1744m
+jmeter args=-n -t /load_tests/load_test.jmx -l /load_tests/results/basic_setup/test_1_requests/jmeter.jtl -Jusers=1 -Jloops=1 -Jtestname=test_1_requests -Jsummariser.interval=10 -Jsummariser.out=true
+jmeter ALL ARGS=-Dlog4j2.formatMsgNoLookups=true -n -t /load_tests/load_test.jmx -l /load_tests/results/basic_setup/test_1_requests/jmeter.jtl -Jusers=1 -Jloops=1 -Jtestname=test_1_requests -Jsummariser.interval=10 -Jsummariser.out=true
+Creating summariser <summary>
+Created the tree successfully using /load_tests/load_test.jmx
+Starting standalone test @ September 8, 2025 8:36:03 AM CEST (1757313363432)
+Waiting for possible Shutdown/StopTestNow/HeapDump/ThreadDump message on port 4445
+summary +      1 in 00:00:00 =    2.4/s Avg:   214 Min:   214 Max:   214 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
+summary =      1 in 00:00:00 =    2.4/s Avg:   214 Min:   214 Max:   214 Err:     0 (0.00%)
+Tidying up ...    @ September 8, 2025 8:36:04 AM CEST (1757313364255)
+... end of run
+END Running Jmeter on Mon Sep  8 08:36:05 CEST 2025

@@ -1,0 +1,16 @@
+timestamp,container,cpu_percent,memory_usage,memory_limit,memory_percent,pids
+2025-09-08 03:36:38,architecture_a1_app,2.16,233.2,3.495,6.52,88
+2025-09-08 03:36:38,architecture_a1_mongo,0.61,121.4,3.495,3.39,35
+2025-09-08 03:36:38,elegant_chatterjee,171.32,136.7,3.495,3.82,41
+2025-09-08 03:36:45,elegant_chatterjee,2.96,327,3.495,9.14,130
+2025-09-08 03:36:45,architecture_a1_app,277.26,250.5,3.495,7.00,88
+2025-09-08 03:36:45,architecture_a1_mongo,66.71,120.9,3.495,3.38,35
+2025-09-08 03:36:52,elegant_chatterjee,5.04,371.9,3.495,10.39,103
+2025-09-08 03:36:52,architecture_a1_app,215.97,255.7,3.495,7.14,80
+2025-09-08 03:36:52,architecture_a1_mongo,44.44,121,3.495,3.38,35
+2025-09-08 03:36:59,elegant_chatterjee,5.90,408.6,3.495,11.42,76
+2025-09-08 03:36:59,architecture_a1_app,149.03,250.1,3.495,6.99,79
+2025-09-08 03:36:59,architecture_a1_mongo,65.98,121,3.495,3.38,35
+2025-09-08 03:37:07,elegant_chatterjee,13.60,471.3,3.495,13.17,51
+2025-09-08 03:37:07,architecture_a1_app,164.47,272.6,3.495,7.62,88
+2025-09-08 03:37:07,architecture_a1_mongo,1.64,121.1,3.495,3.38,35

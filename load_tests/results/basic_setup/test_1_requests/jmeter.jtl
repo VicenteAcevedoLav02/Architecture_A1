@@ -1,0 +1,10 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1757312875965,147,01 - GET Home Page,200,OK,Exact Request Control 1-1,text,true,,4332,119,1,1,http://localhost:4000/,139,0,39
+1757312889637,132,02 - GET Books List,200,OK,Exact Request Control 1-1,text,true,,577177,124,1,1,http://localhost:4000/books,122,0,0
+1757312914303,99,03 - GET Books Search Random,200,OK,Exact Request Control 1-1,text,true,,4315,164,1,1,http://localhost:4000/books/search?query=%24%7BRANDOM_BOOK_QUERY%7D,99,0,0
+1757312920439,774,04 - GET Top Selling Books,200,OK,Exact Request Control 1-1,text,true,,33148,136,1,1,http://localhost:4000/books/top_selling,773,0,0
+1757312923501,98,05 - GET Authors List,200,OK,Exact Request Control 1-1,text,true,,80374,126,1,1,http://localhost:4000/authors,98,0,0
+1757312928791,216,06 - GET All Reviews,200,OK,Exact Request Control 1-1,text,true,,3746614,126,1,1,http://localhost:4000/reviews,196,0,0
+1757312933629,150,07 - GET Sales,200,OK,Exact Request Control 1-1,text,true,,2055733,124,1,1,http://localhost:4000/sales,143,0,0
+1757312933973,598,08 - GET Authors Stats,200,OK,Exact Request Control 1-1,text,true,,33424,132,1,1,http://localhost:4000/authors/stats,598,0,0
+1757313364026,214,GET Sales,200,OK,Load Test Users 1-1,text,true,,2055733,124,1,1,http://localhost:4000/sales,199,0,29

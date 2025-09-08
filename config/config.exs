@@ -38,7 +38,12 @@ config :architecture_a1, ArchitectureA1.Cache.NebulexImpl,
   conn_opts: [url: redis_url],
   pool_size: 5
 
-config :architecture_a1, :cache_module, ArchitectureA1.Cache.NebulexImpl
+# config :architecture_a1, :cache_module, ArchitectureA1.Cache.NebulexImpl
+if System.get_env("REDIS_URL") && System.get_env("USE_REDIS") != "false" do
+  config :architecture_a1, :cache_module, ArchitectureA1.Cache.NebulexImpl
+else
+  config :architecture_a1, :cache_module, ArchitectureA1.Cache.NoopImpl
+end
 
 # Configure esbuild (the version is required)
 config :esbuild,

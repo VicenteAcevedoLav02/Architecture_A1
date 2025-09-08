@@ -1,2 +1,2 @@
 timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
-1757330382309,200,GET Books List,200,OK,Load Test Users 1-1,text,true,,639705,124,1,1,http://localhost:4000/books,193,0,28
+1757328697707,275,GET Books Search Random,200,OK,Load Test Users 1-1,text,true,,12894,145,1,1,http://localhost:4000/books/search?query=Book+20,266,0,57

@@ -1,13 +1,5 @@
 timestamp,container,cpu_percent,memory_usage,memory_limit,memory_percent,pids
-2025-09-08 04:42:17,architecture_a1_app,1.69,214.5,3.495,5.99,79
-2025-09-08 04:42:17,architecture_a1_redis,0.49,4.477,3.495,0.13,6
-2025-09-08 04:42:17,architecture_a1_mongo,0.61,89.34,3.495,2.50,35
-2025-09-08 04:42:17,modest_thompson,105.07,70.36,3.495,1.97,40
-2025-09-08 04:42:25,modest_thompson,74.23,306.5,3.495,8.56,43
-2025-09-08 04:42:25,architecture_a1_app,57.06,215.4,3.495,6.02,88
-2025-09-08 04:42:25,architecture_a1_redis,0.56,4.477,3.495,0.13,6
-2025-09-08 04:42:25,architecture_a1_mongo,0.58,89.64,3.495,2.50,35
-2025-09-08 04:42:32,modest_thompson,2.56,304.7,3.495,8.51,43
-2025-09-08 04:42:32,architecture_a1_app,5.04,215.4,3.495,6.02,80
-2025-09-08 04:42:32,architecture_a1_redis,0.62,4.977,3.495,0.14,6
-2025-09-08 04:42:32,architecture_a1_mongo,1.32,89.61,3.495,2.50,35
+2025-09-08 08:19:38,architecture_a1_app,1.65,460.6,3.495,12.87,78
+2025-09-08 08:19:38,architecture_a1_redis,0.45,3.27,3.495,0.09,6
+2025-09-08 08:19:38,architecture_a1_mongo,0.68,91.64,3.495,2.56,35
+2025-09-08 08:19:38,quizzical_chandrasekhar,150.01,135.9,3.495,3.80,41

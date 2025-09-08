@@ -1,18 +1,18 @@
-START Running Jmeter on Mon Sep  8 09:42:37 CEST 2025
-JVM_ARGS=-Xmn428m -Xms1712m -Xmx1712m
+START Running Jmeter on Mon Sep  8 13:19:44 CEST 2025
+JVM_ARGS=-Xmn400m -Xms1600m -Xmx1600m
 jmeter args=-n -t /load_tests/load_test.jmx -l /load_tests/results/cache_setup/test_10_requests/jmeter.jtl -Jusers=10 -Jloops=1 -Jtestname=test_10_requests -Jsummariser.interval=10 -Jsummariser.out=true
 jmeter ALL ARGS=-Dlog4j2.formatMsgNoLookups=true -n -t /load_tests/load_test.jmx -l /load_tests/results/cache_setup/test_10_requests/jmeter.jtl -Jusers=10 -Jloops=1 -Jtestname=test_10_requests -Jsummariser.interval=10 -Jsummariser.out=true
 Creating summariser <summary>
 Created the tree successfully using /load_tests/load_test.jmx
-Starting standalone test @ September 8, 2025 9:42:40 AM CEST (1757317360189)
+Starting standalone test @ September 8, 2025 1:19:47 PM CEST (1757330387086)
 Waiting for possible Shutdown/StopTestNow/HeapDump/ThreadDump message on port 4445
-summary +      1 in 00:00:01 =    1.6/s Avg:   350 Min:   350 Max:   350 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
-summary +      4 in 00:00:12 =    0.3/s Avg:   343 Min:   126 Max:   821 Err:     0 (0.00%) Active: 1 Started: 5 Finished: 4
-summary =      5 in 00:00:12 =    0.4/s Avg:   344 Min:   126 Max:   821 Err:     0 (0.00%)
-summary +      3 in 00:00:09 =    0.3/s Avg:   150 Min:    98 Max:   198 Err:     0 (0.00%) Active: 1 Started: 8 Finished: 7
-summary =      8 in 00:00:21 =    0.4/s Avg:   271 Min:    98 Max:   821 Err:     0 (0.00%)
-summary +      2 in 00:00:06 =    0.3/s Avg:   123 Min:   117 Max:   129 Err:     0 (0.00%) Active: 0 Started: 10 Finished: 10
-summary =     10 in 00:00:27 =    0.4/s Avg:   241 Min:    98 Max:   821 Err:     0 (0.00%)
-Tidying up ...    @ September 8, 2025 9:43:07 AM CEST (1757317387816)
+summary +      2 in 00:00:03 =    0.6/s Avg:   418 Min:   136 Max:   701 Err:     0 (0.00%) Active: 1 Started: 2 Finished: 1
+summary +      4 in 00:00:14 =    0.3/s Avg:   642 Min:   142 Max:  2034 Err:     0 (0.00%) Active: 1 Started: 6 Finished: 5
+summary =      6 in 00:00:17 =    0.4/s Avg:   568 Min:   136 Max:  2034 Err:     0 (0.00%)
+summary +      3 in 00:00:07 =    0.4/s Avg:   416 Min:   126 Max:   996 Err:     0 (0.00%) Active: 1 Started: 9 Finished: 8
+summary =      9 in 00:00:24 =    0.4/s Avg:   517 Min:   126 Max:  2034 Err:     0 (0.00%)
+summary +      1 in 00:00:03 =    0.3/s Avg:   208 Min:   208 Max:   208 Err:     0 (0.00%) Active: 0 Started: 10 Finished: 10
+summary =     10 in 00:00:27 =    0.4/s Avg:   486 Min:   126 Max:  2034 Err:     0 (0.00%)
+Tidying up ...    @ September 8, 2025 1:20:14 PM CEST (1757330414687)
 ... end of run
-END Running Jmeter on Mon Sep  8 09:43:08 CEST 2025
+END Running Jmeter on Mon Sep  8 13:20:16 CEST 2025

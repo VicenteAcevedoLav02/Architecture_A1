@@ -1,0 +1,22 @@
+START Running Jmeter on Mon Sep  8 12:22:59 CEST 2025
+JVM_ARGS=-Xmn222m -Xms888m -Xmx888m
+jmeter args=-n -t /load_tests/load_test.jmx -l /load_tests/results/search_engine_setup/test_1000_requests/jmeter.jtl -Jusers=1000 -Jloops=1 -Jtestname=test_1000_requests -Jsummariser.interval=10 -Jsummariser.out=true
+jmeter ALL ARGS=-Dlog4j2.formatMsgNoLookups=true -n -t /load_tests/load_test.jmx -l /load_tests/results/search_engine_setup/test_1000_requests/jmeter.jtl -Jusers=1000 -Jloops=1 -Jtestname=test_1000_requests -Jsummariser.interval=10 -Jsummariser.out=true
+Creating summariser <summary>
+Created the tree successfully using /load_tests/load_test.jmx
+Starting standalone test @ September 8, 2025 12:23:04 PM CEST (1757326984716)
+Waiting for possible Shutdown/StopTestNow/HeapDump/ThreadDump message on port 4445
+summary +     78 in 00:00:05 =   17.1/s Avg:   779 Min:   294 Max:  1970 Err:     0 (0.00%) Active: 77 Started: 154 Finished: 77
+summary +    352 in 00:00:10 =   35.2/s Avg:  3293 Min:   333 Max: 11239 Err:   188 (53.41%) Active: 53 Started: 482 Finished: 429
+summary =    430 in 00:00:15 =   29.5/s Avg:  2837 Min:   294 Max: 11239 Err:   188 (43.72%)
+summary +    332 in 00:00:10 =   33.2/s Avg:  1426 Min:   378 Max:  7414 Err:   130 (39.16%) Active: 54 Started: 815 Finished: 761
+summary =    762 in 00:00:25 =   31.0/s Avg:  2222 Min:   294 Max: 11239 Err:   318 (41.73%)
+summary +    218 in 00:00:26 =    8.5/s Avg:  1854 Min:   351 Max: 28245 Err:    87 (39.91%) Active: 21 Started: 1000 Finished: 979
+summary =    980 in 00:00:50 =   19.5/s Avg:  2140 Min:   294 Max: 28245 Err:   405 (41.33%)
+summary +     10 in 00:00:05 =    1.8/s Avg: 26020 Min: 25214 Max: 28517 Err:     0 (0.00%) Active: 11 Started: 1000 Finished: 989
+summary =    990 in 00:00:56 =   17.8/s Avg:  2382 Min:   294 Max: 28517 Err:   405 (40.91%)
+summary +     10 in 00:00:01 =   14.6/s Avg: 27341 Min: 26401 Max: 28499 Err:     0 (0.00%) Active: 0 Started: 1000 Finished: 1000
+summary =   1000 in 00:00:56 =   17.7/s Avg:  2631 Min:   294 Max: 28517 Err:   405 (40.50%)
+Tidying up ...    @ September 8, 2025 12:24:01 PM CEST (1757327041823)
+... end of run
+END Running Jmeter on Mon Sep  8 12:24:02 CEST 2025

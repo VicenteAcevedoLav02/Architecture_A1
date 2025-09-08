@@ -1,0 +1,11 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1757328705301,393,GET All Reviews,200,OK,Load Test Users 1-1,text,true,,3598815,126,1,1,http://localhost:4000/reviews,348,0,45
+1757328708136,519,GET All Reviews,200,OK,Load Test Users 1-2,text,true,,3598815,126,1,1,http://localhost:4000/reviews,313,0,1
+1757328711134,240,GET Sales,200,OK,Load Test Users 1-3,text,true,,2055724,124,1,1,http://localhost:4000/sales,189,0,1
+1757328714134,314,GET Sales,200,OK,Load Test Users 1-4,text,true,,2055724,124,1,1,http://localhost:4000/sales,189,0,1
+1757328717130,308,GET Sales,200,OK,Load Test Users 1-5,text,true,,2055724,124,1,1,http://localhost:4000/sales,223,0,0
+1757328720137,127,GET Books Search Random,200,OK,Load Test Users 1-6,text,true,,7076,145,1,1,http://localhost:4000/books/search?query=Book+35,127,0,2
+1757328723133,807,GET Authors Stats,200,OK,Load Test Users 1-7,text,true,,33426,132,1,1,http://localhost:4000/authors/stats,807,0,1
+1757328726128,124,GET Books Search Random,200,OK,Load Test Users 1-8,text,true,,12896,145,1,1,http://localhost:4000/books/search?query=Book+13,124,0,1
+1757328729125,2781,GET Top Selling Books,200,OK,Load Test Users 1-9,text,true,,33155,136,1,1,http://localhost:4000/books/top_selling,2781,0,0
+1757328732123,1767,GET Sales,200,OK,Load Test Users 1-10,text,true,,2055724,124,1,1,http://localhost:4000/sales,1660,0,1

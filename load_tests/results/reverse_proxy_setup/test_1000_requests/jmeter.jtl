@@ -1,0 +1,1021 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1757328776972,748,GET Sales,200,OK,Load Test Users 1-24,text,true,,2055724,124,53,53,http://localhost:4000/sales,570,0,2
+1757328776519,1556,GET Home Page,200,OK,Load Test Users 1-1,text,true,,4332,119,55,55,http://localhost:4000/,1556,0,458
+1757328776696,1380,GET Home Page,200,OK,Load Test Users 1-20,text,true,,4332,119,55,55,http://localhost:4000/,1380,0,278
+1757328776973,1114,GET Sales,200,OK,Load Test Users 1-26,text,true,,2055724,124,57,57,http://localhost:4000/sales,569,0,1
+1757328777026,1144,GET Authors List,200,OK,Load Test Users 1-31,text,true,,92505,126,64,64,http://localhost:4000/authors,1140,0,1
+1757328776972,1199,GET Authors List,200,OK,Load Test Users 1-28,text,true,,92505,126,65,65,http://localhost:4000/authors,1199,0,3
+1757328776972,1199,GET Authors List,200,OK,Load Test Users 1-27,text,true,,92505,126,65,65,http://localhost:4000/authors,1199,0,3
+1757328777298,875,GET Authors List,200,OK,Load Test Users 1-39,text,true,,92505,126,65,65,http://localhost:4000/authors,868,0,1
+1757328776546,1646,GET Authors List,200,OK,Load Test Users 1-15,text,true,,92505,126,64,64,http://localhost:4000/authors,1645,0,500
+1757328776519,1702,GET Authors List,200,OK,Load Test Users 1-5,text,true,,92505,126,61,61,http://localhost:4000/authors,1702,0,457
+1757328777085,1149,GET Books Search Random,200,OK,Load Test Users 1-33,text,true,,7078,145,61,61,http://localhost:4000/books/search?query=Book+49,1149,0,1
+1757328777057,1202,GET Books Search Random,200,OK,Load Test Users 1-32,text,true,,12894,145,61,61,http://localhost:4000/books/search?query=Book+20,1202,0,1
+1757328776518,1746,GET Books Search Random,200,OK,Load Test Users 1-13,text,true,,17092,144,60,60,http://localhost:4000/books/search?query=Book+1,1746,0,458
+1757328776521,1743,GET Books Search Random,200,OK,Load Test Users 1-7,text,true,,7078,145,60,60,http://localhost:4000/books/search?query=Book+31,1743,0,457
+1757328776607,1674,GET Books List,200,OK,Load Test Users 1-17,text,true,,639707,124,58,58,http://localhost:4000/books,1669,0,371
+1757328776636,1645,GET Books List,200,OK,Load Test Users 1-18,text,true,,639707,124,58,58,http://localhost:4000/books,1639,0,338
+1757328777298,997,GET Books List,200,OK,Load Test Users 1-38,text,true,,639707,124,57,57,http://localhost:4000/books,991,0,1
+1757328776520,1786,GET Books Search Random,200,OK,Load Test Users 1-12,text,true,,7078,145,56,56,http://localhost:4000/books/search?query=Book+49,1786,0,457
+1757328776519,1786,GET Books Search Random,200,OK,Load Test Users 1-6,text,true,,7078,145,56,56,http://localhost:4000/books/search?query=Book+47,1786,0,460
+1757328777297,1008,GET Books Search Random,200,OK,Load Test Users 1-40,text,true,,7078,145,56,56,http://localhost:4000/books/search?query=Book+31,1008,0,1
+1757328777146,1173,GET Books Search Random,200,OK,Load Test Users 1-35,text,true,,17091,144,54,54,http://localhost:4000/books/search?query=Book+3,1173,0,0
+1757328776972,1355,GET Books List,200,OK,Load Test Users 1-25,text,true,,639707,124,53,53,http://localhost:4000/books,1346,0,5
+1757328777625,760,GET Home Page,200,OK,Load Test Users 1-51,text,true,,4332,119,54,54,http://localhost:4000/,760,0,1
+1757328777656,803,GET Authors List,200,OK,Load Test Users 1-52,text,true,,92505,126,55,55,http://localhost:4000/authors,803,0,1
+1757328777701,920,GET Books List,200,OK,Load Test Users 1-53,text,true,,639707,124,56,56,http://localhost:4000/books,914,0,1
+1757328777536,1094,GET Books Search Random,200,OK,Load Test Users 1-48,text,true,,7078,145,57,57,http://localhost:4000/books/search?query=Book+49,1090,0,1
+1757328777355,1280,GET Books Search Random,200,OK,Load Test Users 1-42,text,true,,7077,145,56,56,http://localhost:4000/books/search?query=Book+38,1280,0,100
+1757328776726,1914,GET Sales,200,OK,Load Test Users 1-21,text,true,,2055724,124,55,55,http://localhost:4000/sales,1904,0,248
+1757328776518,2131,GET Sales,200,OK,Load Test Users 1-3,text,true,,2055724,124,55,55,http://localhost:4000/sales,2111,0,459
+1757328776756,1902,GET Sales,200,OK,Load Test Users 1-22,text,true,,2055724,124,55,55,http://localhost:4000/sales,1872,0,223
+1757328776586,2086,GET Sales,200,OK,Load Test Users 1-16,text,true,,2055724,124,55,55,http://localhost:4000/sales,2073,0,388
+1757328778115,599,GET Home Page,200,OK,Load Test Users 1-67,text,true,,4332,119,56,56,http://localhost:4000/,599,0,5
+1757328778233,482,GET Home Page,200,OK,Load Test Users 1-71,text,true,,4332,119,56,56,http://localhost:4000/,481,0,2
+1757328778121,595,GET Home Page,200,OK,Load Test Users 1-55,text,true,,4332,119,54,54,http://localhost:4000/,595,0,2
+1757328778257,532,GET Authors List,200,OK,Load Test Users 1-72,text,true,,92505,126,55,55,http://localhost:4000/authors,532,0,1
+1757328778123,672,GET Authors List,200,OK,Load Test Users 1-54,text,true,,92505,126,54,54,http://localhost:4000/authors,672,0,2
+1757328778320,489,GET Authors List,200,OK,Load Test Users 1-74,text,true,,92505,126,54,54,http://localhost:4000/authors,488,0,3
+1757328777476,1395,GET Sales,200,OK,Load Test Users 1-46,text,true,,2055724,124,55,55,http://localhost:4000/sales,1380,0,1
+1757328778349,538,GET Books Search Random,200,OK,Load Test Users 1-75,text,true,,17090,144,55,55,http://localhost:4000/books/search?query=Book+8,538,0,1
+1757328778123,782,GET Books List,200,OK,Load Test Users 1-63,text,true,,639707,124,54,54,http://localhost:4000/books,776,0,2
+1757328777506,1409,GET Sales,200,OK,Load Test Users 1-47,text,true,,2055724,124,53,53,http://localhost:4000/sales,1395,0,1
+1757328778122,817,GET Books Search Random,200,OK,Load Test Users 1-59,text,true,,7077,145,53,53,http://localhost:4000/books/search?query=Book+38,817,0,1
+1757328778122,817,GET Books Search Random,200,OK,Load Test Users 1-61,text,true,,12894,145,53,53,http://localhost:4000/books/search?query=Book+20,817,0,2
+1757328778651,297,GET Home Page,200,OK,Load Test Users 1-85,text,true,,4332,119,52,52,http://localhost:4000/,297,0,9
+1757328778437,641,GET Authors List,200,OK,Load Test Users 1-78,text,true,,92505,126,55,55,http://localhost:4000/authors,640,0,2
+1757328778887,276,GET Home Page,200,OK,Load Test Users 1-93,text,true,,4332,119,57,57,http://localhost:4000/,276,0,5
+1757328776520,2679,GET All Reviews,200,OK,Load Test Users 1-9,text,true,,3598815,126,57,57,http://localhost:4000/reviews,2650,0,454
+1757328778678,542,GET Books Search Random,200,OK,Load Test Users 1-86,text,true,,12898,145,57,57,http://localhost:4000/books/search?query=Book+17,542,0,1
+1757328778378,852,GET Books Search Random,200,OK,Load Test Users 1-76,text,true,,7076,145,56,56,http://localhost:4000/books/search?query=Book+35,852,0,1
+1757328778634,601,GET Books Search Random,200,OK,Load Test Users 1-80,text,true,,7078,145,55,55,http://localhost:4000/books/search?query=Book+32,601,0,3
+1757328777205,2098,GET All Reviews,200,OK,Load Test Users 1-37,text,true,,3598815,126,56,56,http://localhost:4000/reviews,1979,0,1
+1757328778564,743,GET Books List,200,OK,Load Test Users 1-81,text,true,,639707,124,56,56,http://localhost:4000/books,699,0,65
+1757328778142,1208,GET Sales,200,OK,Load Test Users 1-68,text,true,,2055724,124,56,56,http://localhost:4000/sales,1106,0,2
+1757328778054,1344,GET Sales,200,OK,Load Test Users 1-64,text,true,,2055724,124,57,57,http://localhost:4000/sales,1245,0,52
+1757328776521,2882,GET All Reviews,200,OK,Load Test Users 1-8,text,true,,3598815,126,56,56,http://localhost:4000/reviews,2698,0,456
+1757328776519,2889,GET All Reviews,200,OK,Load Test Users 1-10,text,true,,3598815,126,55,55,http://localhost:4000/reviews,2678,0,525
+1757328778113,1311,GET Sales,200,OK,Load Test Users 1-66,text,true,,2055724,124,54,54,http://localhost:4000/sales,1231,0,1
+1757328778830,622,GET Authors List,200,OK,Load Test Users 1-91,text,true,,92505,126,54,54,http://localhost:4000/authors,621,0,2
+1757328778976,697,GET Home Page,200,OK,Load Test Users 1-96,text,true,,4332,119,61,61,http://localhost:4000/,697,0,1
+1757328778708,966,GET Books Search Random,200,OK,Load Test Users 1-87,text,true,,12316,145,61,61,http://localhost:4000/books/search?query=Book+11,966,0,1
+1757328779006,678,GET Home Page,200,OK,Load Test Users 1-97,text,true,,4332,119,59,59,http://localhost:4000/,678,0,4
+1757328778918,789,GET Books List,200,OK,Load Test Users 1-94,text,true,,639707,124,59,59,http://localhost:4000/books,771,0,1
+1757328778860,854,GET Books List,200,OK,Load Test Users 1-92,text,true,,639707,124,58,58,http://localhost:4000/books,827,0,4
+1757328778406,1559,GET Sales,200,OK,Load Test Users 1-77,text,true,,2055724,124,65,65,http://localhost:4000/sales,1427,0,2
+1757328778648,1353,GET Sales,200,OK,Load Test Users 1-82,text,true,,2055724,124,66,66,http://localhost:4000/sales,1243,0,1
+1757328778637,1367,GET Sales,200,OK,Load Test Users 1-79,text,true,,2055724,124,66,66,http://localhost:4000/sales,1228,0,1
+1757328779126,1002,GET Books List,200,OK,Load Test Users 1-101,text,true,,639707,124,68,68,http://localhost:4000/books,945,0,1
+1757328777446,2727,GET All Reviews,200,OK,Load Test Users 1-45,text,true,,3598815,126,68,68,http://localhost:4000/reviews,2475,0,0
+1757328779551,708,GET Home Page,200,OK,Load Test Users 1-115,text,true,,4332,119,70,70,http://localhost:4000/,708,0,18
+1757328778766,1508,GET Sales,200,OK,Load Test Users 1-89,text,true,,2055724,124,70,70,http://localhost:4000/sales,1390,0,1
+1757328777457,3010,GET All Reviews,200,OK,Load Test Users 1-43,text,true,,3598815,126,75,75,http://localhost:4000/reviews,2731,0,1
+1757328779427,1099,GET Authors List,200,OK,Load Test Users 1-111,text,true,,92505,126,76,76,http://localhost:4000/authors,1099,0,3
+1757328779585,944,GET Authors List,200,OK,Load Test Users 1-116,text,true,,92505,126,75,75,http://localhost:4000/authors,944,0,1
+1757328779522,1021,GET Authors List,200,OK,Load Test Users 1-114,text,true,,92505,126,75,75,http://localhost:4000/authors,1019,0,1
+1757328779342,1203,GET Authors List,200,OK,Load Test Users 1-108,text,true,,92505,126,74,74,http://localhost:4000/authors,1200,0,4
+1757328779375,1171,GET Authors List,200,OK,Load Test Users 1-109,text,true,,92505,126,74,74,http://localhost:4000/authors,1169,0,1
+1757328779306,1413,GET Books Search Random,200,OK,Load Test Users 1-107,text,true,,12896,145,78,78,http://localhost:4000/books/search?query=Book+26,1412,0,2
+1757328779457,1267,GET Books Search Random,200,OK,Load Test Users 1-112,text,true,,7078,145,77,77,http://localhost:4000/books/search?query=Book+48,1267,0,2
+1757328779398,1421,GET Books List,200,OK,Load Test Users 1-110,text,true,,639707,124,79,79,http://localhost:4000/books,1375,0,1
+1757328778054,2844,GET All Reviews,200,OK,Load Test Users 1-65,text,true,,3598815,126,81,81,http://localhost:4000/reviews,2603,0,36
+1757328779186,1714,GET Books Search Random,200,OK,Load Test Users 1-103,text,true,,12895,145,80,80,http://localhost:4000/books/search?query=Book+28,1714,0,1
+1757328779066,1837,GET Sales,200,OK,Load Test Users 1-99,text,true,,2055724,124,79,79,http://localhost:4000/sales,1726,0,1
+1757328779848,1129,GET Home Page,200,OK,Load Test Users 1-125,text,true,,4332,119,80,80,http://localhost:4000/,1129,0,1
+1757328779971,1006,GET Home Page,200,OK,Load Test Users 1-129,text,true,,4332,119,80,80,http://localhost:4000/,1006,0,1
+1757328780145,836,GET Home Page,200,OK,Load Test Users 1-135,text,true,,4332,119,79,79,http://localhost:4000/,836,0,2
+1757328779790,1191,GET Home Page,200,OK,Load Test Users 1-123,text,true,,4332,119,79,79,http://localhost:4000/,1191,0,1
+1757328779758,1219,GET Home Page,200,OK,Load Test Users 1-122,text,true,,4332,119,80,80,http://localhost:4000/,1219,0,1
+1757328779037,1961,GET Sales,200,OK,Load Test Users 1-98,text,true,,2055724,124,76,76,http://localhost:4000/sales,1772,0,1
+1757328778121,2961,GET All Reviews,200,OK,Load Test Users 1-60,text,true,,3598815,126,78,78,http://localhost:4000/reviews,2661,0,2
+1757328779727,1403,GET Authors List,200,OK,Load Test Users 1-121,text,true,,92505,126,78,78,http://localhost:4000/authors,1403,0,1
+1757328780205,925,GET Authors List,200,OK,Load Test Users 1-137,text,true,,92505,126,78,78,http://localhost:4000/authors,925,0,1
+1757328780055,1076,GET Authors List,200,OK,Load Test Users 1-132,text,true,,92505,126,78,78,http://localhost:4000/authors,1075,0,1
+1757328779668,1490,GET Authors List,200,OK,Load Test Users 1-119,text,true,,92505,126,76,76,http://localhost:4000/authors,1489,0,18
+1757328779909,1281,GET Authors List,200,OK,Load Test Users 1-127,text,true,,92505,126,76,76,http://localhost:4000/authors,1280,0,2
+1757328778054,3155,GET All Reviews,200,OK,Load Test Users 1-57,text,true,,3598815,126,76,76,http://localhost:4000/reviews,2870,0,41
+1757328780328,958,GET Home Page,200,OK,Load Test Users 1-141,text,true,,4332,119,78,78,http://localhost:4000/,958,0,3
+1757328780087,1218,GET Books Search Random,200,OK,Load Test Users 1-133,text,true,,7077,145,77,77,http://localhost:4000/books/search?query=Book+36,1217,0,2
+1757328780037,1339,GET Books List,200,OK,Load Test Users 1-131,text,true,,639707,124,78,78,http://localhost:4000/books,1287,0,2
+1757328779156,2228,GET Sales,200,OK,Load Test Users 1-102,text,true,,2055724,124,78,78,http://localhost:4000/sales,2101,0,1
+1757328780177,1244,GET Books List,200,OK,Load Test Users 1-136,text,true,,639707,124,78,78,http://localhost:4000/books,1204,0,1
+1757328778735,2912,GET All Reviews,200,OK,Load Test Users 1-88,text,true,,3598815,126,85,85,http://localhost:4000/reviews,2660,0,0
+1757328778657,3031,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-83,text,false,,4029,136,85,85,http://localhost:4000/books/top_selling,3031,0,1
+1757328780537,1150,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-148,text,false,,3978,136,85,85,http://localhost:4000/books/top_selling,1150,0,2
+1757328777594,4094,GET Authors Stats,500,Internal Server Error,Load Test Users 1-50,text,false,,3992,132,85,85,http://localhost:4000/authors/stats,4094,0,87
+1757328780388,1300,GET Books List,500,Internal Server Error,Load Test Users 1-143,text,false,,3908,124,85,85,http://localhost:4000/books,1300,0,1
+1757328776996,4693,GET Authors Stats,500,Internal Server Error,Load Test Users 1-30,text,false,,3935,132,85,85,http://localhost:4000/authors/stats,4692,0,1
+1757328776972,4717,GET Authors Stats,500,Internal Server Error,Load Test Users 1-29,text,false,,3893,132,85,85,http://localhost:4000/authors/stats,4716,0,2
+1757328777565,4122,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-49,text,false,,3982,136,85,85,http://localhost:4000/books/top_selling,4122,0,1
+1757328779247,2440,GET Authors Stats,500,Internal Server Error,Load Test Users 1-105,text,false,,3999,132,83,83,http://localhost:4000/authors/stats,2440,0,2
+1757328777175,4512,GET Authors Stats,500,Internal Server Error,Load Test Users 1-36,text,false,,3893,132,83,83,http://localhost:4000/authors/stats,4512,0,1
+1757328779821,1868,GET Authors Stats,500,Internal Server Error,Load Test Users 1-124,text,false,,3637,132,82,82,http://localhost:4000/authors/stats,1868,0,2
+1757328780716,974,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-154,text,false,,3978,136,82,82,http://localhost:4000/books/top_selling,973,0,2
+1757328779877,1809,GET Sales,500,Internal Server Error,Load Test Users 1-126,text,false,,3908,124,79,79,http://localhost:4000/sales,1809,0,1
+1757328777457,4233,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-44,text,false,,3982,136,79,79,http://localhost:4000/books/top_selling,4233,0,1
+1757328780568,1122,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-149,text,false,,3978,136,79,79,http://localhost:4000/books/top_selling,1122,0,2
+1757328778291,3400,GET Authors Stats,500,Internal Server Error,Load Test Users 1-73,text,false,,3992,132,79,79,http://localhost:4000/authors/stats,3400,0,2
+1757328779621,2070,GET Authors Stats,500,Internal Server Error,Load Test Users 1-117,text,false,,3999,132,79,79,http://localhost:4000/authors/stats,2070,0,1
+1757328780454,1237,GET Sales,500,Internal Server Error,Load Test Users 1-145,text,false,,3908,124,79,79,http://localhost:4000/sales,1237,0,1
+1757328776519,5173,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-11,text,false,,4039,136,77,77,http://localhost:4000/books/top_selling,5173,0,456
+1757328779695,1997,GET Sales,500,Internal Server Error,Load Test Users 1-120,text,false,,3908,124,77,77,http://localhost:4000/sales,1997,0,1
+1757328779645,2047,GET Authors Stats,500,Internal Server Error,Load Test Users 1-118,text,false,,3637,132,77,77,http://localhost:4000/authors/stats,2047,0,1
+1757328776518,5208,GET Authors Stats,500,Internal Server Error,Load Test Users 1-14,text,false,,3893,132,67,67,http://localhost:4000/authors/stats,5208,0,457
+1757328780298,1429,GET Authors Stats,500,Internal Server Error,Load Test Users 1-140,text,false,,3986,132,67,67,http://localhost:4000/authors/stats,1429,0,5
+1757328780117,1604,GET Authors Stats,500,Internal Server Error,Load Test Users 1-134,text,false,,3637,132,67,67,http://localhost:4000/authors/stats,1604,0,1
+1757328780656,1061,GET Authors List,500,Internal Server Error,Load Test Users 1-152,text,false,,3930,126,67,67,http://localhost:4000/authors,1061,0,1
+1757328779219,2497,GET All Reviews,500,Internal Server Error,Load Test Users 1-104,text,false,,3424,126,67,67,http://localhost:4000/reviews,2497,0,2
+1757328776518,5197,GET Authors Stats,500,Internal Server Error,Load Test Users 1-4,text,false,,3935,132,67,67,http://localhost:4000/authors/stats,5197,0,457
+1757328778173,3559,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-69,text,false,,3619,136,61,61,http://localhost:4000/books/top_selling,3559,0,19
+1757328780597,1116,GET Sales,500,Internal Server Error,Load Test Users 1-150,text,false,,3908,124,74,74,http://localhost:4000/sales,1116,0,1
+1757328780507,1205,GET Authors List,500,Internal Server Error,Load Test Users 1-147,text,false,,3930,126,73,74,http://localhost:4000/authors,1205,0,2
+1757328780691,1020,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-153,text,false,,3978,136,73,73,http://localhost:4000/books/top_selling,1020,0,1
+1757328777326,4385,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-41,text,false,,3982,136,73,73,http://localhost:4000/books/top_selling,4385,0,1
+1757328778666,3045,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-84,text,false,,4029,136,73,73,http://localhost:4000/books/top_selling,3045,0,1
+1757328780238,1471,GET Sales,500,Internal Server Error,Load Test Users 1-138,text,false,,3908,124,73,73,http://localhost:4000/sales,1471,0,1
+1757328779096,2625,GET All Reviews,500,Internal Server Error,Load Test Users 1-100,text,false,,3938,126,67,67,http://localhost:4000/reviews,2625,0,1
+1757328777115,4591,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-34,text,false,,3982,136,75,75,http://localhost:4000/books/top_selling,4591,0,1
+1757328780267,1438,GET Sales,500,Internal Server Error,Load Test Users 1-139,text,false,,3908,124,75,75,http://localhost:4000/sales,1438,0,1
+1757328779999,1694,GET All Reviews,500,Internal Server Error,Load Test Users 1-130,text,false,,3526,126,75,75,http://localhost:4000/reviews,1694,0,1
+1757328778199,3494,GET Authors Stats,500,Internal Server Error,Load Test Users 1-70,text,false,,3992,132,75,75,http://localhost:4000/authors/stats,3494,0,12
+1757328776518,5174,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-2,text,false,,3982,136,75,75,http://localhost:4000/books/top_selling,5174,0,455
+1757328778799,2894,GET All Reviews,200,OK,Load Test Users 1-90,text,true,,3598815,126,75,75,http://localhost:4000/reviews,2669,0,1
+1757328778121,3571,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-56,text,false,,3619,136,77,77,http://localhost:4000/books/top_selling,3571,0,2
+1757328779276,2461,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-106,text,false,,4046,136,62,62,http://localhost:4000/books/top_selling,2461,0,1
+1757328778122,3585,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-58,text,false,,3619,136,74,74,http://localhost:4000/books/top_selling,3585,0,2
+1757328778123,3584,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-62,text,false,,3619,136,75,75,http://localhost:4000/books/top_selling,3584,0,2
+1757328779938,1801,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-128,text,false,,4033,136,62,62,http://localhost:4000/books/top_selling,1767,0,3
+1757328780750,961,GET Sales,500,Internal Server Error,Load Test Users 1-155,text,false,,3908,124,73,73,http://localhost:4000/sales,961,0,2
+1757328776666,5075,GET Authors Stats,500,Internal Server Error,Load Test Users 1-19,text,false,,3992,132,60,60,http://localhost:4000/authors/stats,5075,0,308
+1757328781106,845,GET Home Page,200,OK,Load Test Users 1-167,text,true,,4332,119,47,47,http://localhost:4000/,845,0,1
+1757328780872,1081,GET Home Page,200,OK,Load Test Users 1-159,text,true,,4332,119,46,46,http://localhost:4000/,1081,0,1
+1757328781227,772,GET Books Search Random,200,OK,Load Test Users 1-171,text,true,,12316,145,46,46,http://localhost:4000/books/search?query=Book+11,772,0,1
+1757328780955,1103,GET Books Search Random,200,OK,Load Test Users 1-162,text,true,,17089,144,47,47,http://localhost:4000/books/search?query=Book+9,1102,0,1
+1757328780928,1140,GET Books Search Random,200,OK,Load Test Users 1-161,text,true,,17090,144,47,47,http://localhost:4000/books/search?query=Book+4,1140,0,2
+1757328781257,818,GET Books Search Random,200,OK,Load Test Users 1-172,text,true,,7078,145,46,46,http://localhost:4000/books/search?query=Book+31,818,0,1
+1757328780784,1353,GET Books List,200,OK,Load Test Users 1-156,text,true,,639707,124,47,47,http://localhost:4000/books,1283,0,2
+1757328781018,1177,GET Books List,200,OK,Load Test Users 1-164,text,true,,639707,124,48,48,http://localhost:4000/books,1070,0,2
+1757328779495,2834,GET All Reviews,200,OK,Load Test Users 1-113,text,true,,3598815,126,51,51,http://localhost:4000/reviews,2355,0,4
+1757328778946,3428,GET All Reviews,200,OK,Load Test Users 1-95,text,true,,3598815,126,52,52,http://localhost:4000/reviews,2948,0,2
+1757328781733,736,GET Home Page,200,OK,Load Test Users 1-188,text,true,,4332,119,54,54,http://localhost:4000/,736,0,1
+1757328780357,2112,GET Books Search Random,200,OK,Load Test Users 1-142,text,true,,5946,275,54,54,http://localhost:4000/books/search,1152,0,2
+1757328780357,1152,GET Books Search Random-0,302,Found,Load Test Users 1-142,text,true,,1651,144,54,54,http://localhost:4000/books/search?query=Book+9,1152,0,2
+1757328781512,957,GET Books Search Random-1,200,OK,Load Test Users 1-142,text,true,,4295,131,54,54,http://localhost:4000/books/search,957,0,0
+1757328781497,972,GET Home Page,200,OK,Load Test Users 1-180,text,true,,4332,119,54,54,http://localhost:4000/,972,0,1
+1757328781349,1121,GET Home Page,200,OK,Load Test Users 1-175,text,true,,4332,119,54,54,http://localhost:4000/,1121,0,1
+1757328780476,1995,GET Books Search Random,200,OK,Load Test Users 1-146,text,true,,5946,276,51,51,http://localhost:4000/books/search,1033,0,1
+1757328780476,1033,GET Books Search Random-0,302,Found,Load Test Users 1-146,text,true,,1651,145,51,51,http://localhost:4000/books/search?query=Book+44,1033,0,1
+1757328781512,959,GET Books Search Random-1,200,OK,Load Test Users 1-146,text,true,,4295,131,51,51,http://localhost:4000/books/search,959,0,0
+1757328780420,2051,GET Books Search Random,200,OK,Load Test Users 1-144,text,true,,5946,276,51,51,http://localhost:4000/books/search,1089,0,1
+1757328780420,1089,GET Books Search Random-0,302,Found,Load Test Users 1-144,text,true,,1651,145,51,51,http://localhost:4000/books/search?query=Book+13,1089,0,1
+1757328781512,959,GET Books Search Random-1,200,OK,Load Test Users 1-144,text,true,,4295,131,51,51,http://localhost:4000/books/search,959,0,0
+1757328780627,1846,GET Books Search Random,200,OK,Load Test Users 1-151,text,true,,5946,275,48,48,http://localhost:4000/books/search,884,0,1
+1757328780627,884,GET Books Search Random-0,302,Found,Load Test Users 1-151,text,true,,1651,144,48,48,http://localhost:4000/books/search?query=Book+9,884,0,1
+1757328781513,960,GET Books Search Random-1,200,OK,Load Test Users 1-151,text,true,,4295,131,48,48,http://localhost:4000/books/search,960,0,0
+1757328780988,1532,GET Sales,200,OK,Load Test Users 1-163,text,true,,2055724,124,49,49,http://localhost:4000/sales,1384,0,2
+1757328781825,747,GET All Reviews,500,Internal Server Error,Load Test Users 1-191,text,false,,3937,126,49,49,http://localhost:4000/reviews,747,0,7
+1757328781528,1044,GET Authors List,500,Internal Server Error,Load Test Users 1-181,text,false,,3930,126,49,49,http://localhost:4000/authors,1044,0,37
+1757328781406,1166,GET Authors List,500,Internal Server Error,Load Test Users 1-177,text,false,,3930,126,49,49,http://localhost:4000/authors,1166,0,1
+1757328781676,900,GET All Reviews,500,Internal Server Error,Load Test Users 1-186,text,false,,3937,126,48,48,http://localhost:4000/reviews,900,0,1
+1757328781465,1111,GET All Reviews,500,Internal Server Error,Load Test Users 1-179,text,false,,3937,126,48,48,http://localhost:4000/reviews,1111,0,4
+1757328780840,1740,GET Sales,200,OK,Load Test Users 1-158,text,true,,2055724,124,46,46,http://localhost:4000/sales,1553,0,1
+1757328781920,687,GET Books List,200,OK,Load Test Users 1-194,text,true,,639707,124,45,45,http://localhost:4000/books,680,0,2
+1757328781617,1033,GET Books Search Random,200,OK,Load Test Users 1-184,text,true,,17089,144,45,45,http://localhost:4000/books/search?query=Book+9,1033,0,2
+1757328776972,5732,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-23,text,false,,4039,136,46,46,http://localhost:4000/books/top_selling,5732,0,3
+1757328781197,1511,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-170,text,false,,4029,136,45,45,http://localhost:4000/books/top_selling,1511,0,3
+1757328781733,976,GET All Reviews,500,Internal Server Error,Load Test Users 1-187,text,false,,3931,126,44,44,http://localhost:4000/reviews,976,0,1
+1757328781886,826,GET Books List,200,OK,Load Test Users 1-193,text,true,,639707,124,43,43,http://localhost:4000/books,769,0,3
+1757328781382,1352,GET Books List,200,OK,Load Test Users 1-176,text,true,,639707,124,42,42,http://localhost:4000/books,1279,0,6
+1757328781285,1497,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-173,text,false,,3573,136,43,43,http://localhost:4000/books/top_selling,1497,0,3
+1757328781077,1917,GET All Reviews,200,OK,Load Test Users 1-166,text,true,,3598815,126,49,49,http://localhost:4000/reviews,1636,0,1
+1757328782097,1343,GET Home Page,200,OK,Load Test Users 1-200,text,true,,4332,119,63,63,http://localhost:4000/,1343,0,4
+1757328781449,3650,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-178,text,false,,4024,136,73,73,http://localhost:4000/books/top_selling,3650,0,0
+1757328781645,3610,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-185,text,false,,4024,136,98,98,http://localhost:4000/books/top_selling,3610,0,1
+1757328782131,3678,GET Authors List,200,OK,Load Test Users 1-201,text,true,,92505,126,115,115,http://localhost:4000/authors,3678,0,1
+1757328782275,3535,GET Authors List,200,OK,Load Test Users 1-206,text,true,,92505,126,115,115,http://localhost:4000/authors,3534,0,2
+1757328781554,4260,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-182,text,false,,4024,136,113,113,http://localhost:4000/books/top_selling,4260,0,13
+1757328781944,3882,GET Authors List,200,OK,Load Test Users 1-195,text,true,,92505,126,112,112,http://localhost:4000/authors,3882,0,4
+1757328782313,3562,GET Books Search Random,200,OK,Load Test Users 1-207,text,true,,12315,145,113,113,http://localhost:4000/books/search?query=Book+22,3562,0,3
+1757328781316,4609,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-174,text,false,,4024,136,114,114,http://localhost:4000/books/top_selling,4609,0,1
+1757328781854,9184,GET Sales,200,OK,Load Test Users 1-192,text,true,,2055724,124,223,223,http://localhost:4000/sales,1213,0,1
+1757328782245,8794,GET Sales,200,OK,Load Test Users 1-205,text,true,,2055724,124,223,223,http://localhost:4000/sales,8548,0,1
+1757328781795,9245,GET Sales,200,OK,Load Test Users 1-190,text,true,,2055724,124,223,223,http://localhost:4000/sales,1190,0,1
+1757328782156,8885,GET Books List,200,OK,Load Test Users 1-202,text,true,,639707,124,223,223,http://localhost:4000/books,3770,0,1
+1757328781588,9453,GET Sales,200,OK,Load Test Users 1-183,text,true,,2055724,124,223,223,http://localhost:4000/sales,1397,0,1
+1757328781138,10054,GET All Reviews,200,OK,Load Test Users 1-168,text,true,,3598815,126,223,223,http://localhost:4000/reviews,1849,0,3
+1757328782425,8857,GET Sales,200,OK,Load Test Users 1-211,text,true,,2055724,124,223,223,http://localhost:4000/sales,3515,0,3
+1757328781987,9311,GET Books List,200,OK,Load Test Users 1-196,text,true,,639707,124,223,223,http://localhost:4000/books,3939,0,2
+1757328782336,8982,GET Sales,200,OK,Load Test Users 1-208,text,true,,2055724,124,228,228,http://localhost:4000/sales,8707,0,1
+1757328782365,9006,GET All Reviews,200,OK,Load Test Users 1-209,text,true,,3598815,126,270,270,http://localhost:4000/reviews,8679,0,2
+1757328781765,9668,GET All Reviews,200,OK,Load Test Users 1-189,text,true,,3598815,126,295,295,http://localhost:4000/reviews,9277,0,2
+1757328783127,8346,GET Home Page,200,OK,Load Test Users 1-233,text,true,,4332,119,310,310,http://localhost:4000/,8346,0,0
+1757328783201,8273,GET Home Page,200,OK,Load Test Users 1-236,text,true,,4332,119,310,310,http://localhost:4000/,8273,0,1
+1757328782701,8775,GET Home Page,200,OK,Load Test Users 1-220,text,true,,4332,119,308,308,http://localhost:4000/,8775,0,2
+1757328782820,8741,GET Authors List,200,OK,Load Test Users 1-224,text,true,,92505,126,310,310,http://localhost:4000/authors,8740,0,2
+1757328782639,9028,GET Books Search Random,200,OK,Load Test Users 1-218,text,true,,7077,145,312,312,http://localhost:4000/books/search?query=Book+40,9028,0,1
+1757328783128,8539,GET Books Search Random,200,OK,Load Test Users 1-234,text,true,,7660,145,312,312,http://localhost:4000/books/search?query=Book+30,8539,0,1
+1757328783264,8403,GET Books Search Random,200,OK,Load Test Users 1-239,text,true,,17090,144,312,312,http://localhost:4000/books/search?query=Book+4,8403,0,0
+1757328783147,8520,GET Books Search Random,200,OK,Load Test Users 1-235,text,true,,7078,145,312,312,http://localhost:4000/books/search?query=Book+41,8520,0,1
+1757328782740,8928,GET Books Search Random,200,OK,Load Test Users 1-221,text,true,,7078,145,310,310,http://localhost:4000/books/search?query=Book+31,8928,0,2
+1757328782605,9065,GET Books Search Random,200,OK,Load Test Users 1-217,text,true,,7076,145,308,308,http://localhost:4000/books/search?query=Book+45,9065,0,1
+1757328782905,8788,GET Books List,200,OK,Load Test Users 1-227,text,true,,639707,124,306,306,http://localhost:4000/books,8722,0,1
+1757328782517,9176,GET Books List,200,OK,Load Test Users 1-214,text,true,,639707,124,306,306,http://localhost:4000/books,9150,0,1
+1757328791351,388,GET Home Page,200,OK,Load Test Users 1-440,text,true,,4332,119,307,307,http://localhost:4000/,388,0,2
+1757328783724,8015,GET Home Page,200,OK,Load Test Users 1-254,text,true,,4332,119,307,307,http://localhost:4000/,8015,0,1
+1757328791315,424,GET Home Page,200,OK,Load Test Users 1-492,text,true,,4332,119,307,307,http://localhost:4000/,424,0,1
+1757328789435,2304,GET Home Page,200,OK,Load Test Users 1-395,text,true,,4332,119,307,307,http://localhost:4000/,2304,0,238
+1757328791419,320,GET Home Page,200,OK,Load Test Users 1-264,text,true,,4332,119,307,307,http://localhost:4000/,320,0,2
+1757328790093,1646,GET Home Page,200,OK,Load Test Users 1-397,text,true,,4332,119,307,307,http://localhost:4000/,1646,0,144
+1757328791317,422,GET Home Page,200,OK,Load Test Users 1-364,text,true,,4332,119,307,307,http://localhost:4000/,422,0,1
+1757328791407,332,GET Home Page,200,OK,Load Test Users 1-362,text,true,,4332,119,306,306,http://localhost:4000/,332,0,2
+1757328791342,397,GET Home Page,200,OK,Load Test Users 1-503,text,true,,4332,119,306,306,http://localhost:4000/,397,0,1
+1757328783595,8145,GET Home Page,200,OK,Load Test Users 1-247,text,true,,4332,119,306,306,http://localhost:4000/,8145,0,1
+1757328791361,379,GET Home Page,200,OK,Load Test Users 1-331,text,true,,4332,119,306,306,http://localhost:4000/,379,0,1
+1757328791364,376,GET Home Page,200,OK,Load Test Users 1-361,text,true,,4332,119,306,306,http://localhost:4000/,376,0,1
+1757328785252,6488,GET Home Page,200,OK,Load Test Users 1-305,text,true,,4332,119,306,306,http://localhost:4000/,6488,0,105
+1757328790237,1503,GET Home Page,200,OK,Load Test Users 1-373,text,true,,4332,119,305,305,http://localhost:4000/,1503,0,1
+1757328791348,392,GET Home Page,200,OK,Load Test Users 1-414,text,true,,4332,119,302,302,http://localhost:4000/,392,0,1
+1757328785133,6607,GET Home Page,200,OK,Load Test Users 1-298,text,true,,4332,119,305,305,http://localhost:4000/,6607,0,0
+1757328791150,591,GET Home Page,200,OK,Load Test Users 1-300,text,true,,4332,119,302,302,http://localhost:4000/,591,0,34
+1757328790593,1148,GET Home Page,200,OK,Load Test Users 1-483,text,true,,4332,119,302,302,http://localhost:4000/,1148,0,260
+1757328789428,2313,GET Home Page,200,OK,Load Test Users 1-402,text,true,,4332,119,302,302,http://localhost:4000/,2313,0,4
+1757328791321,421,GET Home Page,200,OK,Load Test Users 1-377,text,true,,4332,119,295,295,http://localhost:4000/,421,0,1
+1757328791347,395,GET Home Page,200,OK,Load Test Users 1-450,text,true,,4332,119,295,295,http://localhost:4000/,395,0,0
+1757328791431,320,GET Home Page,200,OK,Load Test Users 1-375,text,true,,4332,119,286,286,http://localhost:4000/,320,0,1
+1757328791453,507,GET Home Page,200,OK,Load Test Users 1-405,text,true,,4332,119,293,293,http://localhost:4000/,507,0,5
+1757328791457,503,GET Home Page,200,OK,Load Test Users 1-419,text,true,,4332,119,293,293,http://localhost:4000/,503,0,7
+1757328791544,416,GET Home Page,200,OK,Load Test Users 1-515,text,true,,4332,119,293,293,http://localhost:4000/,416,0,1
+1757328791447,513,GET Home Page,200,OK,Load Test Users 1-393,text,true,,4332,119,293,293,http://localhost:4000/,513,0,1
+1757328791448,512,GET Home Page,200,OK,Load Test Users 1-431,text,true,,4332,119,293,293,http://localhost:4000/,512,0,1
+1757328791434,526,GET Home Page,200,OK,Load Test Users 1-401,text,true,,4332,119,293,293,http://localhost:4000/,526,0,2
+1757328790213,1870,GET Authors List,200,OK,Load Test Users 1-426,text,true,,92505,126,292,292,http://localhost:4000/authors,1870,0,1081
+1757328791428,659,GET Authors List,200,OK,Load Test Users 1-386,text,true,,92505,126,291,291,http://localhost:4000/authors,658,0,1
+1757328785253,6849,GET Authors List,200,OK,Load Test Users 1-277,text,true,,92505,126,290,290,http://localhost:4000/authors,6845,0,97
+1757328791366,763,GET Authors List,200,OK,Load Test Users 1-354,text,true,,92505,126,290,290,http://localhost:4000/authors,763,0,1
+1757328782845,9334,GET Sales,200,OK,Load Test Users 1-225,text,true,,2055724,124,290,290,http://localhost:4000/sales,9304,0,1
+1757328790992,1197,GET Authors List,200,OK,Load Test Users 1-270,text,true,,92505,126,290,290,http://localhost:4000/authors,1197,0,305
+1757328791120,1071,GET Authors List,200,OK,Load Test Users 1-250,text,true,,92505,126,289,289,http://localhost:4000/authors,1070,0,21
+1757328791876,318,GET Home Page,200,OK,Load Test Users 1-526,text,true,,4332,119,288,288,http://localhost:4000/,318,0,1
+1757328791419,779,GET Authors List,200,OK,Load Test Users 1-261,text,true,,92505,126,287,287,http://localhost:4000/authors,777,0,2
+1757328791361,839,GET Authors List,200,OK,Load Test Users 1-343,text,true,,92505,126,286,286,http://localhost:4000/authors,835,0,3
+1757328790408,1795,GET Authors List,200,OK,Load Test Users 1-421,text,true,,92505,126,285,285,http://localhost:4000/authors,1794,0,0
+1757328791354,859,GET Authors List,200,OK,Load Test Users 1-500,text,true,,92505,126,285,285,http://localhost:4000/authors,859,0,1
+1757328791342,873,GET Authors List,200,OK,Load Test Users 1-508,text,true,,92505,126,284,284,http://localhost:4000/authors,873,0,1
+1757328791363,854,GET Authors List,200,OK,Load Test Users 1-349,text,true,,92505,126,283,283,http://localhost:4000/authors,854,0,1
+1757328791345,878,GET Authors List,200,OK,Load Test Users 1-406,text,true,,92505,126,282,282,http://localhost:4000/authors,877,0,3
+1757328791326,899,GET Authors List,200,OK,Load Test Users 1-368,text,true,,92505,126,281,281,http://localhost:4000/authors,898,0,1
+1757328789434,2793,GET Authors List,200,OK,Load Test Users 1-275,text,true,,92505,126,280,280,http://localhost:4000/authors,2792,0,112
+1757328790343,1889,GET Authors List,200,OK,Load Test Users 1-475,text,true,,92505,126,279,279,http://localhost:4000/authors,1888,0,688
+1757328791409,828,GET Authors List,200,OK,Load Test Users 1-259,text,true,,92505,126,279,279,http://localhost:4000/authors,828,0,13
+1757328791328,915,GET Authors List,200,OK,Load Test Users 1-396,text,true,,92505,126,278,278,http://localhost:4000/authors,915,0,1
+1757328790856,1405,GET Authors List,200,OK,Load Test Users 1-484,text,true,,92505,126,277,277,http://localhost:4000/authors,1404,0,72
+1757328785264,7001,GET Authors List,200,OK,Load Test Users 1-304,text,true,,92505,126,276,276,http://localhost:4000/authors,7001,0,160
+1757328791384,887,GET Authors List,200,OK,Load Test Users 1-252,text,true,,92505,126,276,276,http://localhost:4000/authors,886,0,1
+1757328791418,856,GET Authors List,200,OK,Load Test Users 1-262,text,true,,92505,126,275,275,http://localhost:4000/authors,856,0,6
+1757328790929,1380,GET Authors List,200,OK,Load Test Users 1-372,text,true,,92505,126,275,275,http://localhost:4000/authors,1378,0,1
+1757328790855,1455,GET Authors List,200,OK,Load Test Users 1-451,text,true,,92505,126,274,274,http://localhost:4000/authors,1452,0,122
+1757328790998,1322,GET Authors List,200,OK,Load Test Users 1-382,text,true,,92505,126,273,273,http://localhost:4000/authors,1309,0,1
+1757328790989,1333,GET Authors List,200,OK,Load Test Users 1-389,text,true,,92505,126,273,273,http://localhost:4000/authors,1319,0,0
+1757328782486,9922,GET Sales,200,OK,Load Test Users 1-213,text,true,,2055724,124,274,274,http://localhost:4000/sales,9786,0,1
+1757328785728,6936,GET Books List,200,OK,Load Test Users 1-278,text,true,,639707,124,282,282,http://localhost:4000/books,6872,0,0
+1757328791397,1302,GET Books List,200,OK,Load Test Users 1-344,text,true,,639707,124,282,282,http://localhost:4000/books,1148,0,1
+1757328782784,9946,GET Sales,200,OK,Load Test Users 1-223,text,true,,2055724,124,282,282,http://localhost:4000/sales,9599,0,1
+1757328791427,1337,GET Books List,200,OK,Load Test Users 1-511,text,true,,639707,124,282,282,http://localhost:4000/books,1263,0,1
+1757328791346,1419,GET Books List,200,OK,Load Test Users 1-341,text,true,,639707,124,281,281,http://localhost:4000/books,1275,0,2
+1757328791321,1465,GET Books List,200,OK,Load Test Users 1-271,text,true,,639707,124,281,281,http://localhost:4000/books,1388,0,1
+1757328782754,10036,GET Sales,200,OK,Load Test Users 1-222,text,true,,2055724,124,280,280,http://localhost:4000/sales,9781,0,3
+1757328791354,1487,GET Books Search Random,200,OK,Load Test Users 1-336,text,true,,7078,145,281,281,http://localhost:4000/books/search?query=Book+49,1487,0,2
+1757328785128,7752,GET Books List,200,OK,Load Test Users 1-287,text,true,,639707,124,281,281,http://localhost:4000/books,7671,0,5918
+1757328789683,3223,GET Books List,200,OK,Load Test Users 1-453,text,true,,639707,124,281,281,http://localhost:4000/books,3115,0,0
+1757328785109,7797,GET Books List,200,OK,Load Test Users 1-290,text,true,,639707,124,281,281,http://localhost:4000/books,7742,0,6019
+1757328791371,1549,GET Books List,200,OK,Load Test Users 1-346,text,true,,639707,124,279,279,http://localhost:4000/books,1499,0,2
+1757328791147,1796,GET Books List,200,OK,Load Test Users 1-288,text,true,,639707,124,279,279,http://localhost:4000/books,1732,0,1
+1757328783394,9593,GET Books Search Random,200,OK,Load Test Users 1-243,text,true,,12894,145,280,280,http://localhost:4000/books/search?query=Book+20,9592,0,0
+1757328789862,3189,GET Books List,200,OK,Load Test Users 1-459,text,true,,639707,124,281,281,http://localhost:4000/books,3100,0,250
+1757328791408,1669,GET Books List,200,OK,Load Test Users 1-413,text,true,,639707,124,281,281,http://localhost:4000/books,1554,0,1
+1757328790929,2157,GET Books List,200,OK,Load Test Users 1-491,text,true,,639707,124,280,280,http://localhost:4000/books,2063,0,0
+1757328791327,1769,GET Books List,200,OK,Load Test Users 1-504,text,true,,639707,124,279,279,http://localhost:4000/books,1695,0,1
+1757328791424,1699,GET Books List,200,OK,Load Test Users 1-265,text,true,,639707,124,279,279,http://localhost:4000/books,1581,0,6
+1757328791350,1783,GET Books List,200,OK,Load Test Users 1-329,text,true,,639707,124,278,278,http://localhost:4000/books,1697,0,1
+1757328791357,1788,GET Books List,200,OK,Load Test Users 1-355,text,true,,639707,124,278,278,http://localhost:4000/books,1725,0,1
+1757328791357,1807,GET Books List,200,OK,Load Test Users 1-335,text,true,,639707,124,278,278,http://localhost:4000/books,1725,0,1
+1757328791192,1975,GET Books List,200,OK,Load Test Users 1-452,text,true,,639707,124,277,277,http://localhost:4000/books,1897,0,1
+1757328791323,1864,GET Books Search Random,200,OK,Load Test Users 1-507,text,true,,7078,145,276,276,http://localhost:4000/books/search?query=Book+33,1864,0,1
+1757328790304,2885,GET Books Search Random,200,OK,Load Test Users 1-471,text,true,,17089,144,275,275,http://localhost:4000/books/search?query=Book+6,2885,0,1
+1757328791332,1864,GET Books Search Random,200,OK,Load Test Users 1-266,text,true,,17087,144,274,274,http://localhost:4000/books/search?query=Book+5,1864,0,0
+1757328791346,1851,GET Books Search Random,200,OK,Load Test Users 1-345,text,true,,7078,145,274,274,http://localhost:4000/books/search?query=Book+42,1851,0,2
+1757328791358,1843,GET Books Search Random,200,OK,Load Test Users 1-340,text,true,,12316,145,273,273,http://localhost:4000/books/search?query=Book+11,1843,0,1
+1757328791363,1846,GET Books Search Random,200,OK,Load Test Users 1-353,text,true,,12897,145,272,272,http://localhost:4000/books/search?query=Book+15,1846,0,1
+1757328791192,2021,GET Books Search Random,200,OK,Load Test Users 1-435,text,true,,7077,145,272,272,http://localhost:4000/books/search?query=Book+37,2021,0,98
+1757328790980,2276,GET Books List,200,OK,Load Test Users 1-371,text,true,,639707,124,272,272,http://localhost:4000/books,2137,0,1
+1757328791154,2111,GET Books List,200,OK,Load Test Users 1-291,text,true,,639707,124,271,271,http://localhost:4000/books,2003,0,17
+1757328790318,2975,GET Books Search Random,200,OK,Load Test Users 1-474,text,true,,12897,145,271,271,http://localhost:4000/books/search?query=Book+15,2975,0,1
+1757328792206,1088,GET Home Page,200,OK,Load Test Users 1-537,text,true,,4332,119,270,270,http://localhost:4000/,1088,0,1
+1757328792323,971,GET Home Page,200,OK,Load Test Users 1-541,text,true,,4332,119,270,270,http://localhost:4000/,971,0,1
+1757328792444,851,GET Home Page,200,OK,Load Test Users 1-544,text,true,,4332,119,270,270,http://localhost:4000/,851,0,1
+1757328792594,701,GET Home Page,200,OK,Load Test Users 1-550,text,true,,4332,119,270,270,http://localhost:4000/,701,0,1
+1757328792538,757,GET Home Page,200,OK,Load Test Users 1-548,text,true,,4332,119,270,270,http://localhost:4000/,757,0,1
+1757328792639,658,GET Home Page,200,OK,Load Test Users 1-551,text,true,,4332,119,266,266,http://localhost:4000/,657,0,2
+1757328791535,1810,GET Authors List,200,OK,Load Test Users 1-512,text,true,,92505,126,266,266,http://localhost:4000/authors,1809,0,2
+1757328791442,1912,GET Authors List,200,OK,Load Test Users 1-409,text,true,,92505,126,265,265,http://localhost:4000/authors,1889,0,3
+1757328791347,2009,GET Books List,200,OK,Load Test Users 1-458,text,true,,639707,124,264,264,http://localhost:4000/books,1873,0,2
+1757328791358,1998,GET Books Search Random,200,OK,Load Test Users 1-356,text,true,,7078,145,264,264,http://localhost:4000/books/search?query=Book+47,1998,0,1
+1757328791637,1726,GET Authors List,200,OK,Load Test Users 1-518,text,true,,92505,126,262,262,http://localhost:4000/authors,1705,0,2
+1757328785429,7975,GET Books Search Random,200,OK,Load Test Users 1-311,text,true,,17092,144,263,263,http://localhost:4000/books/search?query=Book+1,7975,0,1
+1757328791192,2213,GET Books Search Random,200,OK,Load Test Users 1-376,text,true,,12897,145,262,262,http://localhost:4000/books/search?query=Book+14,2213,0,3
+1757328790194,3301,GET Books Search Random,200,OK,Load Test Users 1-455,text,true,,12316,145,264,264,http://localhost:4000/books/search?query=Book+11,3301,0,1099
+1757328791408,2088,GET Books Search Random,200,OK,Load Test Users 1-260,text,true,,12894,145,263,263,http://localhost:4000/books/search?query=Book+27,2088,0,4
+1757328789348,4152,GET Books Search Random,200,OK,Load Test Users 1-433,text,true,,12896,145,262,262,http://localhost:4000/books/search?query=Book+16,4152,0,0
+1757328791281,2221,GET Books Search Random,200,OK,Load Test Users 1-423,text,true,,7078,145,261,261,http://localhost:4000/books/search?query=Book+48,2221,0,1
+1757328790972,2666,GET Books Search Random,200,OK,Load Test Users 1-374,text,true,,7078,145,264,264,http://localhost:4000/books/search?query=Book+31,2666,0,6
+1757328791049,2589,GET Books Search Random,200,OK,Load Test Users 1-434,text,true,,12894,145,264,264,http://localhost:4000/books/search?query=Book+27,2589,0,2
+1757328791361,2278,GET Books Search Random,200,OK,Load Test Users 1-330,text,true,,12896,145,262,262,http://localhost:4000/books/search?query=Book+13,2278,0,1
+1757328790196,3473,GET Books Search Random,200,OK,Load Test Users 1-457,text,true,,12316,145,262,262,http://localhost:4000/books/search?query=Book+11,3473,0,1097
+1757328790238,3433,GET Books Search Random,200,OK,Load Test Users 1-468,text,true,,12315,145,261,261,http://localhost:4000/books/search?query=Book+22,3433,0,792
+1757328785425,8249,GET Books Search Random,200,OK,Load Test Users 1-306,text,true,,12897,145,260,260,http://localhost:4000/books/search?query=Book+14,8249,0,1
+1757328791410,2270,GET Books Search Random,200,OK,Load Test Users 1-257,text,true,,12897,145,260,260,http://localhost:4000/books/search?query=Book+10,2270,0,4
+1757328791334,2350,GET Books Search Random,200,OK,Load Test Users 1-479,text,true,,17090,144,259,259,http://localhost:4000/books/search?query=Book+8,2349,0,1
+1757328783426,10307,GET Books List,200,OK,Load Test Users 1-242,text,true,,639707,124,260,260,http://localhost:4000/books,10213,0,113
+1757328791356,2414,GET Books Search Random,200,OK,Load Test Users 1-334,text,true,,12896,145,260,260,http://localhost:4000/books/search?query=Book+21,2414,0,1
+1757328790240,3535,GET Books List,200,OK,Load Test Users 1-470,text,true,,639707,124,259,259,http://localhost:4000/books,3441,0,261
+1757328791361,2415,GET Books List,200,OK,Load Test Users 1-339,text,true,,639707,124,258,258,http://localhost:4000/books,2319,0,3
+1757328783595,10186,GET Books List,200,OK,Load Test Users 1-249,text,true,,639707,124,257,257,http://localhost:4000/books,10044,0,1
+1757328791392,2465,GET Books List,200,OK,Load Test Users 1-316,text,true,,639707,124,259,259,http://localhost:4000/books,2380,0,1
+1757328783414,10497,GET Books Search Random,200,OK,Load Test Users 1-244,text,true,,12894,145,259,259,http://localhost:4000/books/search?query=Book+27,10497,0,1
+1757328785783,8162,GET Books List,200,OK,Load Test Users 1-323,text,true,,639707,124,259,259,http://localhost:4000/books,8066,0,0
+1757328790915,3087,GET Books List,200,OK,Load Test Users 1-494,text,true,,639707,124,260,260,http://localhost:4000/books,2921,0,1
+1757328790853,3159,GET Books Search Random,200,OK,Load Test Users 1-486,text,true,,12894,145,259,259,http://localhost:4000/books/search?query=Book+20,3159,0,1
+1757328785634,8381,GET Books Search Random,200,OK,Load Test Users 1-318,text,true,,12897,145,259,259,http://localhost:4000/books/search?query=Book+14,8381,0,1
+1757328791395,2653,GET Books List,200,OK,Load Test Users 1-510,text,true,,639707,124,259,259,http://localhost:4000/books,2456,0,1
+1757328791359,2714,GET Books Search Random,200,OK,Load Test Users 1-444,text,true,,7078,145,259,259,http://localhost:4000/books/search?query=Book+47,2714,0,1
+1757328791342,2731,GET Books Search Random,200,OK,Load Test Users 1-501,text,true,,12896,145,259,259,http://localhost:4000/books/search?query=Book+13,2731,0,2
+1757328790406,3671,GET Books List,200,OK,Load Test Users 1-398,text,true,,639707,124,257,257,http://localhost:4000/books,3503,0,1
+1757328785728,8361,GET Books Search Random,200,OK,Load Test Users 1-319,text,true,,7076,145,256,256,http://localhost:4000/books/search?query=Book+45,8361,0,0
+1757328789713,4378,GET Books List,200,OK,Load Test Users 1-454,text,true,,639707,124,255,255,http://localhost:4000/books,4157,0,1
+1757328793022,1068,GET Home Page,200,OK,Load Test Users 1-564,text,true,,4332,119,255,255,http://localhost:4000/,1067,0,1
+1757328785511,8607,GET Books List,200,OK,Load Test Users 1-312,text,true,,639707,124,254,254,http://localhost:4000/books,8394,0,1
+1757328785206,8952,GET Books Search Random,200,OK,Load Test Users 1-255,text,true,,17090,144,255,255,http://localhost:4000/books/search?query=Book+8,8952,0,279
+1757328785137,9027,GET Books Search Random,200,OK,Load Test Users 1-280,text,true,,12894,145,254,254,http://localhost:4000/books/search?query=Book+27,9027,0,1
+1757328791053,3135,GET Books Search Random,200,OK,Load Test Users 1-443,text,true,,7077,145,254,254,http://localhost:4000/books/search?query=Book+38,3135,0,3
+1757328783491,10700,GET Books List,200,OK,Load Test Users 1-246,text,true,,639707,124,253,253,http://localhost:4000/books,10550,0,1
+1757328783724,10467,GET Books Search Random,200,OK,Load Test Users 1-253,text,true,,7078,145,253,253,http://localhost:4000/books/search?query=Book+44,10467,0,126
+1757328789200,4993,GET Books Search Random,200,OK,Load Test Users 1-422,text,true,,7076,145,251,251,http://localhost:4000/books/search?query=Book+46,4993,0,119
+1757328789350,4845,GET Books Search Random,200,OK,Load Test Users 1-439,text,true,,12316,145,250,250,http://localhost:4000/books/search?query=Book+11,4845,0,0
+1757328785128,9073,GET Books Search Random,200,OK,Load Test Users 1-296,text,true,,12896,145,249,249,http://localhost:4000/books/search?query=Book+13,9073,0,1
+1757328791330,2874,GET Books Search Random,200,OK,Load Test Users 1-505,text,true,,17090,144,248,248,http://localhost:4000/books/search?query=Book+8,2874,0,1
+1757328789429,4776,GET Books Search Random,200,OK,Load Test Users 1-428,text,true,,7078,145,247,247,http://localhost:4000/books/search?query=Book+49,4776,0,5
+1757328789199,5008,GET Books Search Random,200,OK,Load Test Users 1-424,text,true,,12898,145,246,246,http://localhost:4000/books/search?query=Book+25,5008,0,122
+1757328785253,8983,GET Books List,200,OK,Load Test Users 1-282,text,true,,639707,124,246,246,http://localhost:4000/books,8891,0,170
+1757328791729,2549,GET Authors List,200,OK,Load Test Users 1-520,text,true,,92505,126,247,247,http://localhost:4000/authors,2536,0,1
+1757328791353,2959,GET Books List,200,OK,Load Test Users 1-273,text,true,,639707,124,247,247,http://localhost:4000/books,2842,0,1
+1757328790407,3930,GET Books List,200,OK,Load Test Users 1-476,text,true,,639707,124,246,246,http://localhost:4000/books,3802,0,91
+1757328793523,914,GET Home Page,200,OK,Load Test Users 1-581,text,true,,4332,119,249,249,http://localhost:4000/,914,0,0
+1757328793932,505,GET Home Page,200,OK,Load Test Users 1-594,text,true,,4332,119,249,249,http://localhost:4000/,505,0,0
+1757328793443,995,GET Home Page,200,OK,Load Test Users 1-578,text,true,,4332,119,249,249,http://localhost:4000/,995,0,4
+1757328791452,3380,GET Books Search Random,200,OK,Load Test Users 1-427,text,true,,7078,145,259,259,http://localhost:4000/books/search?query=Book+49,3379,0,1
+1757328794342,490,GET Home Page,200,OK,Load Test Users 1-608,text,true,,4332,119,259,259,http://localhost:4000/,490,0,1
+1757328794031,801,GET Home Page,200,OK,Load Test Users 1-597,text,true,,4332,119,259,259,http://localhost:4000/,801,0,6
+1757328794402,430,GET Home Page,200,OK,Load Test Users 1-610,text,true,,4332,119,259,259,http://localhost:4000/,430,0,3
+1757328792569,2295,GET Authors List,200,OK,Load Test Users 1-549,text,true,,92505,126,256,256,http://localhost:4000/authors,2294,0,5
+1757328791439,3481,GET Books Search Random,200,OK,Load Test Users 1-403,text,true,,7077,145,257,257,http://localhost:4000/books/search?query=Book+36,3481,0,1
+1757328791452,3472,GET Books List,200,OK,Load Test Users 1-268,text,true,,639707,124,256,256,http://localhost:4000/books,3394,0,1
+1757328791431,3520,GET Books Search Random,200,OK,Load Test Users 1-411,text,true,,12895,145,256,256,http://localhost:4000/books/search?query=Book+12,3520,0,1
+1757328791437,3525,GET Books List,200,OK,Load Test Users 1-388,text,true,,639707,124,255,255,http://localhost:4000/books,3428,0,1
+1757328791464,3509,GET Books List,200,OK,Load Test Users 1-387,text,true,,639707,124,255,255,http://localhost:4000/books,3432,0,10
+1757328791449,3545,GET Books List,200,OK,Load Test Users 1-425,text,true,,639707,124,254,254,http://localhost:4000/books,3454,0,2
+1757328789951,5143,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-461,text,false,,4050,136,257,257,http://localhost:4000/books/top_selling,5142,0,285
+1757328791450,3660,GET Books List,200,OK,Load Test Users 1-385,text,true,,639707,124,256,256,http://localhost:4000/books,3537,0,1
+1757328791359,3821,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-333,text,false,,4034,136,258,258,http://localhost:4000/books/top_selling,3821,0,1
+1757328791363,3824,GET Sales,500,Internal Server Error,Load Test Users 1-342,text,false,,3909,124,257,257,http://localhost:4000/sales,3824,0,1
+1757328783384,11809,GET Sales,500,Internal Server Error,Load Test Users 1-241,text,false,,3909,124,256,256,http://localhost:4000/sales,11809,0,0
+1757328792778,2415,GET Authors Stats,500,Internal Server Error,Load Test Users 1-556,text,false,,3986,132,256,256,http://localhost:4000/authors/stats,2415,0,2
+1757328782878,12317,GET Authors Stats,500,Internal Server Error,Load Test Users 1-226,text,false,,3999,132,255,255,http://localhost:4000/authors/stats,12317,0,1
+1757328785425,9770,GET Sales,500,Internal Server Error,Load Test Users 1-310,text,false,,3908,124,255,255,http://localhost:4000/sales,9770,0,1
+1757328791461,3735,GET Sales,500,Internal Server Error,Load Test Users 1-263,text,false,,3908,124,255,255,http://localhost:4000/sales,3734,0,9
+1757328791461,3735,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-408,text,false,,4033,136,252,252,http://localhost:4000/books/top_selling,3735,0,2
+1757328791448,3749,GET Sales,500,Internal Server Error,Load Test Users 1-410,text,false,,3908,124,251,251,http://localhost:4000/sales,3749,0,1
+1757328789193,6009,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-274,text,false,,4034,136,250,250,http://localhost:4000/books/top_selling,6009,0,118
+1757328791937,3261,GET Authors Stats,500,Internal Server Error,Load Test Users 1-528,text,false,,4042,132,250,250,http://localhost:4000/authors/stats,3260,0,1
+1757328790305,4898,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-466,text,false,,4034,136,248,248,http://localhost:4000/books/top_selling,4898,0,1
+1757328791039,4170,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-446,text,false,,4034,136,247,247,http://localhost:4000/books/top_selling,4170,0,2
+1757328793706,1503,GET Authors Stats,500,Internal Server Error,Load Test Users 1-587,text,false,,3986,132,247,247,http://localhost:4000/authors/stats,1503,0,3
+1757328782997,12209,GET Authors Stats,500,Internal Server Error,Load Test Users 1-230,text,false,,3999,132,247,247,http://localhost:4000/authors/stats,12209,0,1
+1757328791047,4164,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-445,text,false,,4050,136,246,246,http://localhost:4000/books/top_selling,4164,0,1
+1757328793654,1558,GET Authors Stats,500,Internal Server Error,Load Test Users 1-585,text,false,,3986,132,243,243,http://localhost:4000/authors/stats,1558,0,4
+1757328794064,1148,GET Books List,500,Internal Server Error,Load Test Users 1-599,text,false,,3908,124,243,243,http://localhost:4000/books,1148,0,1
+1757328794245,973,GET Authors Stats,500,Internal Server Error,Load Test Users 1-605,text,false,,3986,132,241,241,http://localhost:4000/authors/stats,973,0,3
+1757328793832,1391,GET Authors List,500,Internal Server Error,Load Test Users 1-591,text,false,,3930,126,240,240,http://localhost:4000/authors,1391,0,5
+1757328793405,1818,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-577,text,false,,3978,136,240,240,http://localhost:4000/books/top_selling,1816,0,1
+1757328792238,2988,GET All Reviews,500,Internal Server Error,Load Test Users 1-538,text,false,,3931,126,238,238,http://localhost:4000/reviews,2988,0,2
+1757328789429,5800,GET Sales,500,Internal Server Error,Load Test Users 1-392,text,false,,3909,124,237,237,http://localhost:4000/sales,5800,0,3
+1757328791195,4034,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-384,text,false,,4050,136,237,237,http://localhost:4000/books/top_selling,4034,0,95
+1757328790597,4633,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-412,text,false,,4050,136,235,235,http://localhost:4000/books/top_selling,4633,0,0
+1757328785123,10108,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-301,text,false,,4050,136,235,235,http://localhost:4000/books/top_selling,10108,0,6063
+1757328794276,955,GET Authors Stats,500,Internal Server Error,Load Test Users 1-606,text,false,,3986,132,234,234,http://localhost:4000/authors/stats,954,0,2
+1757328782581,12652,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-216,text,false,,4046,136,232,232,http://localhost:4000/books/top_selling,12652,0,1
+1757328783320,11913,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-240,text,false,,4050,136,232,232,http://localhost:4000/books/top_selling,11913,0,0
+1757328793588,1646,GET Authors Stats,500,Internal Server Error,Load Test Users 1-583,text,false,,3986,132,233,233,http://localhost:4000/authors/stats,1646,0,4
+1757328782965,12269,GET All Reviews,500,Internal Server Error,Load Test Users 1-229,text,false,,4027,126,231,231,http://localhost:4000/reviews,12269,0,1
+1757328783270,11966,GET Authors Stats,500,Internal Server Error,Load Test Users 1-238,text,false,,3999,132,229,229,http://localhost:4000/authors/stats,11966,0,1
+1757328790688,4548,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-480,text,false,,4050,136,229,229,http://localhost:4000/books/top_selling,4547,0,258
+1757328782676,12563,GET Authors Stats,500,Internal Server Error,Load Test Users 1-219,text,false,,3999,132,228,228,http://localhost:4000/authors/stats,12563,0,2
+1757328793346,1894,GET Sales,500,Internal Server Error,Load Test Users 1-575,text,false,,3908,124,226,226,http://localhost:4000/sales,1894,0,5
+1757328785874,9370,GET Sales,500,Internal Server Error,Load Test Users 1-321,text,false,,3908,124,225,225,http://localhost:4000/sales,9370,0,1
+1757328782216,13028,GET Authors Stats,500,Internal Server Error,Load Test Users 1-204,text,false,,3992,132,225,225,http://localhost:4000/authors/stats,13028,0,2
+1757328791394,3851,GET Sales,500,Internal Server Error,Load Test Users 1-502,text,false,,3909,124,225,225,http://localhost:4000/sales,3851,0,1
+1757328790742,4500,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-380,text,false,,4034,136,222,222,http://localhost:4000/books/top_selling,4500,0,238
+1757328793238,2009,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-571,text,false,,3978,136,222,222,http://localhost:4000/books/top_selling,2009,0,4
+1757328782934,12313,GET All Reviews,500,Internal Server Error,Load Test Users 1-228,text,false,,4027,126,222,222,http://localhost:4000/reviews,12313,0,1
+1757328789105,6143,GET Sales,500,Internal Server Error,Load Test Users 1-276,text,false,,3908,124,220,220,http://localhost:4000/sales,6143,0,88
+1757328794370,879,GET Authors Stats,500,Internal Server Error,Load Test Users 1-609,text,false,,3986,132,219,219,http://localhost:4000/authors/stats,879,0,2
+1757328783622,11628,GET Sales,500,Internal Server Error,Load Test Users 1-248,text,false,,3908,124,218,218,http://localhost:4000/sales,11628,0,1
+1757328782545,12708,GET All Reviews,500,Internal Server Error,Load Test Users 1-215,text,false,,4027,126,216,216,http://localhost:4000/reviews,12708,0,1
+1757328785514,9739,GET Sales,500,Internal Server Error,Load Test Users 1-314,text,false,,3909,124,216,216,http://localhost:4000/sales,9739,0,1
+1757328792863,2392,GET Authors Stats,500,Internal Server Error,Load Test Users 1-559,text,false,,3986,132,215,215,http://localhost:4000/authors/stats,2391,0,1
+1757328793374,1882,GET All Reviews,500,Internal Server Error,Load Test Users 1-576,text,false,,3937,126,214,214,http://localhost:4000/reviews,1882,0,3
+1757328790238,5021,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-448,text,false,,4050,136,213,213,http://localhost:4000/books/top_selling,5020,0,796
+1757328781171,14091,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-169,text,false,,3829,136,211,211,http://localhost:4000/books/top_selling,14091,0,1
+1757328793687,1574,GET All Reviews,500,Internal Server Error,Load Test Users 1-586,text,false,,3937,126,211,211,http://localhost:4000/reviews,1574,0,3
+1757328791313,3951,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-416,text,false,,4050,136,209,209,http://localhost:4000/books/top_selling,3951,0,1
+1757328790792,4473,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-490,text,false,,4033,136,209,209,http://localhost:4000/books/top_selling,4473,0,0
+1757328791352,3915,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-328,text,false,,4050,136,207,207,http://localhost:4000/books/top_selling,3915,0,1
+1757328783127,12140,GET All Reviews,500,Internal Server Error,Load Test Users 1-232,text,false,,4027,126,207,207,http://localhost:4000/reviews,12140,0,0
+1757328785925,9342,GET Sales,500,Internal Server Error,Load Test Users 1-322,text,false,,3908,124,207,207,http://localhost:4000/sales,9342,0,1
+1757328794184,1087,GET Authors List,500,Internal Server Error,Load Test Users 1-603,text,false,,3930,126,205,205,http://localhost:4000/authors,1086,0,1
+1757328782395,12876,GET Authors Stats,500,Internal Server Error,Load Test Users 1-210,text,false,,3992,132,205,205,http://localhost:4000/authors/stats,12876,0,2
+1757328791148,4125,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-294,text,false,,4050,136,203,203,http://localhost:4000/books/top_selling,4125,0,0
+1757328794154,1120,GET Books List,500,Internal Server Error,Load Test Users 1-602,text,false,,3908,124,202,202,http://localhost:4000/books,1120,0,1
+1757328792997,2278,GET Authors Stats,500,Internal Server Error,Load Test Users 1-563,text,false,,3986,132,202,202,http://localhost:4000/authors/stats,2277,0,6
+1757328791370,3905,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-350,text,false,,4050,136,202,202,http://localhost:4000/books/top_selling,3904,0,1
+1757328791281,3996,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-462,text,false,,4034,136,200,200,http://localhost:4000/books/top_selling,3995,0,1
+1757328793138,2138,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-568,text,false,,3978,136,200,200,http://localhost:4000/books/top_selling,2138,0,3
+1757328791181,4096,GET Sales,500,Internal Server Error,Load Test Users 1-442,text,false,,3909,124,199,199,http://localhost:4000/sales,4095,0,2
+1757328794036,1245,GET Authors List,500,Internal Server Error,Load Test Users 1-598,text,false,,3930,126,197,197,http://localhost:4000/authors,1245,0,1
+1757328785135,10147,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-295,text,false,,4034,136,197,197,http://localhost:4000/books/top_selling,10147,0,0
+1757328793764,1520,GET All Reviews,500,Internal Server Error,Load Test Users 1-589,text,false,,3937,126,194,194,http://localhost:4000/reviews,1520,0,1
+1757328792354,2932,GET Books Search Random,500,Internal Server Error,Load Test Users 1-542,text,false,,4042,145,193,193,http://localhost:4000/books/search?query=Book+30,2932,0,0
+1757328793334,1952,GET Books List,500,Internal Server Error,Load Test Users 1-574,text,false,,3908,124,193,193,http://localhost:4000/books,1952,0,1
+1757328792391,2899,GET Authors Stats,500,Internal Server Error,Load Test Users 1-543,text,false,,4042,132,192,192,http://localhost:4000/authors/stats,2899,0,2
+1757328794217,1082,GET Authors Stats,500,Internal Server Error,Load Test Users 1-604,text,false,,3986,132,190,190,http://localhost:4000/authors/stats,1077,0,2
+1757328793079,2222,GET Books List,500,Internal Server Error,Load Test Users 1-566,text,false,,3908,124,189,189,http://localhost:4000/books,2222,0,2
+1757328782036,13269,GET Authors Stats,500,Internal Server Error,Load Test Users 1-198,text,false,,3992,132,189,189,http://localhost:4000/authors/stats,13269,0,1
+1757328792055,3261,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-532,text,false,,3573,136,188,188,http://localhost:4000/books/top_selling,3260,0,1
+1757328792091,3230,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-533,text,false,,3573,136,187,187,http://localhost:4000/books/top_selling,3230,0,1
+1757328792445,2878,GET All Reviews,500,Internal Server Error,Load Test Users 1-545,text,false,,3931,126,186,186,http://localhost:4000/reviews,2878,0,0
+1757328791334,3991,GET Sales,500,Internal Server Error,Load Test Users 1-469,text,false,,3503,124,185,185,http://localhost:4000/sales,3991,0,4
+1757328794126,1201,GET Books List,500,Internal Server Error,Load Test Users 1-601,text,false,,3908,124,184,184,http://localhost:4000/books,1201,0,1
+1757328793979,1349,GET Books List,500,Internal Server Error,Load Test Users 1-596,text,false,,3908,124,184,184,http://localhost:4000/books,1349,0,11
+1757328791295,4033,GET Authors Stats,500,Internal Server Error,Load Test Users 1-324,text,false,,3637,132,184,184,http://localhost:4000/authors/stats,4033,0,0
+1757328791313,4021,GET Sales,500,Internal Server Error,Load Test Users 1-407,text,false,,3503,124,183,183,http://localhost:4000/sales,4021,0,1
+1757328791333,4186,GET Sales,500,Internal Server Error,Load Test Users 1-506,text,false,,3503,124,187,187,http://localhost:4000/sales,4186,0,1
+1757328791354,4166,GET Sales,500,Internal Server Error,Load Test Users 1-357,text,false,,3503,124,187,187,http://localhost:4000/sales,4166,0,1
+1757328790600,4938,GET All Reviews,500,Internal Server Error,Load Test Users 1-477,text,false,,3526,126,186,186,http://localhost:4000/reviews,4938,0,0
+1757328792272,3266,GET Books List,500,Internal Server Error,Load Test Users 1-539,text,false,,3503,124,186,186,http://localhost:4000/books,3266,0,2
+1757328792694,2847,GET Sales,500,Internal Server Error,Load Test Users 1-553,text,false,,3503,124,184,184,http://localhost:4000/sales,2847,0,2
+1757328782070,13585,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-199,text,false,,3619,136,187,187,http://localhost:4000/books/top_selling,13585,0,2
+1757328791298,4357,GET All Reviews,500,Internal Server Error,Load Test Users 1-366,text,false,,3526,126,187,187,http://localhost:4000/reviews,4357,0,2
+1757328785512,10144,GET Sales,500,Internal Server Error,Load Test Users 1-313,text,false,,3908,124,187,187,http://localhost:4000/sales,10143,0,0
+1757328791401,4256,GET Sales,500,Internal Server Error,Load Test Users 1-348,text,false,,3909,124,187,187,http://localhost:4000/sales,4256,0,1
+1757328791146,4511,GET Sales,500,Internal Server Error,Load Test Users 1-284,text,false,,3503,124,187,187,http://localhost:4000/sales,4511,0,1
+1757328791281,4376,GET All Reviews,500,Internal Server Error,Load Test Users 1-449,text,false,,3526,126,187,187,http://localhost:4000/reviews,4376,0,1
+1757328780806,14852,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-157,text,false,,4039,136,187,187,http://localhost:4000/books/top_selling,14852,0,2
+1757328792026,3631,GET Authors Stats,500,Internal Server Error,Load Test Users 1-531,text,false,,4042,132,187,187,http://localhost:4000/authors/stats,3631,0,1
+1757328785184,10474,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-303,text,false,,4050,136,187,187,http://localhost:4000/books/top_selling,10474,0,0
+1757328781048,14611,GET Authors Stats,500,Internal Server Error,Load Test Users 1-165,text,false,,4009,132,187,187,http://localhost:4000/authors/stats,14611,0,1
+1757328792667,2991,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-552,text,false,,3573,136,187,187,http://localhost:4000/books/top_selling,2991,0,2
+1757328790966,4692,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-489,text,false,,4034,136,187,187,http://localhost:4000/books/top_selling,4692,0,0
+1757328793226,2433,GET All Reviews,500,Internal Server Error,Load Test Users 1-570,text,false,,3937,126,184,184,http://localhost:4000/reviews,2433,0,4
+1757328790973,4687,GET Authors Stats,500,Internal Server Error,Load Test Users 1-367,text,false,,3637,132,184,184,http://localhost:4000/authors/stats,4687,0,1
+1757328792926,2734,GET Authors Stats,500,Internal Server Error,Load Test Users 1-561,text,false,,3986,132,184,184,http://localhost:4000/authors/stats,2734,0,1
+1757328794305,1356,GET Sales,500,Internal Server Error,Load Test Users 1-607,text,false,,3908,124,179,179,http://localhost:4000/sales,1356,0,4
+1757328791437,4225,GET All Reviews,500,Internal Server Error,Load Test Users 1-420,text,false,,3526,126,178,178,http://localhost:4000/reviews,4225,0,4
+1757328792147,3515,GET Books Search Random,500,Internal Server Error,Load Test Users 1-535,text,false,,4042,145,178,178,http://localhost:4000/books/search?query=Book+30,3515,0,1
+1757328790886,4776,GET All Reviews,500,Internal Server Error,Load Test Users 1-487,text,false,,3526,126,178,178,http://localhost:4000/reviews,4776,0,61
+1757328792898,2764,GET Authors Stats,500,Internal Server Error,Load Test Users 1-560,text,false,,3986,132,176,176,http://localhost:4000/authors/stats,2764,0,3
+1757328791010,4652,GET All Reviews,500,Internal Server Error,Load Test Users 1-383,text,false,,3526,126,175,175,http://localhost:4000/reviews,4652,0,2
+1757328791309,4353,GET Sales,500,Internal Server Error,Load Test Users 1-497,text,false,,3503,124,175,175,http://localhost:4000/sales,4353,0,6
+1757328782458,13200,GET All Reviews,500,Internal Server Error,Load Test Users 1-212,text,false,,4027,126,187,187,http://localhost:4000/reviews,13200,0,2
+1757328792724,2939,GET Sales,500,Internal Server Error,Load Test Users 1-554,text,false,,3503,124,175,175,http://localhost:4000/sales,2939,0,3
+1757328793256,2407,GET All Reviews,500,Internal Server Error,Load Test Users 1-572,text,false,,3937,126,172,172,http://localhost:4000/reviews,2407,0,1
+1757328791967,3697,GET Authors Stats,500,Internal Server Error,Load Test Users 1-529,text,false,,4042,132,172,172,http://localhost:4000/authors/stats,3696,0,1
+1757328792482,3181,GET Books Search Random,500,Internal Server Error,Load Test Users 1-546,text,false,,4042,145,172,172,http://localhost:4000/books/search?query=Book+23,3181,0,4
+1757328791375,4290,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-498,text,false,,4034,136,169,169,http://localhost:4000/books/top_selling,4290,0,2
+1757328793045,2619,GET Books List,500,Internal Server Error,Load Test Users 1-565,text,false,,3908,124,169,169,http://localhost:4000/books,2619,0,5
+1757328793288,2377,GET Authors Stats,500,Internal Server Error,Load Test Users 1-573,text,false,,3986,132,169,169,http://localhost:4000/authors/stats,2377,0,2
+1757328785124,10541,GET Authors Stats,500,Internal Server Error,Load Test Users 1-289,text,false,,3637,132,169,169,http://localhost:4000/authors/stats,10541,0,5923
+1757328791370,4288,GET All Reviews,500,Internal Server Error,Load Test Users 1-360,text,false,,3526,126,187,187,http://localhost:4000/reviews,4288,0,3
+1757328792747,2920,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-555,text,false,,3573,136,167,167,http://localhost:4000/books/top_selling,2920,0,2
+1757328785110,10559,GET Sales,500,Internal Server Error,Load Test Users 1-297,text,false,,3909,124,164,164,http://localhost:4000/sales,10559,0,6032
+1757328791375,4294,GET Sales,500,Internal Server Error,Load Test Users 1-256,text,false,,3909,124,164,164,http://localhost:4000/sales,4294,0,1
+1757328785604,10065,GET Authors Stats,500,Internal Server Error,Load Test Users 1-317,text,false,,3637,132,164,164,http://localhost:4000/authors/stats,10065,0,66
+1757328789429,6241,GET Sales,500,Internal Server Error,Load Test Users 1-394,text,false,,3503,124,164,164,http://localhost:4000/sales,6241,0,3
+1757328793562,2110,GET Authors List,500,Internal Server Error,Load Test Users 1-582,text,false,,3930,126,161,160,http://localhost:4000/authors,2110,0,3
+1757328790992,4681,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-437,text,false,,4050,136,159,159,http://localhost:4000/books/top_selling,4680,0,1
+1757328791789,3884,GET Sales,500,Internal Server Error,Load Test Users 1-523,text,false,,3503,124,159,159,http://localhost:4000/sales,3884,0,1
+1757328791389,4287,GET Authors Stats,500,Internal Server Error,Load Test Users 1-347,text,false,,3637,132,157,157,http://localhost:4000/authors/stats,4287,0,1
+1757328791822,3856,GET Books List,500,Internal Server Error,Load Test Users 1-524,text,false,,3503,124,156,156,http://localhost:4000/books,3856,0,1
+1757328793735,1944,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-588,text,false,,3978,136,155,155,http://localhost:4000/books/top_selling,1944,0,6
+1757328783026,12653,GET Authors Stats,500,Internal Server Error,Load Test Users 1-231,text,false,,3999,132,155,155,http://localhost:4000/authors/stats,12653,0,1
+1757328791302,4384,GET All Reviews,500,Internal Server Error,Load Test Users 1-496,text,false,,3526,126,148,148,http://localhost:4000/reviews,4384,0,5
+1757328791774,3913,GET Sales,500,Internal Server Error,Load Test Users 1-522,text,false,,3503,124,148,148,http://localhost:4000/sales,3912,0,2
+1757328783319,12369,GET Sales,500,Internal Server Error,Load Test Users 1-237,text,false,,3503,124,144,144,http://localhost:4000/sales,12368,0,1
+1757328785730,9958,GET Authors Stats,500,Internal Server Error,Load Test Users 1-320,text,false,,3637,132,144,144,http://localhost:4000/authors/stats,9958,0,197
+1757328791920,3768,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-514,text,false,,3573,136,144,144,http://localhost:4000/books/top_selling,3768,0,1
+1757328790951,4738,GET All Reviews,500,Internal Server Error,Load Test Users 1-493,text,false,,3526,126,141,141,http://localhost:4000/reviews,4738,0,14
+1757328791575,4116,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-516,text,false,,4033,136,138,138,http://localhost:4000/books/top_selling,4116,0,2
+1757328789673,6019,GET Authors Stats,500,Internal Server Error,Load Test Users 1-399,text,false,,3637,132,138,138,http://localhost:4000/authors/stats,6019,0,1
+1757328789388,6302,GET All Reviews,500,Internal Server Error,Load Test Users 1-390,text,false,,3526,126,137,137,http://localhost:4000/reviews,6302,0,54
+1757328791458,4235,GET Authors Stats,500,Internal Server Error,Load Test Users 1-417,text,false,,4008,132,136,136,http://localhost:4000/authors/stats,4235,0,2
+1757328791853,3840,GET Books List,500,Internal Server Error,Load Test Users 1-525,text,false,,3503,124,136,136,http://localhost:4000/books,3840,0,1
+1757328790444,5249,GET Sales,500,Internal Server Error,Load Test Users 1-478,text,false,,3503,124,136,136,http://localhost:4000/sales,5249,0,483
+1757328792114,3583,GET Sales,500,Internal Server Error,Load Test Users 1-534,text,false,,3503,124,134,134,http://localhost:4000/sales,3582,0,1
+1757328789350,6347,GET Authors Stats,500,Internal Server Error,Load Test Users 1-438,text,false,,3637,132,134,134,http://localhost:4000/authors/stats,6347,0,0
+1757328791724,3974,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-521,text,false,,3573,136,134,134,http://localhost:4000/books/top_selling,3973,0,3
+1757328783725,11974,GET Sales,500,Internal Server Error,Load Test Users 1-251,text,false,,3503,124,133,133,http://localhost:4000/sales,11974,0,7589
+1757328791997,3705,GET Sales,500,Internal Server Error,Load Test Users 1-530,text,false,,3503,124,131,131,http://localhost:4000/sales,3705,0,0
+1757328793167,2544,GET Authors List,500,Internal Server Error,Load Test Users 1-569,text,false,,3930,126,127,127,http://localhost:4000/authors,2544,0,2
+1757328786018,9695,GET All Reviews,500,Internal Server Error,Load Test Users 1-327,text,false,,3526,126,126,126,http://localhost:4000/reviews,9695,0,1
+1757328790283,5431,GET Authors Stats,500,Internal Server Error,Load Test Users 1-473,text,false,,3637,132,126,126,http://localhost:4000/authors/stats,5431,0,1050
+1757328791435,4279,GET All Reviews,500,Internal Server Error,Load Test Users 1-378,text,false,,3526,126,126,126,http://localhost:4000/reviews,4279,0,3
+1757328790985,4731,GET All Reviews,500,Internal Server Error,Load Test Users 1-391,text,false,,3526,126,123,123,http://localhost:4000/reviews,4731,0,5
+1757328791346,4372,GET All Reviews,500,Internal Server Error,Load Test Users 1-463,text,false,,3526,126,122,122,http://localhost:4000/reviews,4372,0,1
+1757328793501,2213,GET Authors Stats,500,Internal Server Error,Load Test Users 1-580,text,false,,3986,132,126,126,http://localhost:4000/authors/stats,2212,0,3
+1757328790037,5682,GET Authors Stats,500,Internal Server Error,Load Test Users 1-370,text,false,,3637,132,121,121,http://localhost:4000/authors/stats,5682,0,367
+1757328791336,4383,GET All Reviews,500,Internal Server Error,Load Test Users 1-429,text,false,,3526,126,121,121,http://localhost:4000/reviews,4383,0,2
+1757328793958,1759,GET Authors Stats,500,Internal Server Error,Load Test Users 1-595,text,false,,3986,132,123,123,http://localhost:4000/authors/stats,1759,0,4
+1757328792841,2882,GET All Reviews,500,Internal Server Error,Load Test Users 1-558,text,false,,3937,126,117,117,http://localhost:4000/reviews,2881,0,2
+1757328793853,1870,GET Authors List,500,Internal Server Error,Load Test Users 1-592,text,false,,3930,126,117,117,http://localhost:4000/authors,1870,0,1
+1757328791554,4339,GET Authors Stats,500,Internal Server Error,Load Test Users 1-513,text,false,,4008,132,117,117,http://localhost:4000/authors/stats,4338,0,4
+1757328791037,4855,GET All Reviews,500,Internal Server Error,Load Test Users 1-325,text,false,,3526,126,117,117,http://localhost:4000/reviews,4855,0,2
+1757328794457,1437,GET Authors List,200,OK,Load Test Users 1-612,text,true,,92505,126,117,117,http://localhost:4000/authors,1436,0,3
+1757328791472,4434,GET Authors Stats,500,Internal Server Error,Load Test Users 1-418,text,false,,4008,132,117,117,http://localhost:4000/authors/stats,4434,0,4
+1757328794663,1225,GET Home Page,200,OK,Load Test Users 1-619,text,true,,4332,119,117,117,http://localhost:4000/,1225,0,0
+1757328793796,2150,GET Authors List,500,Internal Server Error,Load Test Users 1-590,text,false,,3930,126,120,120,http://localhost:4000/authors,2150,0,1
+1757328790039,5892,GET Authors Stats,500,Internal Server Error,Load Test Users 1-460,text,false,,3637,132,117,117,http://localhost:4000/authors/stats,5892,0,1155
+1757328790948,5024,GET Authors Stats,500,Internal Server Error,Load Test Users 1-495,text,false,,3637,132,118,118,http://localhost:4000/authors/stats,5023,0,0
+1757328791318,4624,GET Authors Stats,500,Internal Server Error,Load Test Users 1-369,text,false,,3637,132,117,117,http://localhost:4000/authors/stats,4624,0,1
+1757328785123,10808,GET All Reviews,500,Internal Server Error,Load Test Users 1-286,text,false,,3526,126,117,117,http://localhost:4000/reviews,10808,0,6051
+1757328791160,4774,GET All Reviews,500,Internal Server Error,Load Test Users 1-283,text,false,,3526,126,117,117,http://localhost:4000/reviews,4774,0,8
+1757328790600,5332,GET Authors Stats,500,Internal Server Error,Load Test Users 1-456,text,false,,3637,132,117,117,http://localhost:4000/authors/stats,5332,0,327
+1757328783538,12393,GET Sales,500,Internal Server Error,Load Test Users 1-245,text,false,,3909,124,117,117,http://localhost:4000/sales,12393,0,1
+1757328791370,4602,GET All Reviews,500,Internal Server Error,Load Test Users 1-499,text,false,,3526,126,112,112,http://localhost:4000/reviews,4602,0,1
+1757328791371,4559,GET Sales,500,Internal Server Error,Load Test Users 1-337,text,false,,3503,124,117,117,http://localhost:4000/sales,4559,0,2
+1757328792310,3596,GET Sales,500,Internal Server Error,Load Test Users 1-540,text,false,,3503,124,117,117,http://localhost:4000/sales,3596,0,3
+1757328785153,10821,GET All Reviews,500,Internal Server Error,Load Test Users 1-302,text,false,,3527,126,108,108,http://localhost:4000/reviews,10821,0,1
+1757328791905,4069,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-527,text,false,,3573,136,108,108,http://localhost:4000/books/top_selling,4069,0,1
+1757328790593,5335,GET All Reviews,500,Internal Server Error,Load Test Users 1-481,text,false,,3526,126,117,117,http://localhost:4000/reviews,5335,0,1
+1757328790642,5287,GET Authors Stats,500,Internal Server Error,Load Test Users 1-485,text,false,,3637,132,117,117,http://localhost:4000/authors/stats,5286,0,1
+1757328785349,10579,GET Authors Stats,500,Internal Server Error,Load Test Users 1-279,text,false,,3637,132,117,117,http://localhost:4000/authors/stats,10579,0,0
+1757328791605,4325,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-517,text,false,,4050,136,117,117,http://localhost:4000/books/top_selling,4325,0,1
+1757328790992,4936,GET Authors Stats,500,Internal Server Error,Load Test Users 1-432,text,false,,3637,132,117,117,http://localhost:4000/authors/stats,4936,0,2
+1757328791178,4749,GET Authors Stats,500,Internal Server Error,Load Test Users 1-309,text,false,,3637,132,117,117,http://localhost:4000/authors/stats,4749,0,1
+1757328791325,4605,GET Authors Stats,500,Internal Server Error,Load Test Users 1-482,text,false,,3637,132,117,117,http://localhost:4000/authors/stats,4605,0,1
+1757328785127,10846,GET Authors Stats,500,Internal Server Error,Load Test Users 1-292,text,false,,3637,132,109,109,http://localhost:4000/authors/stats,10846,0,3
+1757328791315,4612,GET Sales,500,Internal Server Error,Load Test Users 1-269,text,false,,3503,124,117,117,http://localhost:4000/sales,4612,0,1
+1757328785128,10800,GET All Reviews,500,Internal Server Error,Load Test Users 1-285,text,false,,3526,126,117,117,http://localhost:4000/reviews,10800,0,1
+1757328791304,4623,GET Authors Stats,500,Internal Server Error,Load Test Users 1-381,text,false,,3637,132,117,117,http://localhost:4000/authors/stats,4623,0,1
+1757328794434,1558,GET Books Search Random,200,OK,Load Test Users 1-611,text,true,,12896,145,100,100,http://localhost:4000/books/search?query=Book+13,1558,0,1
+1757328793116,2811,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-567,text,false,,3978,136,117,117,http://localhost:4000/books/top_selling,2810,0,3
+1757328791355,4571,GET All Reviews,500,Internal Server Error,Load Test Users 1-332,text,false,,3526,126,117,117,http://localhost:4000/reviews,4571,0,1
+1757328792191,3735,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-536,text,false,,3573,136,117,117,http://localhost:4000/books/top_selling,3735,0,1
+1757328791447,4479,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-267,text,false,,4050,136,117,117,http://localhost:4000/books/top_selling,4479,0,1
+1757328790194,5731,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-447,text,false,,4050,136,117,117,http://localhost:4000/books/top_selling,5731,0,1
+1757328790214,5710,GET Authors Stats,500,Internal Server Error,Load Test Users 1-430,text,false,,3637,132,117,117,http://localhost:4000/authors/stats,5710,0,90
+1757328791142,4870,GET Sales,500,Internal Server Error,Load Test Users 1-299,text,false,,3503,124,96,96,http://localhost:4000/sales,4870,0,3
+1757328789578,6346,GET Authors Stats,500,Internal Server Error,Load Test Users 1-436,text,false,,3637,132,117,117,http://localhost:4000/authors/stats,6346,0,312
+1757328791349,4575,GET All Reviews,500,Internal Server Error,Load Test Users 1-351,text,false,,3526,126,117,117,http://localhost:4000/reviews,4575,0,0
+1757328791447,4477,GET All Reviews,500,Internal Server Error,Load Test Users 1-400,text,false,,3829,126,117,117,http://localhost:4000/reviews,4477,0,1
+1757328791171,4866,GET All Reviews,500,Internal Server Error,Load Test Users 1-281,text,false,,3526,126,87,87,http://localhost:4000/reviews,4866,0,2
+1757328791290,4633,GET All Reviews,500,Internal Server Error,Load Test Users 1-365,text,false,,3526,126,117,117,http://localhost:4000/reviews,4633,0,2
+1757328782185,13854,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-203,text,false,,3619,136,83,83,http://localhost:4000/books/top_selling,13854,0,1
+1757328791346,4693,GET Sales,500,Internal Server Error,Load Test Users 1-467,text,false,,3503,124,83,83,http://localhost:4000/sales,4693,0,1
+1757328791336,4587,GET All Reviews,500,Internal Server Error,Load Test Users 1-464,text,false,,3526,126,117,117,http://localhost:4000/reviews,4587,0,3
+1757328791358,4565,GET Authors Stats,500,Internal Server Error,Load Test Users 1-358,text,false,,3637,132,117,117,http://localhost:4000/authors/stats,4565,0,1
+1757328794725,1315,GET Books Search Random,200,OK,Load Test Users 1-621,text,true,,7077,145,80,80,http://localhost:4000/books/search?query=Book+37,1315,0,1
+1757328791360,4680,GET Sales,500,Internal Server Error,Load Test Users 1-338,text,false,,3503,124,80,80,http://localhost:4000/sales,4680,0,1
+1757328791337,4585,GET All Reviews,500,Internal Server Error,Load Test Users 1-415,text,false,,3526,126,117,117,http://localhost:4000/reviews,4585,0,1
+1757328785351,10571,GET Authors Stats,500,Internal Server Error,Load Test Users 1-307,text,false,,3637,132,117,117,http://localhost:4000/authors/stats,10571,0,76
+1757328791702,4219,GET Authors Stats,500,Internal Server Error,Load Test Users 1-519,text,false,,4008,132,117,117,http://localhost:4000/authors/stats,4219,0,2
+1757328790147,5893,GET All Reviews,500,Internal Server Error,Load Test Users 1-465,text,false,,3526,126,80,80,http://localhost:4000/reviews,5893,0,157
+1757328792508,3413,GET Books List,500,Internal Server Error,Load Test Users 1-547,text,false,,3503,124,117,117,http://localhost:4000/books,3413,0,3
+1757328785426,10495,GET Authors Stats,500,Internal Server Error,Load Test Users 1-308,text,false,,3637,132,117,117,http://localhost:4000/authors/stats,10495,0,0
+1757328791365,4556,GET Authors Stats,500,Internal Server Error,Load Test Users 1-509,text,false,,3637,132,117,117,http://localhost:4000/authors/stats,4556,0,2
+1757328790788,5132,GET Sales,500,Internal Server Error,Load Test Users 1-488,text,false,,3503,124,117,117,http://localhost:4000/sales,5132,0,181
+1757328780897,15024,GET Authors Stats,500,Internal Server Error,Load Test Users 1-160,text,false,,3992,132,117,117,http://localhost:4000/authors/stats,15024,0,5
+1757328785543,10500,GET Sales,200,OK,Load Test Users 1-315,text,true,,2055724,124,72,72,http://localhost:4000/sales,10134,0,0
+1757328785131,10789,GET Sales,500,Internal Server Error,Load Test Users 1-293,text,false,,3503,124,117,117,http://localhost:4000/sales,10789,0,0
+1757328794545,1498,GET Books List,200,OK,Load Test Users 1-615,text,true,,639707,124,68,68,http://localhost:4000/books,1446,0,1
+1757328789127,6793,GET All Reviews,500,Internal Server Error,Load Test Users 1-272,text,false,,3526,126,117,117,http://localhost:4000/reviews,6793,0,65
+1757328791345,4575,GET All Reviews,500,Internal Server Error,Load Test Users 1-404,text,false,,3526,126,117,117,http://localhost:4000/reviews,4575,0,2
+1757328784978,10942,GET Authors Stats,500,Internal Server Error,Load Test Users 1-258,text,false,,3637,132,117,117,http://localhost:4000/authors/stats,10942,0,6146
+1757328791189,4728,GET All Reviews,500,Internal Server Error,Load Test Users 1-379,text,false,,3526,126,117,117,http://localhost:4000/reviews,4728,0,1
+1757328791359,4555,GET All Reviews,500,Internal Server Error,Load Test Users 1-359,text,false,,3526,126,117,117,http://localhost:4000/reviews,4555,0,1
+1757328791323,4689,GET Sales,500,Internal Server Error,Load Test Users 1-472,text,false,,3503,124,96,96,http://localhost:4000/sales,4689,0,1
+1757328791404,4608,GET Sales,200,OK,Load Test Users 1-363,text,true,,2055724,124,96,96,http://localhost:4000/sales,4251,0,2
+1757328789424,6588,GET All Reviews,500,Internal Server Error,Load Test Users 1-441,text,false,,3526,126,96,96,http://localhost:4000/reviews,6588,0,0
+1757328785928,10084,GET Authors Stats,500,Internal Server Error,Load Test Users 1-326,text,false,,3637,132,96,96,http://localhost:4000/authors/stats,10083,0,1
+1757328791370,4618,GET Authors Stats,500,Internal Server Error,Load Test Users 1-352,text,false,,3637,132,108,108,http://localhost:4000/authors/stats,4618,0,1
+1757328782005,14007,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-197,text,false,,3619,136,96,96,http://localhost:4000/books/top_selling,14007,0,2
+1757328794520,1623,GET Sales,200,OK,Load Test Users 1-614,text,true,,2055724,124,59,59,http://localhost:4000/sales,1614,0,1
+1757328794634,1535,GET Sales,200,OK,Load Test Users 1-618,text,true,,2055724,124,59,59,http://localhost:4000/sales,1524,0,1
+1757328794486,1759,GET Sales,200,OK,Load Test Users 1-613,text,true,,2055724,124,60,60,http://localhost:4000/sales,1718,0,3
+1757328794950,1348,GET Home Page,200,OK,Load Test Users 1-628,text,true,,4332,119,61,61,http://localhost:4000/,1348,0,4
+1757328795070,1228,GET Home Page,200,OK,Load Test Users 1-632,text,true,,4332,119,61,61,http://localhost:4000/,1228,0,2
+1757328795343,955,GET Home Page,200,OK,Load Test Users 1-641,text,true,,4332,119,61,61,http://localhost:4000/,955,0,18
+1757328793464,2836,GET Books Search Random,200,OK,Load Test Users 1-579,text,true,,5946,275,60,60,http://localhost:4000/books/search,1572,0,0
+1757328793464,1572,GET Books Search Random-0,302,Found,Load Test Users 1-579,text,true,,1651,144,60,60,http://localhost:4000/books/search?query=Book+1,1572,0,0
+1757328795036,1264,GET Books Search Random-1,200,OK,Load Test Users 1-579,text,true,,4295,131,60,60,http://localhost:4000/books/search,1264,0,0
+1757328792957,3341,GET Books Search Random,200,OK,Load Test Users 1-562,text,true,,5946,276,61,61,http://localhost:4000/books/search,2075,0,2
+1757328792957,2075,GET Books Search Random-0,302,Found,Load Test Users 1-562,text,true,,1651,145,61,61,http://localhost:4000/books/search?query=Book+21,2075,0,2
+1757328795034,1264,GET Books Search Random-1,200,OK,Load Test Users 1-562,text,true,,4295,131,61,61,http://localhost:4000/books/search,1264,0,0
+1757328792804,3496,GET Books Search Random,200,OK,Load Test Users 1-557,text,true,,5946,275,59,59,http://localhost:4000/books/search,2231,0,2
+1757328792804,2231,GET Books Search Random-0,302,Found,Load Test Users 1-557,text,true,,1651,144,59,59,http://localhost:4000/books/search?query=Book+8,2231,0,2
+1757328795035,1265,GET Books Search Random-1,200,OK,Load Test Users 1-557,text,true,,4295,131,59,59,http://localhost:4000/books/search,1265,0,0
+1757328793619,2680,GET Books Search Random,200,OK,Load Test Users 1-584,text,true,,5946,276,60,60,http://localhost:4000/books/search,1414,0,4
+1757328793619,1415,GET Books Search Random-0,302,Found,Load Test Users 1-584,text,true,,1651,145,60,60,http://localhost:4000/books/search?query=Book+27,1414,0,4
+1757328793904,2394,GET Books Search Random,200,OK,Load Test Users 1-593,text,true,,5946,276,61,61,http://localhost:4000/books/search,1132,0,8
+1757328795035,1264,GET Books Search Random-1,200,OK,Load Test Users 1-584,text,true,,4295,131,60,60,http://localhost:4000/books/search,1264,0,0
+1757328793904,1132,GET Books Search Random-0,302,Found,Load Test Users 1-593,text,true,,1651,145,61,61,http://localhost:4000/books/search?query=Book+32,1132,0,8
+1757328795037,1261,GET Books Search Random-1,200,OK,Load Test Users 1-593,text,true,,4295,131,61,61,http://localhost:4000/books/search,1261,0,0
+1757328795661,637,GET Home Page,200,OK,Load Test Users 1-652,text,true,,4332,119,61,61,http://localhost:4000/,637,0,2
+1757328794097,2201,GET Books Search Random,200,OK,Load Test Users 1-600,text,true,,5946,275,61,61,http://localhost:4000/books/search,935,0,1
+1757328794097,935,GET Books Search Random-0,302,Found,Load Test Users 1-600,text,true,,1651,144,61,61,http://localhost:4000/books/search?query=Book+1,935,0,1
+1757328795036,1262,GET Books Search Random-1,200,OK,Load Test Users 1-600,text,true,,4295,131,61,61,http://localhost:4000/books/search,1262,0,0
+1757328795149,1150,GET Home Page,200,OK,Load Test Users 1-635,text,true,,4332,119,60,60,http://localhost:4000/,1150,0,8
+1757328795357,996,GET Authors List,200,OK,Load Test Users 1-642,text,true,,92505,126,52,52,http://localhost:4000/authors,996,0,3
+1757328795283,1077,GET Authors List,200,OK,Load Test Users 1-639,text,true,,92505,126,51,51,http://localhost:4000/authors,1077,0,4
+1757328795212,1152,GET Authors List,200,OK,Load Test Users 1-637,text,true,,92505,126,50,50,http://localhost:4000/authors,1151,0,1
+1757328795457,925,GET Books Search Random,200,OK,Load Test Users 1-645,text,true,,7660,145,50,50,http://localhost:4000/books/search?query=Book+30,925,0,2
+1757328795084,1308,GET Books Search Random,200,OK,Load Test Users 1-633,text,true,,7078,145,49,49,http://localhost:4000/books/search?query=Book+39,1308,0,6
+1757328795520,874,GET Books List,200,OK,Load Test Users 1-647,text,true,,639707,124,48,48,http://localhost:4000/books,859,0,3
+1757328795401,1001,GET Books Search Random,200,OK,Load Test Users 1-643,text,true,,7077,145,47,47,http://localhost:4000/books/search?query=Book+36,1000,0,5
+1757328794844,1560,GET Books Search Random,200,OK,Load Test Users 1-625,text,true,,17092,144,46,46,http://localhost:4000/books/search?query=Book+1,1560,0,2
+1757328795183,1228,GET Books Search Random,200,OK,Load Test Users 1-636,text,true,,7076,145,46,46,http://localhost:4000/books/search?query=Book+45,1228,0,5
+1757328794965,1455,GET Books Search Random,200,OK,Load Test Users 1-629,text,true,,12898,145,45,45,http://localhost:4000/books/search?query=Book+25,1455,0,1
+1757328795541,882,GET Books Search Random,200,OK,Load Test Users 1-648,text,true,,17090,144,44,44,http://localhost:4000/books/search?query=Book+4,882,0,2
+1757328795133,1308,GET Books Search Random,200,OK,Load Test Users 1-634,text,true,,17089,144,44,44,http://localhost:4000/books/search?query=Book+9,1307,0,3
+1757328795564,878,GET Books List,200,OK,Load Test Users 1-649,text,true,,639707,124,43,43,http://localhost:4000/books,860,0,1
+1757328794757,1726,GET All Reviews,200,OK,Load Test Users 1-622,text,true,,3598815,126,43,43,http://localhost:4000/reviews,1639,0,4
+1757328796051,628,GET Authors List,200,OK,Load Test Users 1-665,text,true,,92505,126,49,49,http://localhost:4000/authors,628,0,1
+1757328796077,607,GET Authors List,200,OK,Load Test Users 1-666,text,true,,92505,126,48,48,http://localhost:4000/authors,607,0,1
+1757328795941,748,GET Authors List,200,OK,Load Test Users 1-659,text,true,,92505,126,47,47,http://localhost:4000/authors,747,0,3
+1757328794882,1819,GET Sales,200,OK,Load Test Users 1-626,text,true,,2055724,124,46,46,http://localhost:4000/sales,1740,0,3
+1757328795311,1391,GET Sales,200,OK,Load Test Users 1-640,text,true,,2055724,124,45,45,http://localhost:4000/sales,1357,0,7
+1757328796137,641,GET Books Search Random,200,OK,Load Test Users 1-668,text,true,,12894,145,47,47,http://localhost:4000/books/search?query=Book+27,641,0,1
+1757328795939,838,GET Books Search Random,200,OK,Load Test Users 1-661,text,true,,7077,145,47,47,http://localhost:4000/books/search?query=Book+40,838,0,1
+1757328795945,832,GET Books Search Random,200,OK,Load Test Users 1-657,text,true,,12897,145,47,47,http://localhost:4000/books/search?query=Book+24,832,0,1
+1757328796109,708,GET Books List,200,OK,Load Test Users 1-667,text,true,,639707,124,45,45,http://localhost:4000/books,686,0,1
+1757328795236,1601,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-638,text,false,,4029,136,45,45,http://localhost:4000/books/top_selling,1601,0,8
+1757328796406,438,GET Home Page,200,OK,Load Test Users 1-677,text,true,,4332,119,44,44,http://localhost:4000/,438,0,1
+1757328796345,664,GET Books Search Random,200,OK,Load Test Users 1-675,text,true,,17092,144,49,49,http://localhost:4000/books/search?query=Book+1,664,0,1
+1757328795940,1074,GET Sales,200,OK,Load Test Users 1-655,text,true,,2055724,124,48,48,http://localhost:4000/sales,1057,0,34
+1757328796031,1040,GET Sales,200,OK,Load Test Users 1-664,text,true,,2055724,124,49,49,http://localhost:4000/sales,1018,0,1
+1757328795434,1659,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-644,text,false,,4029,136,48,48,http://localhost:4000/books/top_selling,1659,0,7
+1757328796707,411,GET Home Page,200,OK,Load Test Users 1-687,text,true,,4332,119,48,48,http://localhost:4000/,411,0,1
+1757328796229,955,GET Sales,200,OK,Load Test Users 1-671,text,true,,2055724,124,49,49,http://localhost:4000/sales,855,0,1
+1757328796622,654,GET Books Search Random,200,OK,Load Test Users 1-684,text,true,,17087,144,51,51,http://localhost:4000/books/search?query=Book+5,654,0,2
+1757328796794,489,GET Books List,200,OK,Load Test Users 1-690,text,true,,639707,124,51,51,http://localhost:4000/books,486,0,1
+1757328796558,743,GET Sales,500,Internal Server Error,Load Test Users 1-682,text,false,,3503,124,50,50,http://localhost:4000/sales,743,0,1
+1757328796674,655,GET Books List,200,OK,Load Test Users 1-686,text,true,,639707,124,50,50,http://localhost:4000/books,608,0,1
+1757328795001,2338,GET All Reviews,200,OK,Load Test Users 1-630,text,true,,3598815,126,50,50,http://localhost:4000/reviews,2313,0,21
+1757328795688,1697,GET All Reviews,200,OK,Load Test Users 1-653,text,true,,3598815,126,50,50,http://localhost:4000/reviews,1605,0,1
+1757328797006,463,GET Home Page,200,OK,Load Test Users 1-697,text,true,,4332,119,52,52,http://localhost:4000/,463,0,0
+1757328797096,373,GET Home Page,200,OK,Load Test Users 1-700,text,true,,4332,119,52,52,http://localhost:4000/,373,0,1
+1757328796947,523,GET Home Page,200,OK,Load Test Users 1-695,text,true,,4332,119,52,52,http://localhost:4000/,522,0,1
+1757328797063,515,GET Authors List,200,OK,Load Test Users 1-699,text,true,,92505,126,52,52,http://localhost:4000/authors,514,0,1
+1757328797035,554,GET Authors List,200,OK,Load Test Users 1-698,text,true,,92505,126,52,52,http://localhost:4000/authors,553,0,1
+1757328796885,705,GET Authors List,200,OK,Load Test Users 1-693,text,true,,92505,126,51,51,http://localhost:4000/authors,705,0,0
+1757328796974,723,GET Books List,200,OK,Load Test Users 1-696,text,true,,639707,124,54,54,http://localhost:4000/books,716,0,1
+1757328796823,887,GET Books List,200,OK,Load Test Users 1-691,text,true,,639707,124,53,53,http://localhost:4000/books,869,0,2
+1757328796036,1742,GET All Reviews,200,OK,Load Test Users 1-654,text,true,,3598815,126,54,54,http://localhost:4000/reviews,1656,0,1
+1757328797425,429,GET Home Page,200,OK,Load Test Users 1-711,text,true,,4332,119,56,56,http://localhost:4000/,429,0,1
+1757328795940,1942,GET All Reviews,200,OK,Load Test Users 1-660,text,true,,3598815,126,56,56,http://localhost:4000/reviews,1853,0,1
+1757328795944,1989,GET All Reviews,200,OK,Load Test Users 1-656,text,true,,3598815,126,57,57,http://localhost:4000/reviews,1852,0,1
+1757328796585,1448,GET All Reviews,200,OK,Load Test Users 1-683,text,true,,3598815,126,59,59,http://localhost:4000/reviews,1414,0,1
+1757328797341,749,GET Books Search Random,200,OK,Load Test Users 1-708,text,true,,7076,145,59,59,http://localhost:4000/books/search?query=Book+35,749,0,1
+1757328797313,780,GET Books Search Random,200,OK,Load Test Users 1-707,text,true,,7660,145,58,58,http://localhost:4000/books/search?query=Book+30,780,0,1
+1757328797454,642,GET Books Search Random,200,OK,Load Test Users 1-712,text,true,,17087,144,57,57,http://localhost:4000/books/search?query=Book+5,642,0,1
+1757328796853,1276,GET Sales,200,OK,Load Test Users 1-692,text,true,,2055724,124,56,56,http://localhost:4000/sales,1172,0,1
+1757328797158,975,GET Books List,200,OK,Load Test Users 1-702,text,true,,639707,124,55,55,http://localhost:4000/books,972,0,1
+1757328796316,1824,GET All Reviews,200,OK,Load Test Users 1-674,text,true,,3598815,126,54,54,http://localhost:4000/reviews,1731,0,1
+1757328796644,1627,GET All Reviews,200,OK,Load Test Users 1-685,text,true,,3598815,126,60,60,http://localhost:4000/reviews,1591,0,2
+1757328796764,1551,GET All Reviews,200,OK,Load Test Users 1-689,text,true,,3598815,126,60,60,http://localhost:4000/reviews,1522,0,1
+1757328797215,1199,GET Sales,200,OK,Load Test Users 1-704,text,true,,2055724,124,62,62,http://localhost:4000/sales,1184,0,1
+1757328797278,1176,GET Sales,200,OK,Load Test Users 1-706,text,true,,2055724,124,63,63,http://localhost:4000/sales,1113,0,0
+1757328797580,887,GET Authors List,200,OK,Load Test Users 1-716,text,true,,92505,126,62,62,http://localhost:4000/authors,886,0,1
+1757328797517,950,GET Authors List,200,OK,Load Test Users 1-714,text,true,,92505,126,62,62,http://localhost:4000/authors,949,0,1
+1757328797967,619,GET Home Page,200,OK,Load Test Users 1-729,text,true,,4332,119,64,64,http://localhost:4000/,619,0,2
+1757328798235,351,GET Home Page,200,OK,Load Test Users 1-738,text,true,,4332,119,64,64,http://localhost:4000/,351,0,2
+1757328797818,770,GET Books Search Random,200,OK,Load Test Users 1-724,text,true,,17086,144,63,63,http://localhost:4000/books/search?query=Book+7,770,0,1
+1757328797545,1079,GET Books Search Random,200,OK,Load Test Users 1-715,text,true,,12316,145,62,62,http://localhost:4000/books/search?query=Book+11,1079,0,1
+1757328798228,576,GET Authors List,200,OK,Load Test Users 1-736,text,true,,92505,126,67,67,http://localhost:4000/authors,575,0,1
+1757328798167,638,GET Authors List,200,OK,Load Test Users 1-733,text,true,,92505,126,66,66,http://localhost:4000/authors,637,0,2
+1757328797846,964,GET Authors List,200,OK,Load Test Users 1-725,text,true,,92505,126,66,66,http://localhost:4000/authors,963,0,1
+1757328798354,573,GET Home Page,200,OK,Load Test Users 1-742,text,true,,4332,119,69,69,http://localhost:4000/,573,0,1
+1757328798028,917,GET Books Search Random,200,OK,Load Test Users 1-731,text,true,,12316,145,68,68,http://localhost:4000/books/search?query=Book+11,917,0,1
+1757328798266,695,GET Books List,200,OK,Load Test Users 1-739,text,true,,639707,124,68,68,http://localhost:4000/books,693,0,0
+1757328798508,587,GET Authors List,200,OK,Load Test Users 1-747,text,true,,92505,126,71,71,http://localhost:4000/authors,587,0,2
+1757328798302,793,GET Authors List,200,OK,Load Test Users 1-740,text,true,,92505,126,71,71,http://localhost:4000/authors,793,0,0
+1757328798451,658,GET Authors List,200,OK,Load Test Users 1-745,text,true,,92505,126,70,70,http://localhost:4000/authors,658,0,1
+1757328797664,1483,GET Sales,200,OK,Load Test Users 1-719,text,true,,2055724,124,70,70,http://localhost:4000/sales,1409,0,0
+1757328796043,3134,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-663,text,false,,3940,136,70,70,http://localhost:4000/books/top_selling,3134,0,6
+1757328796525,2657,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-681,text,false,,3982,136,69,69,http://localhost:4000/books/top_selling,2657,0,1
+1757328794606,4577,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-617,text,false,,3940,136,68,68,http://localhost:4000/books/top_selling,4577,0,1
+1757328797364,1822,GET All Reviews,500,Internal Server Error,Load Test Users 1-709,text,false,,3938,126,67,67,http://localhost:4000/reviews,1822,0,1
+1757328797245,1941,GET All Reviews,500,Internal Server Error,Load Test Users 1-705,text,false,,3938,126,67,67,http://localhost:4000/reviews,1941,0,0
+1757328797605,1581,GET Authors Stats,500,Internal Server Error,Load Test Users 1-717,text,false,,3999,132,67,67,http://localhost:4000/authors/stats,1581,0,0
+1757328796201,2985,GET Authors Stats,500,Internal Server Error,Load Test Users 1-670,text,false,,4013,132,67,67,http://localhost:4000/authors/stats,2985,0,1
+1757328797694,1493,GET Authors Stats,500,Internal Server Error,Load Test Users 1-720,text,false,,3999,132,67,67,http://localhost:4000/authors/stats,1493,0,1
+1757328794787,4399,GET Authors Stats,500,Internal Server Error,Load Test Users 1-623,text,false,,3935,132,66,66,http://localhost:4000/authors/stats,4399,0,6
+1757328794918,4268,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-627,text,false,,3940,136,66,66,http://localhost:4000/books/top_selling,4268,0,6
+1757328794820,4366,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-624,text,false,,3940,136,63,63,http://localhost:4000/books/top_selling,4366,0,1
+1757328794704,4484,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-620,text,false,,3982,136,61,61,http://localhost:4000/books/top_selling,4484,0,6
+1757328797935,1254,GET Sales,500,Internal Server Error,Load Test Users 1-728,text,false,,3908,124,61,61,http://localhost:4000/sales,1254,0,0
+1757328796375,2816,GET Authors Stats,500,Internal Server Error,Load Test Users 1-676,text,false,,3935,132,59,59,http://localhost:4000/authors/stats,2816,0,0
+1757328795501,3690,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-646,text,false,,3940,136,58,58,http://localhost:4000/books/top_selling,3690,0,7
+1757328797127,2065,GET All Reviews,500,Internal Server Error,Load Test Users 1-701,text,false,,3938,126,58,58,http://localhost:4000/reviews,2065,0,0
+1757328798196,996,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-734,text,false,,4033,136,58,58,http://localhost:4000/books/top_selling,996,0,0
+1757328797786,1407,GET Authors Stats,500,Internal Server Error,Load Test Users 1-723,text,false,,3999,132,53,53,http://localhost:4000/authors/stats,1407,0,0
+1757328794577,4615,GET Authors Stats,500,Internal Server Error,Load Test Users 1-616,text,false,,3893,132,52,52,http://localhost:4000/authors/stats,4615,0,1
+1757328796465,2729,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-679,text,false,,3982,136,52,52,http://localhost:4000/books/top_selling,2729,0,1
+1757328797634,1560,GET Authors Stats,500,Internal Server Error,Load Test Users 1-718,text,false,,3999,132,52,51,http://localhost:4000/authors/stats,1559,0,0
+1757328797876,1321,GET Sales,500,Internal Server Error,Load Test Users 1-726,text,false,,3908,124,51,51,http://localhost:4000/sales,1321,0,1
+1757328797395,1800,GET Authors Stats,500,Internal Server Error,Load Test Users 1-710,text,false,,3999,132,51,51,http://localhost:4000/authors/stats,1800,0,1
+1757328795633,3569,GET Authors Stats,500,Internal Server Error,Load Test Users 1-651,text,false,,3935,132,48,48,http://localhost:4000/authors/stats,3568,0,5
+1757328795947,3255,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-658,text,false,,3940,136,48,48,http://localhost:4000/books/top_selling,3255,0,1
+1757328795991,3212,GET Authors Stats,500,Internal Server Error,Load Test Users 1-662,text,false,,4013,132,46,46,http://localhost:4000/authors/stats,3212,0,0
+1757328796286,2921,GET Authors Stats,500,Internal Server Error,Load Test Users 1-673,text,false,,3935,132,45,45,http://localhost:4000/authors/stats,2921,0,2
+1757328798388,830,GET Books Search Random,200,OK,Load Test Users 1-743,text,true,,7076,145,44,44,http://localhost:4000/books/search?query=Book+35,830,0,1
+1757328798054,1166,GET All Reviews,500,Internal Server Error,Load Test Users 1-732,text,false,,3526,126,44,44,http://localhost:4000/reviews,1166,0,1
+1757328798259,980,GET Authors Stats,500,Internal Server Error,Load Test Users 1-737,text,false,,3637,132,43,43,http://localhost:4000/authors/stats,980,0,1
+1757328797906,1333,GET Authors Stats,500,Internal Server Error,Load Test Users 1-727,text,false,,3637,132,43,43,http://localhost:4000/authors/stats,1333,0,1
+1757328798256,984,GET Authors Stats,500,Internal Server Error,Load Test Users 1-735,text,false,,3637,132,43,43,http://localhost:4000/authors/stats,984,0,0
+1757328797484,1756,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-713,text,false,,3645,136,42,42,http://localhost:4000/books/top_selling,1756,0,0
+1757328797728,1513,GET All Reviews,500,Internal Server Error,Load Test Users 1-721,text,false,,3424,126,40,40,http://localhost:4000/reviews,1513,0,2
+1757328797995,1248,GET Authors Stats,500,Internal Server Error,Load Test Users 1-730,text,false,,3637,132,38,38,http://localhost:4000/authors/stats,1248,0,0
+1757328797755,1490,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-722,text,false,,3645,136,37,37,http://localhost:4000/books/top_selling,1490,0,0
+1757328798422,825,GET Books List,200,OK,Load Test Users 1-744,text,true,,639707,124,36,36,http://localhost:4000/books,821,0,0
+1757328798655,594,GET Authors List,200,OK,Load Test Users 1-752,text,true,,92505,126,36,36,http://localhost:4000/authors,594,0,1
+1757328798537,713,GET Books List,200,OK,Load Test Users 1-748,text,true,,639707,124,34,34,http://localhost:4000/books,706,0,1
+1757328798685,568,GET Authors List,200,OK,Load Test Users 1-753,text,true,,92505,126,33,33,http://localhost:4000/authors,567,0,1
+1757328798572,686,GET Authors List,200,OK,Load Test Users 1-749,text,true,,92505,126,33,33,http://localhost:4000/authors,685,0,1
+1757328798896,375,GET Authors List,200,OK,Load Test Users 1-760,text,true,,92505,126,32,32,http://localhost:4000/authors,371,0,1
+1757328798476,814,GET Books List,500,Internal Server Error,Load Test Users 1-746,text,false,,3503,124,32,32,http://localhost:4000/books,814,0,1
+1757328798745,562,GET Books Search Random,200,OK,Load Test Users 1-755,text,true,,7078,145,31,31,http://localhost:4000/books/search?query=Book+50,562,0,1
+1757328798835,474,GET Books Search Random,200,OK,Load Test Users 1-758,text,true,,12896,145,30,30,http://localhost:4000/books/search?query=Book+29,474,0,1
+1757328799075,383,GET Home Page,200,OK,Load Test Users 1-766,text,true,,4332,119,34,34,http://localhost:4000/,383,0,0
+1757328799104,454,GET Authors List,200,OK,Load Test Users 1-767,text,true,,92505,126,37,37,http://localhost:4000/authors,454,0,1
+1757328798986,619,GET Books Search Random,200,OK,Load Test Users 1-763,text,true,,12897,145,37,37,http://localhost:4000/books/search?query=Book+24,619,0,2
+1757328799017,594,GET Books Search Random,200,OK,Load Test Users 1-764,text,true,,17087,144,36,36,http://localhost:4000/books/search?query=Book+5,593,0,1
+1757328798925,691,GET Books Search Random,200,OK,Load Test Users 1-761,text,true,,12896,145,36,36,http://localhost:4000/books/search?query=Book+23,691,0,2
+1757328799165,535,GET Home Page,200,OK,Load Test Users 1-769,text,true,,4332,119,37,37,http://localhost:4000/,535,0,0
+1757328799231,470,GET Home Page,200,OK,Load Test Users 1-771,text,true,,4332,119,36,36,http://localhost:4000/,470,0,4
+1757328799314,541,GET Books List,200,OK,Load Test Users 1-774,text,true,,639707,124,41,41,http://localhost:4000/books,536,0,1
+1757328799403,455,GET Books List,200,OK,Load Test Users 1-777,text,true,,639707,124,40,40,http://localhost:4000/books,453,0,1
+1757328799045,857,GET Sales,200,OK,Load Test Users 1-765,text,true,,2055724,124,40,40,http://localhost:4000/sales,844,0,1
+1757328799374,567,GET Authors Stats,500,Internal Server Error,Load Test Users 1-776,text,false,,4042,132,40,40,http://localhost:4000/authors/stats,567,0,1
+1757328799255,686,GET All Reviews,500,Internal Server Error,Load Test Users 1-772,text,false,,3931,126,40,40,http://localhost:4000/reviews,686,0,4
+1757328796735,3216,GET Authors Stats,500,Internal Server Error,Load Test Users 1-688,text,false,,3935,132,39,39,http://localhost:4000/authors/stats,3216,0,1
+1757328799554,416,GET Home Page,200,OK,Load Test Users 1-782,text,true,,4332,119,38,38,http://localhost:4000/,416,0,1
+1757328799644,326,GET Home Page,200,OK,Load Test Users 1-785,text,true,,4332,119,38,38,http://localhost:4000/,326,0,1
+1757328798629,1379,GET All Reviews,200,OK,Load Test Users 1-751,text,true,,3598815,126,38,38,http://localhost:4000/reviews,1308,0,0
+1757328799494,537,GET Authors List,200,OK,Load Test Users 1-780,text,true,,92505,126,37,37,http://localhost:4000/authors,537,0,1
+1757328799197,887,GET Sales,200,OK,Load Test Users 1-770,text,true,,2055724,124,38,38,http://localhost:4000/sales,872,0,1
+1757328799524,572,GET Books Search Random,200,OK,Load Test Users 1-781,text,true,,12898,145,38,38,http://localhost:4000/books/search?query=Book+18,572,0,1
+1757328799286,847,GET Sales,200,OK,Load Test Users 1-773,text,true,,2055724,124,38,38,http://localhost:4000/sales,799,0,0
+1757328798717,1455,GET All Reviews,200,OK,Load Test Users 1-754,text,true,,3598815,126,38,38,http://localhost:4000/reviews,1368,0,1
+1757328798596,1590,GET All Reviews,200,OK,Load Test Users 1-750,text,true,,3598815,126,38,38,http://localhost:4000/reviews,1460,0,1
+1757328798792,1414,GET All Reviews,200,OK,Load Test Users 1-756,text,true,,3598815,126,37,37,http://localhost:4000/reviews,1360,0,2
+1757328799884,426,GET Home Page,200,OK,Load Test Users 1-793,text,true,,4332,119,40,40,http://localhost:4000/,425,0,0
+1757328799916,472,GET Authors List,200,OK,Load Test Users 1-794,text,true,,92505,126,41,41,http://localhost:4000/authors,472,0,1
+1757328799824,674,GET Books List,200,OK,Load Test Users 1-791,text,true,,639707,124,44,44,http://localhost:4000/books,671,0,0
+1757328799949,551,GET Books List,200,OK,Load Test Users 1-795,text,true,,639707,124,43,43,http://localhost:4000/books,546,0,1
+1757328799710,800,GET Books List,200,OK,Load Test Users 1-787,text,true,,639707,124,42,42,http://localhost:4000/books,790,0,1
+1757328800184,385,GET Home Page,200,OK,Load Test Users 1-803,text,true,,4332,119,43,43,http://localhost:4000/,385,0,1
+1757328800103,466,GET Home Page,200,OK,Load Test Users 1-800,text,true,,4332,119,43,43,http://localhost:4000/,466,0,1
+1757328799344,1292,GET All Reviews,200,OK,Load Test Users 1-775,text,true,,3598815,126,44,44,http://localhost:4000/reviews,1144,0,2
+1757328799675,984,GET Authors Stats,500,Internal Server Error,Load Test Users 1-786,text,false,,3637,132,43,43,http://localhost:4000/authors/stats,984,0,0
+1757328800215,454,GET Authors List,200,OK,Load Test Users 1-804,text,true,,92505,126,43,43,http://localhost:4000/authors,453,0,0
+1757328800124,548,GET All Reviews,500,Internal Server Error,Load Test Users 1-801,text,false,,3937,126,42,42,http://localhost:4000/reviews,548,0,1
+1757328799463,1336,GET All Reviews,200,OK,Load Test Users 1-779,text,true,,3598815,126,45,45,http://localhost:4000/reviews,1317,0,0
+1757328799737,1075,GET Sales,200,OK,Load Test Users 1-788,text,true,,2055724,124,44,44,http://localhost:4000/sales,1059,0,1
+1757328800158,668,GET Books List,500,Internal Server Error,Load Test Users 1-802,text,false,,3503,124,44,44,http://localhost:4000/books,668,0,0
+1757328800068,758,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-799,text,false,,3573,136,44,44,http://localhost:4000/books/top_selling,758,0,1
+1757328800274,553,GET Books List,500,Internal Server Error,Load Test Users 1-806,text,false,,3503,124,42,42,http://localhost:4000/books,553,0,0
+1757328800034,794,GET Books List,500,Internal Server Error,Load Test Users 1-798,text,false,,3503,124,41,41,http://localhost:4000/books,793,0,0
+1757328800514,391,GET Home Page,200,OK,Load Test Users 1-814,text,true,,4332,119,43,43,http://localhost:4000/,391,0,1
+1757328800487,499,GET Authors List,200,OK,Load Test Users 1-813,text,true,,92505,126,44,44,http://localhost:4000/authors,498,0,1
+1757328800005,1018,GET Sales,200,OK,Load Test Users 1-797,text,true,,2055724,124,44,44,http://localhost:4000/sales,1007,0,1
+1757328800304,757,GET Books Search Random,200,OK,Load Test Users 1-807,text,true,,12316,145,45,45,http://localhost:4000/books/search?query=Book+11,757,0,1
+1757328800424,640,GET Books List,200,OK,Load Test Users 1-811,text,true,,639707,124,44,44,http://localhost:4000/books,637,0,1
+1757328800549,518,GET Books Search Random,200,OK,Load Test Users 1-815,text,true,,12898,145,43,43,http://localhost:4000/books/search?query=Book+17,518,0,1
+1757328800454,616,GET Books List,200,OK,Load Test Users 1-812,text,true,,639707,124,42,42,http://localhost:4000/books,613,0,2
+1757328800789,313,GET Home Page,200,OK,Load Test Users 1-823,text,true,,4332,119,42,42,http://localhost:4000/,313,0,1
+1757328800844,316,GET Authors List,200,OK,Load Test Users 1-825,text,true,,92505,126,43,43,http://localhost:4000/authors,316,0,1
+1757328800723,452,GET Authors List,200,OK,Load Test Users 1-821,text,true,,92505,126,43,43,http://localhost:4000/authors,452,0,1
+1757328800873,382,GET Books Search Random,200,OK,Load Test Users 1-826,text,true,,17086,144,44,44,http://localhost:4000/books/search?query=Book+7,382,0,1
+1757328800637,618,GET Books Search Random,200,OK,Load Test Users 1-818,text,true,,7078,145,44,44,http://localhost:4000/books/search?query=Book+49,618,0,2
+1757328799795,1502,GET All Reviews,200,OK,Load Test Users 1-790,text,true,,3598815,126,44,44,http://localhost:4000/reviews,1474,0,0
+1757328800995,337,GET Home Page,200,OK,Load Test Users 1-830,text,true,,4332,119,44,44,http://localhost:4000/,337,0,2
+1757328800964,486,GET Authors List,200,OK,Load Test Users 1-829,text,true,,92505,126,47,47,http://localhost:4000/authors,486,0,1
+1757328800933,627,GET Books Search Random,200,OK,Load Test Users 1-828,text,true,,12898,145,49,49,http://localhost:4000/books/search?query=Book+18,627,0,1
+1757328800611,980,GET Sales,200,OK,Load Test Users 1-817,text,true,,2055724,124,49,49,http://localhost:4000/sales,974,0,1
+1757328800244,1406,GET All Reviews,200,OK,Load Test Users 1-805,text,true,,3598815,126,50,50,http://localhost:4000/reviews,1355,0,1
+1757328800817,864,GET Sales,200,OK,Load Test Users 1-824,text,true,,2055724,124,50,50,http://localhost:4000/sales,827,0,1
+1757328801143,728,GET Books Search Random,200,OK,Load Test Users 1-835,text,true,,7078,145,56,56,http://localhost:4000/books/search?query=Book+49,728,0,1
+1757328801504,368,GET Home Page,200,OK,Load Test Users 1-847,text,true,,4332,119,55,55,http://localhost:4000/,368,0,1
+1757328801293,602,GET Books List,200,OK,Load Test Users 1-840,text,true,,639707,124,55,55,http://localhost:4000/books,599,0,0
+1757328801353,636,GET Authors List,200,OK,Load Test Users 1-842,text,true,,92505,126,57,57,http://localhost:4000/authors,636,0,1
+1757328801629,360,GET Authors List,200,OK,Load Test Users 1-851,text,true,,92505,126,57,57,http://localhost:4000/authors,360,0,0
+1757328801535,455,GET Authors List,200,OK,Load Test Users 1-848,text,true,,92505,126,55,55,http://localhost:4000/authors,455,0,1
+1757328801324,668,GET Authors List,200,OK,Load Test Users 1-841,text,true,,92505,126,54,54,http://localhost:4000/authors,667,0,1
+1757328801384,697,GET Books Search Random,200,OK,Load Test Users 1-843,text,true,,7077,145,56,56,http://localhost:4000/books/search?query=Book+38,697,0,0
+1757328800334,1754,GET All Reviews,200,OK,Load Test Users 1-808,text,true,,3598815,126,55,55,http://localhost:4000/reviews,1741,0,1
+1757328801564,540,GET Books Search Random,200,OK,Load Test Users 1-849,text,true,,12896,145,55,55,http://localhost:4000/books/search?query=Book+29,539,0,0
+1757328801685,424,GET Home Page,200,OK,Load Test Users 1-853,text,true,,4332,119,54,54,http://localhost:4000/,424,0,1
+1757328801473,656,GET Books List,200,OK,Load Test Users 1-846,text,true,,639707,124,53,53,http://localhost:4000/books,652,0,0
+1757328801837,403,GET Authors List,200,OK,Load Test Users 1-858,text,true,,92505,126,56,56,http://localhost:4000/authors,403,0,0
+1757328800574,1770,GET All Reviews,200,OK,Load Test Users 1-816,text,true,,3598815,126,59,59,http://localhost:4000/reviews,1757,0,1
+1757328801714,670,GET Books Search Random,200,OK,Load Test Users 1-854,text,true,,12898,145,59,59,http://localhost:4000/books/search?query=Book+25,670,0,1
+1757328801779,621,GET Books List,200,OK,Load Test Users 1-856,text,true,,639707,124,58,58,http://localhost:4000/books,618,0,1
+1757328801894,623,GET Authors List,200,OK,Load Test Users 1-860,text,true,,92505,126,61,61,http://localhost:4000/authors,622,0,0
+1757328801442,1076,GET Sales,200,OK,Load Test Users 1-845,text,true,,2055724,124,60,60,http://localhost:4000/sales,1061,0,0
+1757328802104,501,GET Home Page,200,OK,Load Test Users 1-867,text,true,,4332,119,62,62,http://localhost:4000/,501,0,0
+1757328801954,722,GET Books List,200,OK,Load Test Users 1-862,text,true,,639707,124,64,64,http://localhost:4000/books,720,0,1
+1757328801984,700,GET Books List,200,OK,Load Test Users 1-863,text,true,,639707,124,63,63,http://localhost:4000/books,695,0,1
+1757328801053,1632,GET All Reviews,200,OK,Load Test Users 1-832,text,true,,3598815,126,62,62,http://localhost:4000/reviews,1608,0,1
+1757328802253,523,GET Authors List,200,OK,Load Test Users 1-872,text,true,,92505,126,64,64,http://localhost:4000/authors,523,0,1
+1757328801748,1041,GET Sales,200,OK,Load Test Users 1-855,text,true,,2055724,124,63,63,http://localhost:4000/sales,1029,0,1
+1757328802462,376,GET Home Page,200,OK,Load Test Users 1-879,text,true,,4332,119,64,64,http://localhost:4000/,376,0,1
+1757328802133,757,GET Books Search Random,200,OK,Load Test Users 1-868,text,true,,7077,145,65,65,http://localhost:4000/books/search?query=Book+43,757,0,1
+1757328802283,662,GET Books List,200,OK,Load Test Users 1-873,text,true,,639707,124,66,66,http://localhost:4000/books,659,0,1
+1757328802344,603,GET Books List,200,OK,Load Test Users 1-875,text,true,,639707,124,65,65,http://localhost:4000/books,599,0,1
+1757328802224,740,GET Books List,200,OK,Load Test Users 1-871,text,true,,639707,124,64,64,http://localhost:4000/books,698,0,0
+1757328802434,585,GET Authors List,200,OK,Load Test Users 1-878,text,true,,92505,126,65,65,http://localhost:4000/authors,585,0,1
+1757328802313,957,GET Sales,200,OK,Load Test Users 1-874,text,true,,2055724,124,72,72,http://localhost:4000/sales,905,0,1
+1757328802555,737,GET Books Search Random,500,Internal Server Error,Load Test Users 1-882,text,false,,4042,145,72,72,http://localhost:4000/books/search?query=Book+20,736,0,0
+1757328801173,2119,GET Authors Stats,500,Internal Server Error,Load Test Users 1-836,text,false,,4013,132,72,72,http://localhost:4000/authors/stats,2119,0,1
+1757328801594,1699,GET Authors Stats,500,Internal Server Error,Load Test Users 1-850,text,false,,3999,132,70,70,http://localhost:4000/authors/stats,1699,0,3
+1757328799764,3530,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-789,text,false,,4039,136,70,70,http://localhost:4000/books/top_selling,3530,0,1
+1757328799983,3311,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-796,text,false,,3829,136,70,70,http://localhost:4000/books/top_selling,3311,0,1
+1757328801656,1639,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-852,text,false,,4029,136,69,69,http://localhost:4000/books/top_selling,1639,0,2
+1757328801413,1882,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-844,text,false,,4029,136,69,69,http://localhost:4000/books/top_selling,1882,0,1
+1757328801803,1494,GET Authors Stats,500,Internal Server Error,Load Test Users 1-857,text,false,,3999,132,69,69,http://localhost:4000/authors/stats,1494,0,1
+1757328801863,1434,GET Authors Stats,500,Internal Server Error,Load Test Users 1-859,text,false,,3999,132,69,69,http://localhost:4000/authors/stats,1434,0,0
+1757328801025,2271,GET Authors Stats,500,Internal Server Error,Load Test Users 1-831,text,false,,4009,132,69,69,http://localhost:4000/authors/stats,2271,0,1
+1757328801203,2092,GET Authors Stats,500,Internal Server Error,Load Test Users 1-837,text,false,,4013,132,69,69,http://localhost:4000/authors/stats,2092,0,1
+1757328798326,4990,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-741,text,false,,3982,136,62,62,http://localhost:4000/books/top_selling,4990,0,1
+1757328800366,2952,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-809,text,false,,3982,136,61,61,http://localhost:4000/books/top_selling,2952,0,1
+1757328801083,2235,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-833,text,false,,4039,136,60,60,http://localhost:4000/books/top_selling,2235,0,1
+1757328799855,3464,GET Authors Stats,500,Internal Server Error,Load Test Users 1-792,text,false,,3935,132,60,60,http://localhost:4000/authors/stats,3464,0,1
+1757328795597,7722,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-650,text,false,,4024,136,59,59,http://localhost:4000/books/top_selling,7722,0,4
+1757328800398,2922,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-810,text,false,,3982,136,59,59,http://localhost:4000/books/top_selling,2922,0,1
+1757328797186,6138,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-703,text,false,,4039,136,56,56,http://localhost:4000/books/top_selling,6138,0,1
+1757328800905,2419,GET Authors Stats,500,Internal Server Error,Load Test Users 1-827,text,false,,3992,132,56,56,http://localhost:4000/authors/stats,2419,0,1
+1757328800695,2629,GET Authors Stats,500,Internal Server Error,Load Test Users 1-820,text,false,,3992,132,56,56,http://localhost:4000/authors/stats,2629,0,1
+1757328799584,3740,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-783,text,false,,4039,136,56,56,http://localhost:4000/books/top_selling,3740,0,0
+1757328799137,4188,GET Authors Stats,500,Internal Server Error,Load Test Users 1-768,text,false,,4013,132,52,52,http://localhost:4000/authors/stats,4188,0,1
+1757328796495,6831,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-680,text,false,,3774,136,51,51,http://localhost:4000/books/top_selling,6831,0,1
+1757328800754,2573,GET Authors Stats,500,Internal Server Error,Load Test Users 1-822,text,false,,3992,132,50,50,http://localhost:4000/authors/stats,2573,0,1
+1757328801113,2213,GET All Reviews,200,OK,Load Test Users 1-834,text,true,,3598815,126,49,49,http://localhost:4000/reviews,2103,0,1
+1757328796436,6891,GET Authors Stats,500,Internal Server Error,Load Test Users 1-678,text,false,,4009,132,49,49,http://localhost:4000/authors/stats,6891,0,1
+1757328800665,2663,GET Authors Stats,500,Internal Server Error,Load Test Users 1-819,text,false,,3992,132,49,49,http://localhost:4000/authors/stats,2663,0,1
+1757328801263,2065,GET Authors Stats,500,Internal Server Error,Load Test Users 1-839,text,false,,4009,132,47,47,http://localhost:4000/authors/stats,2064,0,1
+1757328796260,7068,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-672,text,false,,4039,136,48,48,http://localhost:4000/books/top_selling,7068,0,1
+1757328799615,3715,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-784,text,false,,4039,136,46,46,http://localhost:4000/books/top_selling,3715,0,4
+1757328799434,3899,GET Authors Stats,500,Internal Server Error,Load Test Users 1-778,text,false,,3992,132,43,43,http://localhost:4000/authors/stats,3899,0,1
+1757328802583,766,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-883,text,false,,3573,136,43,43,http://localhost:4000/books/top_selling,766,0,1
+1757328801926,1423,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-861,text,false,,3645,136,43,43,http://localhost:4000/books/top_selling,1423,0,1
+1757328802045,1308,GET All Reviews,500,Internal Server Error,Load Test Users 1-865,text,false,,3424,126,41,41,http://localhost:4000/reviews,1308,0,0
+1757328802373,984,GET Books List,500,Internal Server Error,Load Test Users 1-876,text,false,,3503,124,40,40,http://localhost:4000/books,983,0,1
+1757328802523,834,GET Sales,500,Internal Server Error,Load Test Users 1-881,text,false,,3503,124,40,40,http://localhost:4000/sales,834,0,1
+1757328802074,1284,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-866,text,false,,3645,136,38,38,http://localhost:4000/books/top_selling,1284,0,0
+1757328802792,568,GET Home Page,200,OK,Load Test Users 1-890,text,true,,4332,119,37,37,http://localhost:4000/,568,0,1
+1757328802013,1349,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-864,text,false,,3645,136,36,36,http://localhost:4000/books/top_selling,1349,0,0
+1757328802493,869,GET Sales,500,Internal Server Error,Load Test Users 1-880,text,false,,3503,124,36,36,http://localhost:4000/sales,869,0,1
+1757328802404,963,GET Books List,500,Internal Server Error,Load Test Users 1-877,text,false,,3503,124,35,35,http://localhost:4000/books,963,0,1
+1757328795025,8345,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-631,text,false,,3619,136,34,34,http://localhost:4000/books/top_selling,8345,0,1
+1757328802163,1209,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-869,text,false,,3645,136,33,33,http://localhost:4000/books/top_selling,1209,0,1
+1757328801232,2208,GET All Reviews,200,OK,Load Test Users 1-838,text,true,,3598815,126,33,33,http://localhost:4000/reviews,2054,0,1
+1757328802732,708,GET Books Search Random,200,OK,Load Test Users 1-888,text,true,,7078,145,33,33,http://localhost:4000/books/search?query=Book+34,708,0,1
+1757328802764,677,GET Books Search Random,200,OK,Load Test Users 1-889,text,true,,17087,144,31,31,http://localhost:4000/books/search?query=Book+5,677,0,0
+1757328802643,1024,GET Sales,200,OK,Load Test Users 1-885,text,true,,2055724,124,37,37,http://localhost:4000/sales,963,0,1
+1757328802193,1565,GET All Reviews,200,OK,Load Test Users 1-870,text,true,,3598815,126,40,40,http://localhost:4000/reviews,1497,0,1
+1757328802614,1145,GET Sales,200,OK,Load Test Users 1-884,text,true,,2055724,124,40,40,http://localhost:4000/sales,1092,0,1
+1757328798807,4953,GET Authors Stats,500,Internal Server Error,Load Test Users 1-757,text,false,,4009,132,39,39,http://localhost:4000/authors/stats,4953,0,1
+1757328796166,7594,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-669,text,false,,3982,136,37,37,http://localhost:4000/books/top_selling,7594,0,1
+1757328798867,4896,GET Authors Stats,500,Internal Server Error,Load Test Users 1-759,text,false,,4009,132,36,36,http://localhost:4000/authors/stats,4896,0,1
+1757328802973,798,GET Home Page,200,OK,Load Test Users 1-896,text,true,,4332,119,36,36,http://localhost:4000/,798,0,1
+1757328803035,736,GET Home Page,200,OK,Load Test Users 1-898,text,true,,4332,119,36,36,http://localhost:4000/,736,0,1
+1757328802882,890,GET Home Page,200,OK,Load Test Users 1-893,text,true,,4332,119,34,34,http://localhost:4000/,890,0,1
+1757328803334,439,GET Home Page,200,OK,Load Test Users 1-908,text,true,,4332,119,33,33,http://localhost:4000/,439,0,1
+1757328803094,719,GET Books Search Random,200,OK,Load Test Users 1-900,text,true,,7078,145,33,33,http://localhost:4000/books/search?query=Book+50,719,0,0
+1757328802824,997,GET Books List,200,OK,Load Test Users 1-891,text,true,,639707,124,33,33,http://localhost:4000/books,993,0,0
+1757328803218,612,GET Books Search Random,200,OK,Load Test Users 1-904,text,true,,17089,144,32,32,http://localhost:4000/books/search?query=Book+2,612,0,1
+1757328803245,585,GET Books Search Random,200,OK,Load Test Users 1-905,text,true,,7078,145,32,32,http://localhost:4000/books/search?query=Book+48,585,0,0
+1757328803186,647,GET Books Search Random,200,OK,Load Test Users 1-903,text,true,,7078,145,30,30,http://localhost:4000/books/search?query=Book+50,647,0,1
+1757328803004,839,GET Books Search Random,200,OK,Load Test Users 1-897,text,true,,7078,145,29,29,http://localhost:4000/books/search?query=Book+41,839,0,1
+1757328802917,932,GET Books Search Random,200,OK,Load Test Users 1-894,text,true,,7078,145,28,28,http://localhost:4000/books/search?query=Book+44,932,0,1
+1757328802852,1013,GET Books List,200,OK,Load Test Users 1-892,text,true,,639707,124,28,28,http://localhost:4000/books,962,0,1
+1757328803272,636,GET Books List,200,OK,Load Test Users 1-906,text,true,,639707,124,29,29,http://localhost:4000/books,578,0,1
+1757328803066,1008,GET Sales,200,OK,Load Test Users 1-899,text,true,,2055724,124,33,33,http://localhost:4000/sales,923,0,2
+1757328803484,623,GET Home Page,200,OK,Load Test Users 1-913,text,true,,4332,119,33,33,http://localhost:4000/,623,0,1
+1757328803513,617,GET Authors List,200,OK,Load Test Users 1-914,text,true,,92505,126,33,33,http://localhost:4000/authors,617,0,1
+1757328803543,598,GET Authors List,200,OK,Load Test Users 1-915,text,true,,92505,126,32,32,http://localhost:4000/authors,598,0,1
+1757328803672,471,GET Authors List,200,OK,Load Test Users 1-919,text,true,,92505,126,31,31,http://localhost:4000/authors,471,0,1
+1757328803577,598,GET Books Search Random,200,OK,Load Test Users 1-916,text,true,,7660,145,32,32,http://localhost:4000/books/search?query=Book+30,598,0,1
+1757328803393,818,GET Books List,200,OK,Load Test Users 1-910,text,true,,639707,124,32,32,http://localhost:4000/books,799,0,47
+1757328803669,546,GET Books List,200,OK,Load Test Users 1-918,text,true,,639707,124,31,31,http://localhost:4000/books,527,0,1
+1757328802704,1515,GET All Reviews,200,OK,Load Test Users 1-887,text,true,,3598815,126,30,30,http://localhost:4000/reviews,1307,0,0
+1757328803154,1200,GET All Reviews,200,OK,Load Test Users 1-902,text,true,,3598815,126,33,33,http://localhost:4000/reviews,1074,0,1
+1757328803694,893,GET Sales,200,OK,Load Test Users 1-920,text,true,,2055724,124,40,40,http://localhost:4000/sales,661,0,3
+1757328803765,873,GET Home Page,200,OK,Load Test Users 1-922,text,true,,4332,119,41,41,http://localhost:4000/,873,0,0
+1757328803606,1038,GET Sales,200,OK,Load Test Users 1-917,text,true,,2055724,124,40,40,http://localhost:4000/sales,759,0,0
+1757328803816,861,GET Authors List,200,OK,Load Test Users 1-924,text,true,,92505,126,40,40,http://localhost:4000/authors,861,0,1
+1757328803934,746,GET Authors List,200,OK,Load Test Users 1-926,text,true,,92505,126,39,39,http://localhost:4000/authors,746,0,0
+1757328803970,746,GET Books Search Random,200,OK,Load Test Users 1-929,text,true,,7078,145,40,40,http://localhost:4000/books/search?query=Book+50,745,0,2
+1757328802946,1877,GET All Reviews,200,OK,Load Test Users 1-895,text,true,,3598815,126,42,42,http://localhost:4000/reviews,1405,0,1
+1757328803999,890,GET Books List,200,OK,Load Test Users 1-930,text,true,,639707,124,43,43,http://localhost:4000/books,735,0,1
+1757328804296,861,GET Home Page,200,OK,Load Test Users 1-940,text,true,,4332,119,51,51,http://localhost:4000/,861,0,0
+1757328803864,1385,GET Sales,200,OK,Load Test Users 1-925,text,true,,2055724,124,53,53,http://localhost:4000/sales,1025,0,1
+1757328804240,1039,GET Books Search Random,200,OK,Load Test Users 1-938,text,true,,12896,145,53,53,http://localhost:4000/books/search?query=Book+29,1039,0,1
+1757328804570,712,GET Books Search Random,200,OK,Load Test Users 1-949,text,true,,7078,145,52,52,http://localhost:4000/books/search?query=Book+49,712,0,0
+1757328804386,951,GET Books Search Random,200,OK,Load Test Users 1-943,text,true,,12897,145,53,53,http://localhost:4000/books/search?query=Book+15,951,0,1
+1757328804436,903,GET Books Search Random,200,OK,Load Test Users 1-944,text,true,,12896,145,52,52,http://localhost:4000/books/search?query=Book+23,903,0,0
+1757328804365,978,GET Books Search Random,200,OK,Load Test Users 1-942,text,true,,17089,144,51,51,http://localhost:4000/books/search?query=Book+9,978,0,1
+1757328804117,1309,GET Books List,200,OK,Load Test Users 1-934,text,true,,639707,124,53,53,http://localhost:4000/books,1245,0,1
+1757328804148,1286,GET Books List,200,OK,Load Test Users 1-935,text,true,,639707,124,52,52,http://localhost:4000/books,1150,0,1
+1757328804511,964,GET Books List,200,OK,Load Test Users 1-947,text,true,,639707,124,53,53,http://localhost:4000/books,819,0,2
+1757328804456,1023,GET Books List,200,OK,Load Test Users 1-945,text,true,,639707,124,52,52,http://localhost:4000/books,899,0,1
+1757328803454,2240,GET All Reviews,200,OK,Load Test Users 1-912,text,true,,3598815,126,58,58,http://localhost:4000/reviews,1404,0,1
+1757328803783,2246,GET All Reviews,200,OK,Load Test Users 1-923,text,true,,3598815,126,64,64,http://localhost:4000/reviews,1555,0,1
+1757328804932,1099,GET Home Page,200,OK,Load Test Users 1-961,text,true,,4332,119,64,64,http://localhost:4000/,1099,0,6
+1757328804715,1317,GET Home Page,200,OK,Load Test Users 1-954,text,true,,4332,119,63,63,http://localhost:4000/,1317,0,1
+1757328804626,1429,GET Authors List,200,OK,Load Test Users 1-951,text,true,,92505,126,66,66,http://localhost:4000/authors,1428,0,2
+1757328805025,1090,GET Books Search Random,200,OK,Load Test Users 1-963,text,true,,7077,145,67,67,http://localhost:4000/books/search?query=Book+43,1090,0,2
+1757328805112,1025,GET Books Search Random,200,OK,Load Test Users 1-967,text,true,,12897,145,66,66,http://localhost:4000/books/search?query=Book+24,1025,0,1
+1757328804836,1472,GET Books List,200,OK,Load Test Users 1-958,text,true,,639707,124,65,65,http://localhost:4000/books,1338,0,0
+1757328804094,2437,GET Sales,200,OK,Load Test Users 1-933,text,true,,2055724,124,64,64,http://localhost:4000/sales,1953,0,0
+1757328804542,2131,GET Sales,200,OK,Load Test Users 1-948,text,true,,2055724,124,63,63,http://localhost:4000/sales,1505,0,0
+1757328804206,2491,GET Sales,200,OK,Load Test Users 1-937,text,true,,2055724,124,62,62,http://localhost:4000/sales,1833,0,1
+1757328804327,2447,GET Sales,200,OK,Load Test Users 1-941,text,true,,2055724,124,61,61,http://localhost:4000/sales,1709,0,1
+1757328804480,2299,GET Sales,200,OK,Load Test Users 1-946,text,true,,2055724,124,60,60,http://localhost:4000/sales,1563,0,1
+1757328805077,1838,GET Sales,200,OK,Load Test Users 1-966,text,true,,2055724,124,59,59,http://localhost:4000/sales,1378,0,0
+1757328804866,2209,GET Sales,200,OK,Load Test Users 1-959,text,true,,2055724,124,58,58,http://localhost:4000/sales,1999,0,23
+1757328805587,1499,GET Home Page,200,OK,Load Test Users 1-983,text,true,,4332,119,57,57,http://localhost:4000/,1499,0,7
+1757328805285,1803,GET Home Page,200,OK,Load Test Users 1-973,text,true,,4332,119,56,56,http://localhost:4000/,1803,0,1
+1757328804600,2492,GET All Reviews,200,OK,Load Test Users 1-950,text,true,,3598815,126,55,55,http://localhost:4000/reviews,1621,0,0
+1757328805006,2123,GET Sales,200,OK,Load Test Users 1-962,text,true,,2055724,124,54,54,http://localhost:4000/sales,1940,0,16
+1757328805766,1409,GET Authors List,200,OK,Load Test Users 1-989,text,true,,92505,126,53,53,http://localhost:4000/authors,1409,0,1
+1757328805316,1859,GET Authors List,200,OK,Load Test Users 1-974,text,true,,92505,126,53,53,http://localhost:4000/authors,1859,0,0
+1757328805466,1715,GET Authors List,200,OK,Load Test Users 1-979,text,true,,92505,126,51,51,http://localhost:4000/authors,1715,0,1
+1757328804266,2945,GET All Reviews,200,OK,Load Test Users 1-939,text,true,,3598815,126,50,50,http://localhost:4000/reviews,2597,0,0
+1757328805497,1806,GET Books Search Random,200,OK,Load Test Users 1-980,text,true,,12897,145,49,49,http://localhost:4000/books/search?query=Book+24,1806,0,1
+1757328805742,1580,GET Books Search Random,200,OK,Load Test Users 1-988,text,true,,12896,145,48,48,http://localhost:4000/books/search?query=Book+19,1579,0,0
+1757328805677,1651,GET Books List,200,OK,Load Test Users 1-986,text,true,,639707,124,47,47,http://localhost:4000/books,1627,0,7
+1757328805884,1446,GET Books List,200,OK,Load Test Users 1-993,text,true,,639707,124,46,46,http://localhost:4000/books,1420,0,1
+1757328805646,1696,GET Books List,200,OK,Load Test Users 1-985,text,true,,639707,124,45,45,http://localhost:4000/books,1685,0,0
+1757328805229,2115,GET Books Search Random,200,OK,Load Test Users 1-971,text,true,,12896,145,44,44,http://localhost:4000/books/search?query=Book+21,2115,0,1
+1757328805859,1485,GET Books Search Random,200,OK,Load Test Users 1-992,text,true,,12897,145,44,44,http://localhost:4000/books/search?query=Book+24,1485,0,1
+1757328805797,1558,GET Books List,200,OK,Load Test Users 1-990,text,true,,639707,124,42,42,http://localhost:4000/books,1545,0,4
+1757328806031,1515,GET Books Search Random,200,OK,Load Test Users 1-997,text,true,,7077,145,41,41,http://localhost:4000/books/search?query=Book+38,1515,0,1
+1757328806070,1506,GET Books Search Random,200,OK,Load Test Users 1-999,text,true,,12896,145,40,40,http://localhost:4000/books/search?query=Book+26,1506,0,3
+1757328806097,1749,GET Books List,200,OK,Load Test Users 1-1000,text,true,,639707,124,39,39,http://localhost:4000/books,1495,0,1
+1757328805827,2339,GET Sales,200,OK,Load Test Users 1-991,text,true,,2055724,124,38,38,http://localhost:4000/sales,1774,0,2
+1757328805412,3482,GET Sales,200,OK,Load Test Users 1-976,text,true,,2055724,124,37,37,http://localhost:4000/sales,2681,0,1
+1757328805555,3406,GET Sales,200,OK,Load Test Users 1-982,text,true,,2055724,124,36,36,http://localhost:4000/sales,2800,0,0
+1757328804758,4338,GET All Reviews,200,OK,Load Test Users 1-955,text,true,,3598815,126,35,35,http://localhost:4000/reviews,2954,0,0
+1757328805021,4402,GET All Reviews,200,OK,Load Test Users 1-964,text,true,,3598815,126,34,34,http://localhost:4000/reviews,3239,0,10
+1757328806035,3460,GET All Reviews,500,Internal Server Error,Load Test Users 1-995,text,false,,3622,126,33,33,http://localhost:4000/reviews,3460,0,1
+1757328796914,12582,GET Authors Stats,500,Internal Server Error,Load Test Users 1-694,text,false,,3608,132,33,33,http://localhost:4000/authors/stats,12582,0,1
+1757328805256,4241,GET Authors Stats,500,Internal Server Error,Load Test Users 1-972,text,false,,3999,132,32,32,http://localhost:4000/authors/stats,4241,0,3
+1757328805436,4061,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-978,text,false,,4029,136,32,32,http://localhost:4000/books/top_selling,4061,0,0
+1757328805165,4333,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-969,text,false,,4029,136,29,29,http://localhost:4000/books/top_selling,4333,0,6
+1757328802674,6824,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-886,text,false,,3982,136,29,29,http://localhost:4000/books/top_selling,6824,0,1
+1757328805197,4303,GET All Reviews,500,Internal Server Error,Load Test Users 1-970,text,false,,3938,126,27,27,http://localhost:4000/reviews,4303,0,1
+1757328803936,5564,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-928,text,false,,4024,136,27,27,http://localhost:4000/books/top_selling,5564,0,1
+1757328805045,4455,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-965,text,false,,3982,136,26,26,http://localhost:4000/books/top_selling,4455,0,1
+1757328803442,6059,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-911,text,false,,3940,136,26,26,http://localhost:4000/books/top_selling,6059,0,0
+1757328805345,4158,GET Authors Stats,500,Internal Server Error,Load Test Users 1-975,text,false,,3999,132,25,25,http://localhost:4000/authors/stats,4158,0,2
+1757328805616,3888,GET All Reviews,500,Internal Server Error,Load Test Users 1-984,text,false,,3938,126,23,23,http://localhost:4000/reviews,3887,0,1
+1757328803724,5780,GET Authors Stats,500,Internal Server Error,Load Test Users 1-921,text,false,,4009,132,23,23,http://localhost:4000/authors/stats,5780,0,0
+1757328805707,3797,GET All Reviews,500,Internal Server Error,Load Test Users 1-987,text,false,,3938,126,23,23,http://localhost:4000/reviews,3796,0,1
+1757328805526,3981,GET All Reviews,500,Internal Server Error,Load Test Users 1-981,text,false,,3938,126,20,20,http://localhost:4000/reviews,3981,0,0
+1757328804176,5332,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-936,text,false,,3982,136,19,19,http://localhost:4000/books/top_selling,5332,0,1
+1757328805137,4372,GET Authors Stats,500,Internal Server Error,Load Test Users 1-968,text,false,,3999,132,18,18,http://localhost:4000/authors/stats,4372,0,5
+1757328798955,10558,GET Authors Stats,500,Internal Server Error,Load Test Users 1-762,text,false,,4009,132,16,16,http://localhost:4000/authors/stats,10558,0,1
+1757328805414,4100,GET Authors Stats,500,Internal Server Error,Load Test Users 1-977,text,false,,3999,132,15,15,http://localhost:4000/authors/stats,4100,0,13
+1757328803932,5584,GET Authors Stats,500,Internal Server Error,Load Test Users 1-927,text,false,,4009,132,14,14,http://localhost:4000/authors/stats,5584,0,1
+1757328804657,4859,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-952,text,false,,3982,136,13,13,http://localhost:4000/books/top_selling,4859,0,1
+1757328804029,5488,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-931,text,false,,4024,136,12,12,http://localhost:4000/books/top_selling,5488,0,1
+1757328803365,6152,GET Authors Stats,500,Internal Server Error,Load Test Users 1-909,text,false,,4009,132,11,11,http://localhost:4000/authors/stats,6152,0,1
+1757328806044,3585,GET Authors Stats,500,Internal Server Error,Load Test Users 1-994,text,false,,3999,132,10,10,http://localhost:4000/authors/stats,3585,0,1
+1757328803123,6508,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-901,text,false,,4024,136,9,9,http://localhost:4000/books/top_selling,6508,0,0
+1757328803305,6329,GET Top Selling Books,500,Internal Server Error,Load Test Users 1-907,text,false,,4024,136,8,8,http://localhost:4000/books/top_selling,6329,0,1
+1757328806033,3882,GET Sales,200,OK,Load Test Users 1-996,text,true,,2055724,124,7,7,http://localhost:4000/sales,2946,0,1
+1757328804811,5175,GET All Reviews,200,OK,Load Test Users 1-957,text,true,,3598815,126,6,6,http://localhost:4000/reviews,3826,0,0
+1757328804686,6184,GET All Reviews,200,OK,Load Test Users 1-953,text,true,,3598815,126,5,5,http://localhost:4000/reviews,3430,0,1
+1757328804059,6812,GET Authors Stats,200,OK,Load Test Users 1-932,text,true,,33426,132,5,5,http://localhost:4000/authors/stats,6812,0,2
+1757328804780,6091,GET All Reviews,200,OK,Load Test Users 1-956,text,true,,3598815,126,3,3,http://localhost:4000/reviews,3353,0,1
+1757328806038,5476,GET Sales,200,OK,Load Test Users 1-998,text,true,,2055724,124,2,2,http://localhost:4000/sales,4833,0,0
+1757328804897,6801,GET All Reviews,200,OK,Load Test Users 1-960,text,true,,3598815,126,1,1,http://localhost:4000/reviews,4002,0,1

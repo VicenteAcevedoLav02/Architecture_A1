@@ -9,7 +9,12 @@ defmodule ArchitectureA1.OpenSearchManager do
   end
 
   def available?() do
-    GenServer.call(__MODULE__, :refresh_and_get)
+    case GenServer.call(__MODULE__, :get_availability) do
+      status when is_boolean(status) -> status
+      _ -> false
+    end
+  rescue
+    _ -> false
   end
 
   @impl true
@@ -21,9 +26,8 @@ defmodule ArchitectureA1.OpenSearchManager do
   end
 
   @impl true
-  def handle_call(:refresh_and_get, _from, _state) do
-    available = check_opensearch_connection()
-    {:reply, available, %{available: available}}
+  def handle_call(:get_availability, _from, state) do
+    {:reply, state.available, state}
   end
 
   defp check_opensearch_connection() do

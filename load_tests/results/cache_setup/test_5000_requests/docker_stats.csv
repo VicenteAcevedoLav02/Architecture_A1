@@ -1,0 +1,12 @@
+timestamp,container,cpu_percent,memory_usage,memory_limit,memory_percent,pids
+2025-09-08 04:44:31,architecture_a1_app,3.99,293.6,3.495,8.20,81
+2025-09-08 04:44:31,architecture_a1_redis,0.63,7.727,3.495,0.22,6
+2025-09-08 04:44:31,architecture_a1_mongo,0.73,105.3,3.495,2.94,35
+2025-09-08 04:44:31,blissful_feistel,106.38,68.79,3.495,1.92,40
+2025-09-08 04:44:39,blissful_feistel,1127.00,402.9,3.495,11.26,491
+2025-09-08 04:44:39,architecture_a1_app,35.05,251.2,3.495,7.02,80
+2025-09-08 04:44:39,architecture_a1_redis,0.74,5.676,3.495,0.16,6
+2025-09-08 04:44:39,architecture_a1_mongo,0.72,106.2,3.495,2.97,35
+2025-09-08 04:44:49,architecture_a1_app,1016.50,497.3,3.495,13.89,88
+2025-09-08 04:44:49,architecture_a1_redis,11.86,24.9,3.495,0.70,6
+2025-09-08 04:44:49,architecture_a1_mongo,9.79,53.25,3.495,1.49,35

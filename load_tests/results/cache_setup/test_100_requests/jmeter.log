@@ -1,0 +1,20 @@
+START Running Jmeter on Mon Sep  8 09:43:09 CEST 2025
+JVM_ARGS=-Xmn426m -Xms1704m -Xmx1704m
+jmeter args=-n -t /load_tests/load_test.jmx -l /load_tests/results/cache_setup/test_100_requests/jmeter.jtl -Jusers=100 -Jloops=1 -Jtestname=test_100_requests -Jsummariser.interval=10 -Jsummariser.out=true
+jmeter ALL ARGS=-Dlog4j2.formatMsgNoLookups=true -n -t /load_tests/load_test.jmx -l /load_tests/results/cache_setup/test_100_requests/jmeter.jtl -Jusers=100 -Jloops=1 -Jtestname=test_100_requests -Jsummariser.interval=10 -Jsummariser.out=true
+Creating summariser <summary>
+Created the tree successfully using /load_tests/load_test.jmx
+Starting standalone test @ September 8, 2025 9:43:12 AM CEST (1757317392717)
+Waiting for possible Shutdown/StopTestNow/HeapDump/ThreadDump message on port 4445
+summary +      1 in 00:00:01 =    1.8/s Avg:   286 Min:   286 Max:   286 Err:     0 (0.00%) Active: 2 Started: 2 Finished: 0
+summary +     23 in 00:00:07 =    3.5/s Avg:   129 Min:    99 Max:   234 Err:     0 (0.00%) Active: 1 Started: 24 Finished: 23
+summary =     24 in 00:00:07 =    3.4/s Avg:   136 Min:    99 Max:   286 Err:     0 (0.00%)
+summary +     33 in 00:00:10 =    3.3/s Avg:   133 Min:   103 Max:   221 Err:     0 (0.00%) Active: 1 Started: 57 Finished: 56
+summary =     57 in 00:00:17 =    3.4/s Avg:   134 Min:    99 Max:   286 Err:     0 (0.00%)
+summary +     33 in 00:00:10 =    3.2/s Avg:   168 Min:    90 Max:   447 Err:     0 (0.00%) Active: 2 Started: 91 Finished: 89
+summary =     90 in 00:00:27 =    3.3/s Avg:   147 Min:    90 Max:   447 Err:     0 (0.00%)
+summary +     10 in 00:00:03 =    3.7/s Avg:   197 Min:   115 Max:   317 Err:     0 (0.00%) Active: 0 Started: 100 Finished: 100
+summary =    100 in 00:00:30 =    3.3/s Avg:   152 Min:    90 Max:   447 Err:     0 (0.00%)
+Tidying up ...    @ September 8, 2025 9:43:43 AM CEST (1757317423033)
+... end of run
+END Running Jmeter on Mon Sep  8 09:43:43 CEST 2025

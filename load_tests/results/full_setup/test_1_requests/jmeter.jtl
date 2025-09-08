@@ -1,0 +1,2 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1757321097083,379,GET Authors List,200,OK,Load Test Users 1-1,text,true,,92505,126,1,1,http://localhost:4000/authors,362,0,82

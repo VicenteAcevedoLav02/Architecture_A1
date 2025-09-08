@@ -75,6 +75,7 @@ defmodule ArchitectureA1.Authors do
         # Invalidating affected cache
         Cache.delete(@all_authors_cache_key)
         Cache.delete(@stats_cache_key)
+        ArchitectureA1.Reviews.invalidate_top_rated_cache()
         {:ok, result}
 
       {:error, e} ->
@@ -92,6 +93,7 @@ defmodule ArchitectureA1.Authors do
         Cache.delete(@all_authors_cache_key)
         Cache.delete(@stats_cache_key)
         Cache.delete(author_cache_key(id)) # Individual author cache key
+        ArchitectureA1.Reviews.invalidate_top_rated_cache()
         {:ok, "Author updated successfully"}
 
       {:ok, %Mongo.UpdateResult{matched_count: 0}} ->
@@ -114,6 +116,7 @@ defmodule ArchitectureA1.Authors do
         Cache.delete(@all_authors_cache_key)
         Cache.delete(@stats_cache_key)
         Cache.delete(author_cache_key(id)) # Individual author cache key
+        ArchitectureA1.Reviews.invalidate_top_rated_cache()
         {:ok, "Author deleted successfully"}
 
       {:ok, %Mongo.DeleteResult{deleted_count: 0}} ->

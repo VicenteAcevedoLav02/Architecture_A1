@@ -67,6 +67,7 @@ defmodule ArchitectureA1.Books do
         Cache.delete(@top_selling_key)
         # Author Stats affected, so we Invalidate them
         Authors.invalidate_stats_cache()
+        ArchitectureA1.Reviews.invalidate_top_rated_cache()
         {:ok, result}
 
       {:error, e} ->
@@ -85,6 +86,7 @@ defmodule ArchitectureA1.Books do
         Cache.delete(book_cache_key(id))
         # Author Stats affected, so we Invalidate them
         Authors.invalidate_stats_cache()
+        ArchitectureA1.Reviews.invalidate_top_rated_cache()
         {:ok, "Book updated successfully"}
 
       {:ok, %Mongo.UpdateResult{matched_count: 0}} ->
@@ -110,6 +112,7 @@ defmodule ArchitectureA1.Books do
         Cache.delete(book_cache_key(id))
         # Author Stats affected, so we Invalidate them
         Authors.invalidate_stats_cache()
+        ArchitectureA1.Reviews.invalidate_top_rated_cache()
         {:ok, "Book deleted successfully"}
 
       {:ok, %Mongo.DeleteResult{deleted_count: 0}} ->
@@ -233,13 +236,12 @@ defmodule ArchitectureA1.Books do
   end
 
   def top_selling_books() do
-    ## >> 1. Verificamos el caché primero con la llave estática
     case Cache.get(@top_selling_key) do
       # CACHE HIT: Si ya existe, lo devolvemos directamente
       top_books when is_list(top_books) ->
         top_books
 
-      # CACHE MISS: Si no existe, ejecutamos toda tu lógica original
+      # CACHE MISS:
       nil ->
         books = get_all_books()
 
@@ -260,7 +262,6 @@ defmodule ArchitectureA1.Books do
 
         authors_stats = ArchitectureA1.Authors.list_authors_stats()
 
-        # >> 2. Guardamos el resultado final en una variable
         result =
           Enum.map(top_books, fn book ->
             year =
@@ -290,10 +291,7 @@ defmodule ArchitectureA1.Books do
             }
           end)
 
-        ## >> 3. Guardamos el resultado en el caché antes de devolverlo
         Cache.put(@top_selling_key, result, ttl: :timer.minutes(30))
-
-        # Devolvemos el resultado que acabamos de calcular y guardar
         result
     end
   end

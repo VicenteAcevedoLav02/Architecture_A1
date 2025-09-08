@@ -19,4 +19,6 @@ defmodule ArchitectureA1.Cache do
   def put(key, value, opts \\ []), do: impl().put(key, value, opts)
 
   def delete(key), do: impl().delete(key)
+
+  def flush(), do: impl().flush()
 end

@@ -9,4 +9,7 @@ defmodule ArchitectureA1.Cache.NoopImpl do
 
   @impl true
   def delete(_key), do: :ok
+
+  @impl true
+  def flush(), do: :ok
 end

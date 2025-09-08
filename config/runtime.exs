@@ -117,3 +117,8 @@ if config_env() == :prod do
   #
   # See https://hexdocs.pm/swoosh/Swoosh.html#module-installation for details.
 end
+
+# The next line dissables the database cache via Redis-Nebulex and replaces it with a mockup:
+if System.get_env("CACHE_ENABLED") == "false" do
+  config :architecture_a1, :cache_module, ArchitectureA1.Cache.NoopImpl
+end

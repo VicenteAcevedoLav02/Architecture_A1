@@ -38,6 +38,7 @@
       <table class="min-w-full divide-y divide-gray-200">
         <thead class="bg-gray-50">
           <tr>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Cover</th>
             <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Title</th>
             <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Summary</th>
             <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date of Publication</th>
@@ -48,6 +49,13 @@
         <tbody class="bg-white divide-y divide-gray-200">
           <%= for book <- @books do %>
             <tr class="hover:bg-gray-100 transition-colors duration-200">
+             <td class="px-6 py-4 whitespace-normal text-sm font-medium text-gray-900">
+                <%= if book["cover_url"] do %>
+                  <img src={book["cover_url"]} alt={"Photo of #{book["name"]}"} class="w-16 h-16 rounded-full object-cover shadow-sm">
+                <% else %>
+                  <span class="text-gray-400">No photo</span>
+                <% end %>
+              </td>
               <td class="px-6 py-4 whitespace-normal text-sm font-medium text-gray-900"><%= book["title"] %></td>
               <td class="px-6 py-4 whitespace-normal text-sm text-gray-500"><%= book["summary"] || "-" %></td>
               <td class="px-6 py-4 whitespace-normal text-sm text-gray-500"><%= book["date_of_publication"] || "-" %></td>

@@ -10,15 +10,13 @@ services:
       MIX_ENV: dev
       SERVE_STATIC: "true"
       UPLOAD_PATH: "/app/priv/static/uploads"
+      CACHE_ENABLED: "false"
     volumes:
       - .:/app:cached
       - deps:/app/deps
       - _build:/app/_build
     depends_on:
-      mongo:
-        condition: service_started
-      opensearch:
-        condition: service_healthy
+      - mongo
     command: mix phx.server
 
   mongo:
@@ -28,6 +26,26 @@ services:
       - "27017:27017"
     volumes:
       - mongo_data:/data/db
+      
+  apache:
+    container_name: architecture_a1_apache
+    image: httpd:2.4
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./apache/httpd.conf:/usr/local/apache2/conf/httpd.conf
+      - .:/app:cached  # Compartir todo el proyecto para acceso a uploads
+      #- ./apache/conf.d/:/usr/local/apache2/conf/extra/
+    depends_on:
+      - app
+    command: ["httpd-foreground"]
+
+  redis:
+    image: redis:7-alpine
+    container_name: architecture_a1_redis
+    ports:
+      - "6379:6379"
 
   opensearch:
     container_name: architecture_a1_opensearch

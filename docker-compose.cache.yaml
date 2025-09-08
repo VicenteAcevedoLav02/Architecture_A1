@@ -7,6 +7,8 @@ services:
     ports:
       - "4000:4000"
     environment:
+      SERVE_STATIC: "true"
+      UPLOAD_PATH: "/app/priv/static/uploads"
       MIX_ENV: dev
     volumes:
       - .:/app:cached

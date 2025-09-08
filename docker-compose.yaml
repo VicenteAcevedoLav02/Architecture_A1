@@ -4,6 +4,8 @@ services:
     image: web_app
     build:
       context: .
+      args:
+        - SERVE_STATIC=true
     ports:
       - "4000:4000"
     environment:
@@ -17,7 +19,7 @@ services:
       - _build:/app/_build
     depends_on:
       - mongo
-    command: mix phx.server
+    command: mix phx.server 
 
   mongo:
     container_name: architecture_a1_mongo
